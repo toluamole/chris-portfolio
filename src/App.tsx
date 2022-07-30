@@ -1,10 +1,17 @@
 import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
+import { MainRoute } from './Routes/MainRoutes';
+import { theme } from './Theme/BaseTheme';
+import '@fontsource/jura';
+import {Global} from '@emotion/react';
+import {GlobalStyles} from './Theme/GlobalStyles';
 
 function App() {
 	return (
-		<div className="App">
-			<h2>App</h2>
-		</div>
+		<ChakraProvider theme={theme}>
+			<Global styles={GlobalStyles}/>
+			<MainRoute />
+		</ChakraProvider>
 	);
 }
 
