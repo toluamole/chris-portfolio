@@ -1,10 +1,71 @@
-import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { 
+	Box, 
+	Flex, 
+	Image, 
+	Text, 
+	Avatar, 
+	AvatarBadge, 
+	Modal,
+	ModalOverlay,
+	ModalContent,
+	ModalBody,
+	ModalCloseButton,
+	useDisclosure,
+} from '@chakra-ui/react';
+import profileImage from '../Assets/profileImage.svg';
+import ExpandedImage from '../Assets/ExpandedImage.png';
 
 export const Profile = () => {
+	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
-		<Box>
-			<Text>Profile</Text>
+		<Box
+			display={'flex'}
+			alignItems={'center'}
+			border={'1px'}
+			borderColor={'#C6C6D3'}
+			borderRadius={'24px'}
+			height={'79px'}
+			width={'78vw'}
+			boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
+			// opacity= {'0.7'}
+			// filter= {'auto'}
+		>
+			<Flex 
+				alignItems={'center'}
+				ml={4}
+			>
+				<Avatar src={profileImage} cursor={'pointer'} onClick={onOpen}>
+					<AvatarBadge  boxSize='.8em' bg='#D83636' borderColor={'#15191A'} />
+				</Avatar>
+				<Text 
+					color={'#F4F0EB'} 
+					ml={4}
+					fontSize={'lg'}
+					fontWeight={'700'}
+				>
+					Oladapo Awosika
+				</Text>
+			</Flex>
+			<Modal isOpen={isOpen} onClose={onClose}>
+				<ModalOverlay />
+				<ModalCloseButton 
+					position={'fixed'}
+					color={'#F4F0EB'} 
+					top={'2%'}
+					right={'3%'} 
+					w='50px'
+					h={'50px'}
+					border={'2px'} 
+					borderColor={'#F4F0EB'} 
+					borderRadius={'50%'}
+				/>
+				<ModalContent bg={'none'}>
+					<ModalBody w={'500px'}>
+						<Image src={ExpandedImage} boxSize={'100%'} />
+					</ModalBody>
+				</ModalContent>
+			</Modal>
 		</Box>
 	);
 };
