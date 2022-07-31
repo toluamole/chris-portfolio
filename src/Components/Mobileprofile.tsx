@@ -26,15 +26,16 @@ export const Mobileprofile = () => {
 			flexDirection={'column'}
 			border={'1px'}
 			borderColor={'#C6C6D3'}
-			borderRadius={'24px'}
-			height={'65px'}
+			borderRadius={'16px'}
+			height={'60px'}
 			width={'90vw'}
+			mt={'6'}
 			boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
 			// opacity= {'0.7'}
 			// filter= {'auto'}
 		>
 			<Flex 
-				justifyContent={'space-evenly'}
+				justifyContent={'space-around'}
 				alignItems={'center'}
 			>
 				<Box 
