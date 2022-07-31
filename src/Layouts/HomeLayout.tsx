@@ -1,7 +1,8 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, useMediaQuery } from '@chakra-ui/react';
 import React from 'react';
 import { NavBar } from '../Components/NavBar';
 import { Profile } from '../Components/Profile';
+import {Mobileprofile} from '../Components/Mobileprofile';
 import backgroundImage from '../Assets/backgroundImage.svg';
 
 interface IHomeLayoutProps{
@@ -9,6 +10,7 @@ interface IHomeLayoutProps{
 }
 
 export const HomeLayout = ({children}: IHomeLayoutProps) => {
+	const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
 	return (
 		<Box
 			display={'flex'}
@@ -20,15 +22,14 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
-			p={[10, 10, 10, 5]}
+			p={[3, 10, 10, 5]}
 			overflow={'hidden'}
 		>
-			<Box  w={['25vw','18vw']} >
-				<NavBar/>
-			</Box>
+			<NavBar/>
 			<Flex w={'80vw'} direction={'column'}>
 				<Box  w={'80vw'} h={'20vh'} mx={2}>
-					<Profile />
+					{isLargerThan768 && <Profile />}
+					{!isLargerThan768 && <Mobileprofile/>}
 				</Box>
 				<Box  w={'80vw'} m={2} h={'80vh'}>{children}</Box>
 			</Flex>
