@@ -15,37 +15,50 @@ import {
 } from '@chakra-ui/react';
 import profileImage from '../Assets/profileImage.svg';
 import ExpandedImage from '../Assets/ExpandedImage.png';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
-export const Profile = () => {
+export const Mobileprofile = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<Box
 			display={'flex'}
-			alignItems={'center'}
+			justifyContent={'center'}
+			flexDirection={'column'}
 			border={'1px'}
 			borderColor={'#C6C6D3'}
-			borderRadius={'24px'}
-			height={'79px'}
-			width={['90vw','78vw']}
+			borderRadius={'16px'}
+			height={'60px'}
+			width={'90vw'}
+			mt={'6'}
 			boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
 			// opacity= {'0.7'}
 			// filter= {'auto'}
 		>
 			<Flex 
+				justifyContent={'space-around'}
 				alignItems={'center'}
-				ml={4}
 			>
-				<Avatar src={profileImage} cursor={'pointer'} onClick={onOpen}>
-					<AvatarBadge  boxSize='.8em' bg='#D83636' borderColor={'#15191A'} />
-				</Avatar>
+				<Box 
+					border={'1px'} 
+					borderRadius={'50%'}
+					borderColor={'#C6C6D3'} 
+					p={2}
+				>
+					<HamburgerIcon 
+						color={'#C6C6D3'} 
+						w={'5'} h={'5'}
+					/>
+				</Box>
 				<Text 
 					color={'#F4F0EB'} 
-					ml={4}
-					fontSize={'lg'}
+					fontSize={'sm'}
 					fontWeight={'700'}
 				>
 					Oladapo Awosika
 				</Text>
+				<Avatar size={'sm'} src={profileImage} cursor={'pointer'} onClick={onOpen}>
+					<AvatarBadge  boxSize='.8em' bg='#D83636' borderColor={'#15191A'} />
+				</Avatar>
 			</Flex>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />

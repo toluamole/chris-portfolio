@@ -6,6 +6,7 @@ import {links} from '../Constants/NavLinks';
 export const  NavBar = () => {
 	return (
 		<Flex 
+			display={['none', 'flex']}
 			direction={'column'}
 			justifyContent={'space-between'}
 			alignItems={'center'}
@@ -13,6 +14,7 @@ export const  NavBar = () => {
 			borderColor={'#C6C6D3'}
 			borderRadius={'24px'}
 			h={'100%'}
+			w={['25vw','18vw']}
 			boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
 			opacity= {'0.7'}
 			filter= {'auto'}
@@ -44,7 +46,7 @@ export const  NavBar = () => {
 								filter: 'auto',
 								opacity:'0.4px',
 								boxShadow: '0 0 10px rgba(198, 198, 211, 1)',
-								width: {base:'80px', lg: '200px'},
+								width: {base:'80px', md:'80px', lg: '100px', xl: '200px', '2xl': '350px'},
 								
 								mt: '15px'
 							}}
