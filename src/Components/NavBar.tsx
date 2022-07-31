@@ -9,12 +9,14 @@ export const  NavBar = () => {
 			direction={'column'}
 			justifyContent={'space-between'}
 			alignItems={'center'}
-			border={'1px'}
+			border={'2px'}
 			borderColor={'#C6C6D3'}
 			borderRadius={'24px'}
 			h={'100%'}
-			boxShadow= {'0 0 5px rgba(198, 198, 211, 1)'}
+			boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
 			opacity= {'0.7'}
+			filter= {'auto'}
+			// dropShadow={'0 -1mm 2mm #C6C6D3'}
 		>
 			<Flex
 				direction={'column'}
@@ -38,16 +40,18 @@ export const  NavBar = () => {
 								content: '""',
 								display: 'flex',
 								position: 'relative',
-								borderBottom:'1px solid #C6C6D3',
+								borderBottom:'1.4px solid #C6C6D3',
 								filter: 'auto',
-								blur:'.8px',
+								opacity:'0.4px',
 								boxShadow: '0 0 10px rgba(198, 198, 211, 1)',
-								width: '200px',
+								width: {base:'80px', lg: '200px'},
+								
 								mt: '15px'
 							}}
 							_hover={{
 								textDecoration: 'none',
 								color:'#CA4F29',
+								textShadow: '0 0 1.2px #CA4F29',
 								transform: 'scaleY(1.15)',
 								transition: 'all .1s ease'
 							}}
@@ -66,7 +70,7 @@ export const  NavBar = () => {
 					color={'#CA4F29'}
 					fontSize={'16px'}
 					fontWeight={'500'}
-					textShadow= '0 0 .7px rgb(200 198 211 / 13%)'
+					// textShadow= '0 0 .7px rgb(200 198 211 / 13%)'
 				>
 					Status
 				</Text>
@@ -75,15 +79,15 @@ export const  NavBar = () => {
 					position={'relative'}
 					fontSize={'14px'}
 					fontWeight={'500'}
-					textShadow= '0 0 1.2px rgba(198, 198, 211, 1)'
+					// textShadow= '0 0 1.2px rgba(198, 198, 211, 1)'
 					_before={{
 						content:  '""',
 						position: 'absolute',
 						bg: '#D83636',
 						w: '7px',
 						h: '7px',
-						left: '-15%',
-						bottom: '15%',
+						left: '-10%',
+						bottom: '30%',
 						borderRadius:'50%'
 					}}
 				>
@@ -93,7 +97,8 @@ export const  NavBar = () => {
 					color={'#B2B6C7'}
 					fontSize={'14px'}
 					fontWeight={'500'}
-					textShadow= '0 0 1.2px rgba(198, 198, 211, 1)'
+					// textShadow= 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
+					// boxShadow={'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}
 				>
 					collaborations and jobs
 				</Text>

@@ -23,7 +23,7 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			p={[10, 10, 10, 5]}
 			overflow={'hidden'}
 		>
-			<Box  w={'18vw'} >
+			<Box  w={['25vw','18vw']} >
 				<NavBar/>
 			</Box>
 			<Flex w={'80vw'} direction={'column'}>
