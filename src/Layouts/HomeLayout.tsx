@@ -22,16 +22,16 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
-			p={[3, 10, 10, 5]}
+			p={[1, 10, 10, 5]}
 			overflow={'hidden'}
 		>
 			<NavBar/>
-			<Flex w={'80vw'} direction={'column'}>
-				<Box  w={'80vw'} h={'20vh'} mx={2}>
+			<Flex mx={[2, null]} direction={'column'}>
+				<Box  mx={2}>
 					{isLargerThan768 && <Profile />}
 					{!isLargerThan768 && <Mobileprofile/>}
 				</Box>
-				<Box  w={'80vw'} m={2} h={'80vh'}>{children}</Box>
+				<Box m={2}>{children}</Box>
 			</Flex>
 		</Box>
 	);
