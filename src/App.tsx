@@ -12,7 +12,7 @@ function App() {
 		<ChakraProvider theme={theme}>
 			<Global styles={GlobalStyles}/>
 			<MainRoute />
-			<AnimatedCursor innerSize={20} />
+			<AnimatedCursor innerSize={20} clickables={['button', 'a']} />
 		</ChakraProvider>
 	);
 }
