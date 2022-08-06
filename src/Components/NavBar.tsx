@@ -11,18 +11,14 @@ export const  NavBar = () => {
 			justifyContent={'space-between'}
 			alignItems={'center'}
 			border={'2px'}
-			borderColor={'#C6C6D3'}
+			borderColor={'rgba(198,198,211,0.4)'}
 			borderRadius={'24px'}
 			h={'100%'}
 			w={['25vw','18vw']}
-			boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
-			opacity= {'0.7'}
-			filter= {'auto'}
-			// dropShadow={'0 -1mm 2mm #C6C6D3'}
+			boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 		>
 			<Flex
 				direction={'column'}
-				// justifyContent={'space-evenly'}
 				alignItems={'center'}
 				p={8}
 			>
@@ -42,10 +38,10 @@ export const  NavBar = () => {
 								content: '""',
 								display: 'flex',
 								position: 'relative',
-								borderBottom:'1.4px solid #C6C6D3',
+								borderBottom:'1.4px solid rgba(198,198,211,0.4)',
 								filter: 'auto',
 								opacity:'0.4px',
-								boxShadow: '0 0 10px rgba(198, 198, 211, 1)',
+								boxShadow: '0 0 3px rgba(198,198,211,0.4)',
 								width: {base:'80px', md:'80px', lg: '100px', xl: '200px', '2xl': '350px'},
 								
 								mt: '15px'
@@ -72,7 +68,6 @@ export const  NavBar = () => {
 					color={'#CA4F29'}
 					fontSize={'16px'}
 					fontWeight={'500'}
-					// textShadow= '0 0 .7px rgb(200 198 211 / 13%)'
 				>
 					Status
 				</Text>
@@ -81,7 +76,6 @@ export const  NavBar = () => {
 					position={'relative'}
 					fontSize={'14px'}
 					fontWeight={'500'}
-					// textShadow= '0 0 1.2px rgba(198, 198, 211, 1)'
 					_before={{
 						content:  '""',
 						position: 'absolute',
@@ -99,8 +93,6 @@ export const  NavBar = () => {
 					color={'#B2B6C7'}
 					fontSize={'14px'}
 					fontWeight={'500'}
-					// textShadow= 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
-					// boxShadow={'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}
 				>
 					collaborations and jobs
 				</Text>

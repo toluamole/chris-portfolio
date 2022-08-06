@@ -9,11 +9,11 @@ export const Home = () => {
 		<HomeLayout >
 			<Box
 				border={'2px'}
-				borderColor={'#C6C6D3'}
+				borderColor={'rgba(198,198,211,0.4)'}
 				borderRadius={'24px'}
 				h={'80vh'}
 				w={['90vw','78vw']}
-				boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
+				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				p={4}
 			>
 				<Flex

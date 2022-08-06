@@ -6,6 +6,7 @@ import '@fontsource/jura';
 import {Global} from '@emotion/react';
 import {GlobalStyles} from './Theme/GlobalStyles';
 import AnimatedCursor from 'react-animated-cursor';
+import { ScrollUpBtn } from './Components/ScrollUpBtn';
 
 function App() {
 	return (
