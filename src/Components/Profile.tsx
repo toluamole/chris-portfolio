@@ -22,14 +22,12 @@ export const Profile = () => {
 		<Box
 			display={'flex'}
 			alignItems={'center'}
-			border={'1px'}
-			borderColor={'#C6C6D3'}
+			border={'2px'}
+			borderColor={'rgba(198,198,211,0.4)'}
 			borderRadius={'24px'}
 			height={'79px'}
 			width={['90vw','78vw']}
-			boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
-			// opacity= {'0.7'}
-			// filter= {'auto'}
+			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 		>
 			<Flex 
 				alignItems={'center'}
@@ -42,7 +40,7 @@ export const Profile = () => {
 					color={'#F4F0EB'} 
 					ml={4}
 					fontSize={'lg'}
-					fontWeight={'700'}
+					fontWeight={'500'}
 				>
 					Oladapo Awosika
 				</Text>

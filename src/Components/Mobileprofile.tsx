@@ -25,14 +25,12 @@ export const Mobileprofile = () => {
 			justifyContent={'center'}
 			flexDirection={'column'}
 			border={'1px'}
-			borderColor={'#C6C6D3'}
+			borderColor={'rgba(198,198,211,0.4)'}
 			borderRadius={'16px'}
 			height={'60px'}
 			width={'90vw'}
 			mt={'6'}
-			boxShadow= {'0 0 5px rgba(58, 38, 200, 100)'}
-			// opacity= {'0.7'}
-			// filter= {'auto'}
+			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 		>
 			<Flex 
 				justifyContent={'space-around'}
@@ -52,7 +50,7 @@ export const Mobileprofile = () => {
 				<Text 
 					color={'#F4F0EB'} 
 					fontSize={'sm'}
-					fontWeight={'700'}
+					fontWeight={'500'}
 				>
 					Oladapo Awosika
 				</Text>
