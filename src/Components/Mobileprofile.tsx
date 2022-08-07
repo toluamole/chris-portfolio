@@ -28,7 +28,7 @@ export const Mobileprofile = () => {
 			borderColor={'rgba(198,198,211,0.4)'}
 			borderRadius={'16px'}
 			height={'60px'}
-			width={'90vw'}
+			// width={'90vw'}
 			mt={'6'}
 			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 		>

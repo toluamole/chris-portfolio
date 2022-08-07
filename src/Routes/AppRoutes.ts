@@ -1,4 +1,5 @@
 export const AppRoutes = {
 	home: '/',
-	about: '/about'
+	about: '/about',
+	contact: '/contact'
 };

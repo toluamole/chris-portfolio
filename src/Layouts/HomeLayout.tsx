@@ -16,22 +16,23 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			display={'flex'}
 			flexDirection={'row'}
 			h={'100vh'}
-			w={'100vw'}
+			w={'100%'}
 			// bg={'#0F0E0E'}
 			bgImage={`url('${backgroundImage}')`}
 			bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
-			p={[1, 10, 10, 5]}
+			p={ '30px'}
+			// py={'30px'}
 			overflow={'hidden'}
 		>
-			<NavBar/>
-			<Flex mx={[2, null]} direction={'column'}>
-				<Box  mx={2}>
+			<NavBar />
+			<Flex width={'100%'}  direction={'column'}>
+				<Box mb={'20px'} >
 					{isLargerThan768 && <Profile />}
 					{!isLargerThan768 && <Mobileprofile/>}
 				</Box>
-				<Box m={2}>{children}</Box>
+				<Box>{children}</Box>
 			</Flex>
 		</Box>
 	);

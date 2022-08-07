@@ -1,9 +1,11 @@
 import React from 'react';
 import { Flex, Text,  Link,} from '@chakra-ui/react';
-import { Link as RLink } from 'react-router-dom';
+import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
 
 export const  NavBar = () => {
+	const location = useLocation();
+	const isActive = location.pathname;
 	return (
 		<Flex 
 			display={['none', 'flex']}
@@ -11,11 +13,12 @@ export const  NavBar = () => {
 			justifyContent={'space-between'}
 			alignItems={'center'}
 			border={'2px'}
-			borderColor={'rgba(198,198,211,0.4)'}
+			borderColor={'#686875'}
 			borderRadius={'24px'}
-			h={'100%'}
+			// h={'100%'}
 			w={['25vw','18vw']}
 			boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
+			mr={'20px'}
 		>
 			<Flex
 				direction={'column'}
@@ -28,30 +31,34 @@ export const  NavBar = () => {
 							key={label}
 							as={RLink}
 							to={path}
-							color={'#F4F0EB'} 
-							mb={'15px'}
+							color={isActive === path ? '#CA4F29' : '#F4F0EB'} 
+							mb={'20px'}
 							textAlign={'center'}
 							fontSize={'14px'}
-							fontWeight={'400'}
+							fontWeight={isActive === path ? '700' : '400'}
 							// position={'relative'}
 							_after={{
 								content: '""',
 								display: 'flex',
 								position: 'relative',
-								borderBottom:'1.4px solid rgba(198,198,211,0.4)',
-								filter: 'auto',
-								opacity:'0.4px',
-								boxShadow: '0 0 3px rgba(198,198,211,0.4)',
+								borderBottom:'1.4px solid #686875',
+								boxShadow: '0 0 5px rgba(198,198,211,0.4)',
 								width: {base:'80px', md:'80px', lg: '100px', xl: '200px', '2xl': '350px'},
 								
-								mt: '15px'
+								mt: '20px',
 							}}
 							_hover={{
 								textDecoration: 'none',
 								color:'#CA4F29',
-								textShadow: '0 0 1.2px #CA4F29',
-								transform: 'scaleY(1.15)',
-								transition: 'all .1s ease'
+								fontWeight: 'bold',
+								textShadow: '0 0 8px #CA4F29',
+								// transform: 'scaleY(1.15)',
+								transition: 'all .3s ease',
+								paddingY: '10px',
+								_after: {
+									mt: '28px',
+									transition: 'all .3s ease',
+								}
 							}}
 						>
 							{label}
