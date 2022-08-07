@@ -22,13 +22,13 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
-			p={ '30px'}
+			p={[2, '30px']}
 			// py={'30px'}
 			overflow={'hidden'}
 		>
 			<NavBar />
 			<Flex width={'100%'}  direction={'column'}>
-				<Box mb={'20px'} >
+				<Box mb={[2,'20px']} >
 					{isLargerThan768 && <Profile />}
 					{!isLargerThan768 && <Mobileprofile/>}
 				</Box>

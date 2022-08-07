@@ -25,11 +25,11 @@ export const Mobileprofile = () => {
 			justifyContent={'center'}
 			flexDirection={'column'}
 			border={'1px'}
-			borderColor={'rgba(198,198,211,0.4)'}
+			borderColor={'#686875'}
 			borderRadius={'16px'}
 			height={'60px'}
 			// width={'90vw'}
-			mt={'6'}
+			// mt={'6'}
 			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 		>
 			<Flex 
@@ -39,11 +39,11 @@ export const Mobileprofile = () => {
 				<Box 
 					border={'1px'} 
 					borderRadius={'50%'}
-					borderColor={'#C6C6D3'} 
+					borderColor={'#686875'} 
 					p={2}
 				>
 					<HamburgerIcon 
-						color={'#C6C6D3'} 
+						color={'#686875'} 
 						w={'5'} h={'5'}
 					/>
 				</Box>
