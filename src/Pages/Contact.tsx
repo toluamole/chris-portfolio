@@ -13,7 +13,7 @@ export const Contact = () => {
 				border={'2px'}
 				borderColor={'#686875'}
 				borderRadius={'24px'}
-				h={'74vh'}
+				h={['85vh','74vh']}
 				// w={['90vw','78vw']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				// p={4}
