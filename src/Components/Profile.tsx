@@ -23,10 +23,10 @@ export const Profile = () => {
 			display={'flex'}
 			alignItems={'center'}
 			border={'2px'}
-			borderColor={'rgba(198,198,211,0.4)'}
+			borderColor={'#686875'}
 			borderRadius={'24px'}
 			height={'79px'}
-			width={['90vw','78vw']}
+			// width={['90vw','78vw']}
 			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 		>
 			<Flex 

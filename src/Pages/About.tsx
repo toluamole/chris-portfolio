@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import { AboutContents } from '../Constants/AboutContents';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
@@ -10,12 +10,12 @@ export const About = () => {
 		<HomeLayout>
 			<Box
 				border={'2px'}
-				borderColor={'rgba(198,198,211,0.4)'}
+				borderColor={'#686875'}
 				borderRadius={'24px'}
-				h={'80vh'}
-				w={['90vw','78vw']}
+				h={'74vh'}
+				// w={['90vw','78vw']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-				p={4}
+				p={'20px'}
 				overflow={'auto'}
 				
 			>
