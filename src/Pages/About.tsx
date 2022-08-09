@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import {Bio } from '../Constants/BioConstant';
