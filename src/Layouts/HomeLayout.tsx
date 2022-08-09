@@ -17,13 +17,11 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			flexDirection={'row'}
 			h={'100vh'}
 			w={'100%'}
-			// bg={'#0F0E0E'}
 			bgImage={`url('${backgroundImage}')`}
 			bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
-			p={ '30px'}
-			// py={'30px'}
+			p={['10px', '30px']}
 			overflow={'hidden'}
 		>
 			<NavBar />
