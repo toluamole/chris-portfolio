@@ -26,7 +26,7 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 		>
 			<NavBar />
 			<Flex width={'100%'}  direction={'column'}>
-				<Box mb={'20px'} >
+				<Box mb={[2,'20px']} >
 					{isLargerThan768 && <Profile />}
 					{!isLargerThan768 && <Mobileprofile/>}
 				</Box>

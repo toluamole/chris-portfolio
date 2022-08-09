@@ -25,7 +25,7 @@ export const Mobileprofile = () => {
 			justify='space-between'
 			px={2}
 			border={'1px'}
-			borderColor={'rgba(198,198,211,0.4)'}
+			borderColor={'#686875'}
 			borderRadius={'16px'}
 			height={'60px'}
 			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
