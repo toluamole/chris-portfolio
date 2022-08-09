@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, Link, VStack } from '@chakra-ui/react';
 import { HomeLayout } from '../Layouts/HomeLayout';
-import { HomeContents, Links } from '../Constants/HomeContent';
+import { HomeContents, Links } from '../Constants/HomeConstant';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { Link as RLink } from 'react-router-dom';
 
 export const Home = () => {
 	return(
@@ -12,17 +13,12 @@ export const Home = () => {
 				borderColor={'#686875'}
 				borderRadius={'24px'}
 				h={['85vh','74vh']}
-				// h={'80vh'}
-				// w={['90vw','78vw']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				p={4}
 			>
 				<Flex
 					direction={'column'}
-					// justifyContent={'space-between'}
 					alignItems={'flex-start'}
-					// opacity= {'0.7'}
-					// filter= {'auto'}
 					mb={[8]}
 
 				>
@@ -79,51 +75,22 @@ export const Home = () => {
 						</Text>
 					</Flex>
 				</Flex>
-				<Flex
-					direction={'column'}
-					alignItems={'flex-end'}
+				<VStack
+					spacing={10}
+					align={'flex-end'}
 				>
 					{
 						Links.map(link => {
 							return (
-								<Flex
+								<Box
 									key={link.label}
-									mb={2}
 								>
-									{/* <Button 
-										size={'lg'}
-										h={'40px'} px={'28px'}
-										color={'#F4F0EB'} 
-										fontSize={'14px'} 
-										bg={'#CA4F29'}
-										fontWeight={'400'}
-										borderRadius={'16px'}
-										lineHeight={'150%'}
-										_hover={{
-											bg:'#fff',
-											color:'#CA4F29',
-											borderLeftWidth: '10px',
-											borderRightWidth:'2px',
-											borderLeftColor: '#fff',
-											// transform: 'scaleX(1)',
-											transition: '0.2s all ease-in',
-										}}
-										p={6}
-									>
-										{link.label} 
-										<ArrowForwardIcon 
-											ml={4}
-											h={'16px'} w={'16px'}
-										/>
-									</Button> */}
-									<Flex
-										alignItems={'center'}
-										as='button'
-										height='50px'
+									<Link
+										as={RLink}
+										to={link.path}
 										lineHeight='1.2'
-										// transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
 										border='1px'
-										px='28px'
+										p='4' px={10}
 										borderRadius='16px'
 										fontSize='14px'
 										fontWeight='500'
@@ -131,14 +98,14 @@ export const Home = () => {
 										borderColor='#CA4F29'
 										color='#F4F0EB'
 										_hover={{
-											bg:'#fff',
-											color:'#CA4F29',
+											bg: '#fff',
+											color: '#CA4F29',
 											borderLeftWidth: '18px',
-											borderRightWidth:'2px',
+											borderRightWidth: '2px',
 											borderLeftColor: '#fff',
 											// transform: 'scaleX(0.98)',
 											transition: '0.2s all ease-in',
-											borderColor: '#fff', 
+											borderColor: '#fff',
 											outline: 'none'
 										}}
 									>
@@ -147,12 +114,12 @@ export const Home = () => {
 											ml={8}
 											h={'16px'} w={'16px'}
 										/>
-									</Flex>
-								</Flex>
+									</Link>
+								</Box>
 							);
 						})
 					}
-				</Flex>
+				</VStack>
 			</Box>
 		</HomeLayout>
 	);

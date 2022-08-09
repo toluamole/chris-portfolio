@@ -1,4 +1,4 @@
-export const AboutContents: {id:number, subText:string}[] = [
+export const Bio: {id:number, subText:string}[] = [
 	{
 		id: 0,
 		subText:'Hey! It\'s me again, Oladapo. I know you might be curious to see the face behind these awesome products, lol. Just click on my profile picture to expand it.'
