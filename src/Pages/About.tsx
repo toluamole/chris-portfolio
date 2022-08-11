@@ -1,9 +1,8 @@
-import { Box, Button, Text, VStack } from '@chakra-ui/react';
+import { Box, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import {Bio } from '../Constants/BioConstant';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { ScrollUpBtn } from '../Components/ScrollUpBtn';
+import { CtaButton } from '../Components/CtaButton';
 
 export const About = () => {
 	return (
@@ -79,35 +78,7 @@ export const About = () => {
 						</Text>
 					</Box>
 				</VStack>
-				<Button 
-					float={'right'}
-					size={'lg'}
-					h={'40px'} px={'28px'}
-					color={'#F4F0EB'} 
-					fontSize={'14px'} 
-					bg={'#CA4F29'}
-					fontWeight={'400'}
-					borderRadius={'16px'}
-					lineHeight={'150%'}
-					mb={24}
-					_hover={{
-						bg:'#fff',
-						color:'#CA4F29',
-						borderLeftWidth: '10px',
-						borderRightWidth:'2px',
-						borderLeftColor: '#fff',
-						// transform: 'scaleX(1)',
-						transition: '0.2s all ease-in',
-					}}
-					p={6}
-				>
-					Reach out 
-					<ArrowForwardIcon 
-						ml={4}
-						h={'16px'} w={'16px'}
-					/>
-				</Button>
-				<ScrollUpBtn />
+				<CtaButton />
 			</Box>
 		</HomeLayout>
 	);

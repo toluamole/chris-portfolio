@@ -1,5 +1,6 @@
 export const AppRoutes = {
 	home: '/',
 	about: '/about',
-	contact: '/contact'
+	contact: '/contact',
+	projects: '/projects'
 };
