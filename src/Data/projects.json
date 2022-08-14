@@ -1,0 +1,244 @@
+
+[
+    {
+        "title": "Crisp",
+        "name": "#1. Crisp",
+        "background": "Crisp is a brand that designs and sells top quality high end musical instruments.",
+        "objective": "The goal of this project is to increase conversion, develop a never before seen feature and give an exotic feeling to the entire website, users pay a good amount of money for these products so they might as well have a nice time while browsing through the catalogue.",
+        "problemStatement": "Music Lovers/entusiast pay a lot of money to purchase high end musical instrusments and from observation, humans tend to judge a book by it's cover. That is, if a brands website doesn't scream luxury most consumers will not be convinced at first glance and would rather not take the risk of purchasinf luxury from such brands.",
+        "solutionProffered": "As a means of keeping users interested in the product, I came up with an idea where users can hear the sound of a musical instrument live from their devices. Each sound will be a live recording of the instrument. I also decided to go with a more elegant design style, by using smooth gradients, subtle animations and interactions that keep users engaged and want them to stay on the sit -  also created an experience where from the first time of getting onto the site, you are being led on by subtle interactions that will eventually lead to you buying and instrument.",
+        "roles": [
+            "UI Design",
+            "UX Design",
+            "Research",
+            "Wireframing",
+            "Prototyping"
+        ],
+        "research": "To get started, i reached out to some intrumentalist and also analysed some of the main competitors, I reviewed several similar websites to better understand what the competitors were doing right and wrong.",
+        "competitiveAnalysis": "After carefully analysing some of the competitors, here are some of the problems i found.",
+        "yamaha": [
+            "Complex and difficult to navigate",
+            "Difficulty to purchase"
+        ],
+        "fender": [
+            "Difficulty to navigate",
+            "Uses poor quality images"
+        ],
+        "ideation": "Once i got a clear picture of the users. I started adapting user flows and started generating design solutions in form paper wireframes - keeping in mind that the website had to be functional, easy to use and aesthetically pleasing to the users.",
+        "userFlows": "I broke down the purchase flow into a few simple steps so that users do not get confused.",
+        "implemtation": "When it was time to turn the wireframes into digital mockups, i started working on the homepage. To ensure that users are informed about the unique feature of the website, I showed a number of examples of what the feature is and how it works.",
+        "images": [
+            {
+                "title": "Landing page",
+                "imageUrl": "/images/Crisp.png"
+            },
+            {
+                "title": "Signup",
+                "imageUrl": "/images/Crisp/signup.png"
+            },
+            {
+                "title": "Login",
+                "imageUrl": "/images/Crisp/login.png"
+            },
+            {
+                "title": "Sketches",
+                "imageUrl": "/images/Crisp/sketch.png"
+            },
+            {
+                "title": "Purchase flow",
+                "imageUrl": "/images/Crisp/steps.png"
+            },
+            {
+                "title": "Special feature",
+                "imageUrl": "/images/Crisp/listen.png"
+            },
+            {
+                "title": "Special feature {product page",
+                "imageUrl": "/images/Crisp/magic.png"
+            },
+            {
+                "title": "Categories",
+                "imageUrl": "/images/Crisp/categories.png"
+            },
+            {
+                "title": "Best seller",
+                "imageUrl": "/images/Crisp/top4.png"
+            },
+            {
+                "title": "Product page",
+                "imageUrl": "/images/Crisp/shopPage.png"
+            },
+            {
+                "title": "Product page",
+                "imageUrl": "/images/Crisp/shopPage2.png"
+            },
+            {
+                "title": "Footer",
+                "imageUrl": "/images/Crisp/footer.png"
+            }
+        ],
+        "id": 0
+    },
+    {
+        "title": "Gather",
+        "name": "#2. Gather",
+        "background": "Gather is a mobile application that helps connects peers and people with similar interests by enabling users create groups aka gatherings, and also create and attend various events.",
+        "objective": "The goals of this project are simple; identify the pain points the ideal users encounter while searching for groups and events of interest and explore feasible ideas that best solves these needs.",
+        "problemStatement": "Finding groups of people and also events that align with a persons personality/interests can be very difficult, especially with how heavily saturated social media is with various contents that do not necessarily always match a users interests.People want a platform where they can easily meet their peers and organise/hosts events with them.",
+        "solutionProffered": [
+            "Gather is an app designed with a user-centred approach. Groups and Events are customised around the users Location and Interests.",
+            "Furthermore, everything the user needs to know is provided within the app including payment for tickets and in-app private/group chat feature to enjoy peer-to-peer communication with other attendees sharing similar interests.",
+            "Also organizers can esasily create groups and events, receive payments, communicate and track event attendees all within the app."
+        ],
+        "roles": [
+            "UI Design",
+            "UX Design",
+            "Research",
+            "Wireframing",
+            "Prototyping"
+        ],
+        "research": "To get started, I reached out to some of the target users, who are; event organisers and attendees. And also analysed some of the main competitors to better understand what the competitors were doing right and wrong, and how they were able to solve the problem.",
+        "competitiveAnalysis": "Here are some of the key takeaways i arrived at from analysing some of the competitors.",
+        "yamaha": [
+            "Complex and difficult to navigate",
+            "Difficulty to purchase"
+        ],
+        "fender": [
+            "Difficulty to navigate",
+            "Uses poor quality images"
+        ],
+        "ideation": "Once i got a clear picture of the users. I started adapting user flows and started generating design solutions in form paper wireframes - keeping in mind that the website had to be functional, easy to use and aesthetically pleasing to the users.",
+        "userFlows": "I broke down the purchase flow into a few simple steps so that users do not get confused.",
+        "implemtation": "When it was time to turn the wireframes into digital mockups, i started working on the homepage. To ensure that users are informed about the unique feature of the website, I showed a number of examples of what the feature is and how it works.",
+        "images": [
+            {
+                "title": "Onboarding",
+                "imageUrl": "/images/Gather.png"
+            },
+            {
+                "title": "User Personas",
+                "imageUrl": "/images/Gather/userPersonas.png"
+            },
+            {
+                "title": "Login",
+                "imageUrl": ""
+            },
+            {
+                "title": "Sketches",
+                "imageUrl": ""
+            },
+            {
+                "title": "Purchase flow",
+                "imageUrl": ""
+            },
+            {
+                "title": "Special feature",
+                "imageUrl": ""
+            },
+            {
+                "title": "Special feature product page",
+                "imageUrl": ""
+            },
+            {
+                "title": "Categories",
+                "imageUrl": ""
+            },
+            {
+                "title": "Best seller",
+                "imageUrl": ""
+            },
+            {
+                "title": "Product page",
+                "imageUrl": ""
+            },
+            {
+                "title": "Product page",
+                "imageUrl": ""
+            },
+            {
+                "title": "Footer",
+                "imageUrl": ""
+            }
+        ],
+        "id": 1
+    },
+    {
+        "title":  "Cookly",
+        "name": "#3. Cookly",
+        "background": "Crisp is a brand that designs and sells top quality high end musical instruments.",
+        "objective": "The goal of this project is to increase conversion, develop a never before seen feature and give an exotic feeling to the entire website, users pay a good amount of money for these products so they might as well have a nice time while browsing through the catalogue.",
+        "problemStatement": "Music Lovers/entusiast pay a lot of money to purchase high end musical instrusments and from observation, humans tend to judge a book by it's cover. That is, if a brands website doesn't scream luxury most consumers will not be convinced at first glance and would rather not take the risk of purchasinf luxury from such brands.",
+        "solutionProffered": "As a means of keeping users interested in the product, I came up with an idea where users can hear the sound of a musical instrument live from their devices. Each sound will be a live recording of the instrument. I also decided to go with a more elegant design style, by using smooth gradients, subtle animations and interactions that keep users engaged and want them to stay on the sit -  also created an experience where from the first time of getting onto the site, you are being led on by subtle interactions that will eventually lead to you buying and instrument.",
+        "roles": [
+            "UI Design",
+            "UX Design",
+            "Research",
+            "Wireframing",
+            "Prototyping"
+        ],
+        "research": "To get started, i reached out to some intrumentalist and also analysed some of the main competitors, I reviewed several similar websites to better understand what the competitors were doing right and wrong.",
+        "competitiveAnalysis": "After carefully analysing some of the competitors, here are some of the problems i found.",
+        "yamaha": [
+            "Complex and difficult to navigate",
+            "Difficulty to purchase"
+        ],
+        "fender": [
+            "Difficulty to navigate",
+            "Uses poor quality images"
+        ],
+        "ideation": "Once i got a clear picture of the users. I started adapting user flows and started generating design solutions in form paper wireframes - keeping in mind that the website had to be functional, easy to use and aesthetically pleasing to the users.",
+        "userFlows": "I broke down the purchase flow into a few simple steps so that users do not get confused.",
+        "implemtation": "When it was time to turn the wireframes into digital mockups, i started working on the homepage. To ensure that users are informed about the unique feature of the website, I showed a number of examples of what the feature is and how it works.",
+        "images": [
+            {
+                "title": "Landing page",
+                "imageUrl": "/images/Cookly.png"
+            },
+            {
+                "title": "Signup",
+                "imageUrl": ""
+            },
+            {
+                "title": "Login",
+                "imageUrl": ""
+            },
+            {
+                "title": "Sketches",
+                "imageUrl": ""
+            },
+            {
+                "title": "Purchase flow",
+                "imageUrl": ""
+            },
+            {
+                "title": "Special feature",
+                "imageUrl": ""
+            },
+            {
+                "title": "Special feature product page",
+                "imageUrl": ""
+            },
+            {
+                "title": "Categories",
+                "imageUrl": ""
+            },
+            {
+                "title": "Best seller",
+                "imageUrl": ""
+            },
+            {
+                "title": "Product page",
+                "imageUrl": ""
+            },
+            {
+                "title": "Product page",
+                "imageUrl": ""
+            },
+            {
+                "title": "Footer",
+                "imageUrl": ""
+            }
+        ],
+        "id": 2
+    }
+]

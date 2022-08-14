@@ -5,6 +5,8 @@ import {About} from '../Pages/About';
 import { AppRoutes } from './AppRoutes';
 import { Contact } from '../Pages/Contact';
 import { Projects } from '../Pages/Projects';
+import { Crisp } from '../Pages/Crisp';
+import { Gather } from '../Pages/Gather';
 
 export const MainRoute = ()=> {
 	return (
@@ -13,6 +15,8 @@ export const MainRoute = ()=> {
 			<Route path={AppRoutes.about} element={<About/>} />
 			<Route path={AppRoutes.contact} element={<Contact/>} />
 			<Route path={AppRoutes.projects} element={<Projects />} />
+			<Route path={AppRoutes.crisp} element={<Crisp />} />
+			<Route path={AppRoutes.Gather} element={<Gather />} />
 		</Routes>
 	);
 };

@@ -78,7 +78,7 @@ export const About = () => {
 						</Text>
 					</Box>
 				</VStack>
-				<CtaButton />
+				<CtaButton title={'Reach Out'}/>
 			</Box>
 		</HomeLayout>
 	);

@@ -10,7 +10,7 @@ interface IHomeLayoutProps{
 }
 
 export const HomeLayout = ({children}: IHomeLayoutProps) => {
-	const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
+	const [isLargerThan768] = useMediaQuery('(min-width: 1000px)');
 	return (
 		<Box
 			display={'flex'}

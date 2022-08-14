@@ -8,7 +8,7 @@ export const  NavBar = () => {
 	const isActive = location.pathname;
 	return (
 		<Flex 
-			display={['none', 'flex']}
+			display={['none', 'none', null, 'flex']}
 			direction={'column'}
 			justifyContent={'space-between'}
 			alignItems={'center'}
@@ -23,7 +23,7 @@ export const  NavBar = () => {
 			<Flex
 				direction={'column'}
 				alignItems={'center'}
-				p={8}
+				px={8} py={'20px'}
 			>
 				{
 					links.map(({label, path}) => (
@@ -32,7 +32,8 @@ export const  NavBar = () => {
 							as={RLink}
 							to={path}
 							color={isActive === path ? '#CA4F29' : '#F4F0EB'} 
-							mb={'20px'}
+							textShadow={isActive === path ? '0 0 8px #CA4F29' : 'none'}
+							py={'10px'}
 							textAlign={'center'}
 							fontSize={'14px'}
 							fontWeight={isActive === path ? '700' : '400'}
@@ -54,9 +55,9 @@ export const  NavBar = () => {
 								textShadow: '0 0 8px #CA4F29',
 								// transform: 'scaleY(1.15)',
 								transition: 'all .3s ease',
-								paddingY: '10px',
+								paddingY: '32px',
 								_after: {
-									mt: '28px',
+									mt: '32px',
 									transition: 'all .3s ease',
 								}
 							}}
