@@ -1,9 +1,9 @@
 /* eslint-disable */
-import { Box, HStack, Link, Text, Image, VStack, Container, Heading, List, ListItem, SimpleGrid, Flex, Spacer } from '@chakra-ui/react';
+import { Box, HStack, Link, Text, Image, VStack,  List, ListItem, SimpleGrid, chakra, UnorderedList, ListIcon } from '@chakra-ui/react';
 import React from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';
-import GatherData from '../Data/Gather.json';
+import CooklyData from '../Data/Cookly.json';
 // import { useNavigate, useParams } from 'react-router-dom';
 import { Link as RLink, useNavigate } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
@@ -11,8 +11,9 @@ import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
 import { CtaButton } from '../Components/CtaButton';
 import { NavigationButton } from '../Components/NavigationButton';
+import {BsDot} from 'react-icons/bs';
 
-export const Gather = () => {
+export const Cookly = () => {
 	const navigate = useNavigate();
 
 	return(
@@ -50,7 +51,7 @@ export const Gather = () => {
 						fontSize={'16px'}
 						fontWeight={'700'}
 					>
-						{GatherData.name}
+						{CooklyData.name}
 					</Text>
 				</HStack> 
 				<VStack
@@ -59,9 +60,9 @@ export const Gather = () => {
 					spacing={'10px'}
 					p={4}
 				>
-					<ImageBox imageTitle={GatherData.images[0].title} width={'60%'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[0].title} width={'60%'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[0].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[0].imageUrl} 
 							width= '100%'
 							vertical-align= 'top'
 						/>
@@ -84,28 +85,7 @@ export const Gather = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{GatherData.background}
-						</Text>
-					</VStack>
-					<VStack 
-						bg={'#F4F0EB'}
-						align={'flex-start'}
-						py={'16px'} px={'40px'}
-						borderRadius={'24px'}
-						w={'90%'}
-					>
-						<Text 
-							color={'#CA4F29'}
-							fontWeight={700}
-							fontSize={'sm'}
-						>
-							Objective
-						</Text>
-						<Text 
-							color={'#CA4F29'}
-							fontSize={'sm'}
-						>
-							{GatherData.objective}
+							{CooklyData.background}
 						</Text>
 					</VStack>
 					<VStack 
@@ -126,7 +106,7 @@ export const Gather = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{GatherData.problemStatement}
+							{CooklyData.problemStatement}
 						</Text>
 					</VStack>
 					<VStack 
@@ -143,18 +123,12 @@ export const Gather = () => {
 						>
 							Solution Proffered
 						</Text>
-						<List 
+						<Text 
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{
-								GatherData.solutionProffered.map((item, index) => {
-									return (
-										<ListItem mb={'16px'} key={index}>{item}</ListItem>
-									);
-								})
-							}
-						</List>
+							{CooklyData.solutionProffered}
+						</Text>
 					</VStack>
 					<Box
 						alignItems={'center'}
@@ -175,7 +149,7 @@ export const Gather = () => {
 							fontSize={'sm'}
 						>
 							{
-								GatherData.roles. map((item, index) => {
+								CooklyData.roles. map((item, index) => {
 									return (
 										<ListItem key={index}>{item}</ListItem>
 									);
@@ -188,25 +162,109 @@ export const Gather = () => {
 						align={'flex-start'}
 						py={'16px'} px={'40px'}
 						borderRadius={'24px'}
-						w={'83%'}
+						w={'90%'}
+						spacing={4}
+					>
+						<VStack
+							align={'flex-start'}	
+						>
+							<Text 
+								color={'#CA4F29'}
+								fontWeight={700}
+								fontSize={'sm'}
+							>	
+								Research / Interviews
+							</Text>
+							<Text 
+								color={'#CA4F29'}
+								fontSize={'sm'}
+							>
+								{CooklyData.research}
+							</Text>
+						</VStack>
+						<VStack
+							align={'flex-start'}
+						>
+							<Text 
+								color={'#CA4F29'}
+								fontWeight={700}
+								fontSize={'sm'}
+							>
+								These are the questions i asked them:
+							</Text>
+							<List
+								color={'#CA4F29'}
+								fontSize={'sm'}
+							>
+								{
+									CooklyData.interviewQuestions.map((item, index) => {
+										return (
+											<ListItem key={index}>
+												<ListIcon as={BsDot} color='#CA4F29.700' />
+												{item}
+											</ListItem>
+										);
+									})
+								}
+							</List>
+						</VStack>
+					</VStack>
+					<VStack 
+						bg={'#F4F0EB'}
+						align={'flex-start'}
+						py={'16px'} px={'40px'}
+						borderRadius={'24px'}
+						w={'90%'}
+						spacing={4}
 					>
 						<Text 
 							color={'#CA4F29'}
 							fontWeight={700}
 							fontSize={'sm'}
 						>
-								Research
+							Challenges & Solutions
 						</Text>
-						<Text 
-							color={'#CA4F29'}
-							fontSize={'sm'}
-						>
-							{GatherData.research}
-						</Text>
+						<Box>
+							
+							<Text 
+								color={'#CA4F29'}
+								fontSize={'sm'}
+								fontWeight={700}
+							>
+								Challenges #1
+							</Text>
+							<List 
+								color={'#CA4F29'}
+								fontSize={'sm'}
+							>
+								{
+									CooklyData.challenges.firstChallenge.map((item, index) => {
+										return (
+											<ListItem key={index}>{item}</ListItem>
+										);
+									})
+								}
+							</List>
+						</Box>
+						<Box>
+							<Text 
+								color={'#CA4F29'}
+								fontSize={'sm'}
+								fontWeight={700}
+							>
+								Solution
+							</Text>
+							<Text 
+								color={'#CA4F29'}
+								fontSize={'sm'}
+							>
+								{CooklyData.challenges.firstSolution}
+							</Text>
+						</Box>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[1].title} width={'685px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[1].title} width={'700px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[1].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[1].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
@@ -215,28 +273,7 @@ export const Gather = () => {
 						align={'flex-start'}
 						py={'16px'} px={'40px'}
 						borderRadius={'24px'}
-						w={'83%'}
-					>
-						<Text 
-							color={'#CA4F29'}
-							fontWeight={700}
-							fontSize={'sm'}
-						>
-								Interviews
-						</Text>
-						<Text 
-							color={'#CA4F29'}
-							fontSize={'sm'}
-						>
-							{GatherData.interviews}
-						</Text>
-					</VStack>
-					<VStack 
-						bg={'#F4F0EB'}
-						align={'flex-start'}
-						py={'16px'} px={'40px'}
-						borderRadius={'24px'}
-						w={'60%'}
+						w={'90%'}
 					>
 						<VStack 
 							align={'flex-start'}
@@ -246,93 +283,23 @@ export const Gather = () => {
 								color={'#CA4F29'}
 								fontWeight={700}
 								fontSize={'sm'}
-							>Interview questions</Text>
-							<VStack
-								align={'flex-start'}
-								spacing={'16px'}
-							>
-								<Text
-									color={'#CA4F29'}
-									fontWeight={700}
-									fontSize={'sm'}
-								>Attendees</Text>
-								<List 
-									color={'#CA4F29'}
-									fontSize={'sm'}
-								>
-									{
-										GatherData.interviewQuestions.attendees. map((item, index) => {
-											return (
-												<ListItem key={index}>{item}</ListItem>
-											);
-										})
-									}
-								</List>
-								<Text
-									color={'#CA4F29'}
-									fontWeight={700}
-									fontSize={'sm'}
-								>Organizers</Text>
-								<List 
-									color={'#CA4F29'}
-									fontSize={'sm'}
-								>
-									{
-										GatherData.interviewQuestions.organizers.map((item, index) => {
-											return (
-												<ListItem key={index}>{item}</ListItem>
-											);
-										})
-									}
-								</List>
-							</VStack>
-						</VStack>
-					</VStack>
-					<VStack 
-						bg={'#F4F0EB'}
-						align={'flex-start'}
-						py={'16px'} px={'40px'}
-						borderRadius={'24px'}
-						w={'83%'}
-						spacing={'16px'}
-					>
-						<Text
-							color={'#CA4F29'}
-							fontWeight={700}
-							fontSize={'sm'}
-						>Key takeaways</Text>
-						<VStack
-							align={'flex-start'}
-							spacing={'16px'}
-						>
+							>Challenges / Solution</Text>
 							<Text
 								color={'#CA4F29'}
 								fontWeight={700}
 								fontSize={'sm'}
-							>Attendees</Text>
+							>Challenge #2</Text>
+							<Text
+								color={'#CA4F29'}
+								fontWeight={700}
+								fontSize={'sm'}
+							>{CooklyData.challenges.secondChallenge}</Text>
 							<List 
 								color={'#CA4F29'}
 								fontSize={'sm'}
 							>
 								{
-									GatherData.keyTakeAways.attendees. map((item, index) => {
-										return (
-											<ListItem key={index}>{item}</ListItem>
-										);
-									})
-								}
-							</List>
-							<Text
-								color={'#CA4F29'}
-								fontWeight={700}
-								fontSize={'sm'}
-							>Organizers</Text>
-							<List 
-								color={'#CA4F29'}
-								fontSize={'sm'}
-							>
-								{
-									GatherData.keyTakeAways.organizers.map((item, index) => {
+									CooklyData.challenges.secondSolution. map((item, index) => {
 										return (
 											<ListItem key={index}>{item}</ListItem>
 										);
@@ -341,12 +308,19 @@ export const Gather = () => {
 							</List>
 						</VStack>
 					</VStack>
+					<ImageBox imageTitle={CooklyData.images[2].title} width={'639px'}  content={'View'}>
+						<Image 
+							src={process.env.PUBLIC_URL + CooklyData.images[2].imageUrl} 
+							vertical-align= 'top'
+							height={['auto','446px']}
+						/>
+					</ImageBox>
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
 						py={'16px'} px={'40px'}
 						borderRadius={'24px'}
-						w={'70%'}
+						w={'90%'}
 						spacing={'16px'}
 					>
 						<Text 
@@ -354,46 +328,32 @@ export const Gather = () => {
 							fontWeight={700}
 							fontSize={'sm'}
 						>
-								Competitive Analysis
+							Competitive Analysis
 						</Text>
 						<Text 
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{GatherData.competitiveAnalysis}
+							{CooklyData.competitiveAnalysis}
 						</Text>
-						<SimpleGrid columns={2} spacing={28}>
+						<SimpleGrid columns={2} spacing={16}>
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
 									fontWeight={700}
 									fontSize={'sm'}
-								>Eventbrite</Text>
-								<Text
-									color={'#CA4F29'}
-									fontWeight={700}
-									fontSize={'sm'}
-								>Pros</Text>
+								>Naija foods recipes</Text>
 								<List 
 									color={'#CA4F29'}
 									fontSize={'sm'}
 								>
 									{
-										GatherData.eventBrite.pros.map((item, index) => {
+										CooklyData.naijaFood.map((item, index) => {
 											return (
-												<ListItem key={index}>{item}</ListItem>
-											);
-										})
-									}
-								</List>
-								<List 
-									color={'#CA4F29'}
-									fontSize={'sm'}
-								>
-									{
-										GatherData.eventBrite.cons.map((item, index) => {
-											return (
-												<ListItem key={index}>{item}</ListItem>
+												<ListItem key={index}>
+													<ListIcon as={BsDot} color='#CA4F29.700' />
+													{item}
+												</ListItem>
 											);
 										})
 									}
@@ -404,32 +364,18 @@ export const Gather = () => {
 									color={'#CA4F29'}
 									fontWeight={700}
 									fontSize={'sm'}
-								>Meetup</Text>
-								<Text
-									color={'#CA4F29'}
-									fontWeight={700}
-									fontSize={'sm'}
-								>Pros</Text>
+								>Recipeas</Text>
 								<List 
 									color={'#CA4F29'}
 									fontSize={'sm'}
 								>
 									{
-										GatherData.meetUp.pros.map((item, index) => {
+										CooklyData.Recipeas.map((item, index) => {
 											return (
-												<ListItem key={index}>{item}</ListItem>
-											);
-										})
-									}
-								</List>
-								<List 
-									color={'#CA4F29'}
-									fontSize={'sm'}
-								>
-									{
-										GatherData.meetUp.cons.map((item, index) => {
-											return (
-												<ListItem key={index}>{item}</ListItem>
+												<ListItem key={index}>
+													<ListIcon as={BsDot} color='#CA4F29.700' />
+													{item}
+												</ListItem>
 											);
 										})
 									}
@@ -442,7 +388,7 @@ export const Gather = () => {
 						align={'flex-start'}
 						py={'16px'} px={'40px'}
 						borderRadius={'24px'}
-						w={'83%'}
+						w={'90%'}
 						// spacing={'16px'}
 					>
 						<Text 
@@ -457,7 +403,7 @@ export const Gather = () => {
 							fontSize={'sm'}
 							pb={'16px'}
 						>
-							{GatherData.revenueModel}
+							{CooklyData.revenueModel}
 						</Text>
 						<VStack
 							spacing={'16px'}
@@ -468,23 +414,41 @@ export const Gather = () => {
 								fontWeight={700}
 								fontSize={'sm'}
 							>Subscription packages</Text>
+							<Text 
+								color={'#CA4F29'}
+								fontSize={'sm'}
+								pb={'16px'}
+							>
+								{CooklyData.subscription}
+							</Text>
 							<List 
 								color={'#CA4F29'}
 								fontSize={'sm'}
+								spacing={1}
 							>
-								{
-									GatherData.subscription.map((item, index) => {
-										return (
-											<ListItem key={index}>{item}</ListItem>
-										);
-									})
-								}
+								<ListItem
+									width={'fit-content'}
+								> 
+									<ListIcon as={BsDot} color='#CA4F29.700' />
+									<chakra.span fontWeight={700} >Free </chakra.span> 
+									{CooklyData.subscription[0]}
+								</ListItem>
+								<ListItem >
+									<ListIcon as={BsDot} color='#CA4F29.700' />
+									<chakra.span fontWeight={700} >Regular</chakra.span> 
+									{CooklyData.subscription[1]}
+								</ListItem>
+								<ListItem >
+									<ListIcon as={BsDot} color='#CA4F29.700' />
+									<chakra.span fontWeight={700} >Premium</chakra.span>
+									{CooklyData.subscription[2]}
+								</ListItem>
 							</List>
 						</VStack>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[2].title} width={'427px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[3].title} width={'639px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[2].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[3].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
@@ -493,7 +457,7 @@ export const Gather = () => {
 						align={'flex-start'}
 						py={'16px'} px={'40px'}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={'90%'}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -506,9 +470,28 @@ export const Gather = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{GatherData.ideation}
+							{CooklyData.ideation}
 						</Text>
 					</VStack>
+					<ImageBox imageTitle={CooklyData.images[4].title} width={'639px'}  content={'View'}>
+						<Image 
+							src={process.env.PUBLIC_URL + CooklyData.images[4].imageUrl} 
+							vertical-align= 'top'
+							// height={[null, '446px']}
+						/>
+					</ImageBox>
+					<ImageBox imageTitle={CooklyData.images[5].title} width={'500px'}  content={'View'}>
+						<Image 
+							src={process.env.PUBLIC_URL + CooklyData.images[5].imageUrl} 
+							vertical-align= 'top'
+						/>
+					</ImageBox>
+					<ImageBox imageTitle={CooklyData.images[6].title} width={'500px'}  content={'View'}>
+						<Image 
+							src={process.env.PUBLIC_URL + CooklyData.images[6].imageUrl} 
+							vertical-align= 'top'
+						/>
+					</ImageBox>
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
@@ -527,68 +510,48 @@ export const Gather = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{GatherData.implemtation}
+							{CooklyData.implemtation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[3].title} width={'427px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[7].title} width={'500px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[3].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[7].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[4].title} width={'800px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[8].title} width={'427px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[4].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[8].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[5].title} width={'664px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[9].title} width={'664px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[5].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[9].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[6].title} width={'664px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[10].title} width={'765px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[6].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[10].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<VStack 
-						bg={'#F4F0EB'}
-						align={'flex-start'}
-						py={'16px'} px={'40px'}
-						borderRadius={'24px'}
-						w={'80%'}
-					>
-						<Text 
-							color={'#CA4F29'}
-							fontSize={'sm'}
-						>
-							{GatherData.userFlows}
-						</Text>
-					</VStack>
-					<ImageBox imageTitle={GatherData.images[7].title} width={'765px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[11].title} width={'765px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[7].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[11].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[8].title} width={'658px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[12].title} width={'765px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[8].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[12].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[9].title} width={'80%'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[13].title} width={'710px'}  content={'View'}>
 						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[9].imageUrl} 
-							vertical-align= 'top'
-						/>
-					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[10].title} width={'446px'}  content={'View'}>
-						<Image 
-							src={process.env.PUBLIC_URL + GatherData.images[10].imageUrl} 
+							src={process.env.PUBLIC_URL + CooklyData.images[13].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
@@ -597,8 +560,8 @@ export const Gather = () => {
 					mr={4}
 					my={'48px'}
 				>
-					<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'right'}  />
-					<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.crisp)} direction={'left'} />
+					{/* <NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'right'}  /> */}
+					<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.gather)} direction={'left'} />
 				</VStack>
 			</Box>
 		</HomeLayout>

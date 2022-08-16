@@ -4,5 +4,6 @@ export const AppRoutes = {
 	contact: '/contact',
 	projects: '/projects',
 	crisp: '/project/crisp',
-	Gather: '/project/gather'
+	gather: '/project/gather',
+	cookly: '/project/cookly'
 };

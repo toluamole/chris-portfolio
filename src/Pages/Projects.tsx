@@ -12,17 +12,6 @@ import { AppRoutes } from '../Routes/AppRoutes';
 
 export const Projects = () => {
 	const navigate = useNavigate();
-	// const animationKeyframes = keyframes`
-	// 	0% { opacity: 0; transform: scale(5); }
-	// 	50% {opacity: 0.7; transform: scale3d(1.5,1.5,1);}
-	// 	100% {transform:  opacity: 1, transform: scale(2)};
-	// `;
-
-	// const animation = `${animationKeyframes} .2s ease-in`;
-
-	// const handleNavigate = (projectId?: number) => {
-	// 	navigate(`project/${projectId}`);
-	// };
 	
 	return(
 		<HomeLayout>
@@ -94,7 +83,7 @@ export const Projects = () => {
 						borderRadius={'16px'}
 						bgColor={'#F4F0EB'}
 						p={'8px'}
-						onClick={() => navigate(AppRoutes.Gather)}
+						onClick={() => navigate(AppRoutes.gather)}
 					>
 						<Text 
 							alignSelf={'flex-start'}
@@ -118,6 +107,7 @@ export const Projects = () => {
 						borderRadius={'16px'}
 						bgColor={'#F4F0EB'}
 						p={'8px'}
+						onClick={() => navigate(AppRoutes.cookly)}
 					>
 						<Text 
 							alignSelf={'flex-start'}

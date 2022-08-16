@@ -403,7 +403,7 @@ export const Crisp = () => {
 					mr={4}
 					my={'48px'}
 				>
-					<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.Gather)} direction={'right'}  />
+					<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
 				</VStack>
 			</Box>
 		</HomeLayout>
