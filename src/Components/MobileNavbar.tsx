@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
-import { Flex, Text,  Link, Slide,} from '@chakra-ui/react';
+import React from 'react';
+import { Flex, Text,  Link,} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
 
-interface IMobileNav{
-	show: boolean
-}
+// interface IMobileNav{
+// 	show: boolean
+// }
 
-export const  MobileNavBar = ({show}:IMobileNav) => {
+export const  MobileNavBar = () => {
 	const location = useLocation();
 	const isActive = location.pathname;
 	return (

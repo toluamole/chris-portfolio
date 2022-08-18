@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Box, HStack, Link, Text, Image, VStack, Container, Heading, List, ListItem, SimpleGrid } from '@chakra-ui/react';
+import { Box, HStack, Link, Text, Image, VStack, List, ListItem, SimpleGrid } from '@chakra-ui/react';
 import React, {useState} from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';
@@ -9,7 +9,7 @@ import { Link as RLink } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
-import { CtaButton } from '../Components/CtaButton';
+// import { CtaButton } from '../Components/CtaButton';
 import { NavigationButton } from '../Components/NavigationButton';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -17,7 +17,7 @@ import 'react-image-lightbox/style.css';
 export const Crisp = () => {
 	const navigate = useNavigate();
 	const [isOpen, setIsOpen] = useState(false);
-  	const [imgIndex, setImgIndex] = useState(0);
+	const [imgIndex, setImgIndex] = useState(0);
 
 
 	return(

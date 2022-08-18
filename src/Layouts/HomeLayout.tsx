@@ -29,7 +29,7 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			overflow={'hidden'}
 		> 
 			{isLargerThan768 && <NavBar />}
-			{!isLargerThan768 && show && <MobileNavBar show={show} />}
+			{!isLargerThan768 && show && <MobileNavBar  />}
 			<Flex width={'100%'} direction={'column'}>
 				<Box mb={[2,'20px']} >
 					{isLargerThan768 && <Profile />}

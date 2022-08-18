@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Flex, Text,  Link,} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
