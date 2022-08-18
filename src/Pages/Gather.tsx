@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { Box, HStack, Link, Text, Image, VStack, Container, Heading, List, ListItem, SimpleGrid, Flex, Spacer } from '@chakra-ui/react';
-import React from 'react';
+import React, {useState} from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import GatherData from '../Data/Gather.json';
@@ -11,9 +11,13 @@ import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
 import { CtaButton } from '../Components/CtaButton';
 import { NavigationButton } from '../Components/NavigationButton';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 export const Gather = () => {
 	const navigate = useNavigate();
+	const [isOpen, setIsOpen] = useState(false);
+  	const [imgIndex, setImgIndex] = useState(0);
 
 	return(
 		<HomeLayout>
@@ -23,7 +27,7 @@ export const Gather = () => {
 				borderRadius={'24px'}
 				h={['85vh','74vh']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-				overflow={'auto'}
+				overflow={'hidden'}
 				cursor={'pointer'}
 			>
 				<HStack
@@ -36,7 +40,7 @@ export const Gather = () => {
 					boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
 					position={'sticky'}
 					top={0}
-					zIndex={'99999'}
+					// zIndex={'99999'}
 					spacing={'20px'}
 					justify={'flex-start'}
 					pl={6}
@@ -54,12 +58,14 @@ export const Gather = () => {
 					</Text>
 				</HStack> 
 				<VStack
-					align={'flex-start'}
-					justify={'center'}
+					align={'baseline'}
+					justify={'start'}
 					spacing={'10px'}
 					p={4}
+					h={'90%'}
+					overflowY={'scroll'}
 				>
-					<ImageBox imageTitle={GatherData.images[0].title} width={'60%'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[0].title} width={'60%'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[0].imageUrl} 
 							width= '100%'
@@ -204,7 +210,7 @@ export const Gather = () => {
 							{GatherData.research}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[1].title} width={'685px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[1].title} width={'685px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[1].imageUrl} 
 							vertical-align= 'top'
@@ -482,7 +488,7 @@ export const Gather = () => {
 							</List>
 						</VStack>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[2].title} width={'427px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[2].title} width={'427px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[2].imageUrl} 
 							vertical-align= 'top'
@@ -530,7 +536,7 @@ export const Gather = () => {
 							{GatherData.implemtation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[3].title} width={'427px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[3].title} width={'427px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[3].imageUrl} 
 							vertical-align= 'top'
@@ -568,39 +574,49 @@ export const Gather = () => {
 							{GatherData.userFlows}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[7].title} width={'765px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[7].title} width={'765px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[7].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[8].title} width={'658px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[8].title} width={'658px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[8].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[9].title} width={'80%'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[9].title} width={'80%'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[9].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[10].title} width={'446px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[10].title} width={'446px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[10].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-				</VStack>
-				<VStack
-					mr={4}
-					my={'48px'}
-				>
-					<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'right'}  />
-					<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.crisp)} direction={'left'} />
+					<VStack
+						alignSelf={'flex-end'}
+						mr={4}
+						py={'48px'}
+					>
+						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'right'}  />
+						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.crisp)} direction={'left'} />
+					</VStack>
 				</VStack>
 			</Box>
+			{isOpen && <Lightbox
+				mainSrc={GatherData.images[imgIndex].imageUrl}
+				nextSrc={GatherData.images[(imgIndex + 1) % GatherData.images.length].imageUrl}
+				prevSrc={GatherData.images[(imgIndex + 1) % GatherData.images.length].imageUrl}
+				onCloseRequest={() => setIsOpen(false)}
+				onMovePrevRequest={() => setImgIndex((imgIndex + GatherData.images.length - 1) % GatherData.images.length)}
+				onMoveNextRequest={() => setImgIndex((imgIndex + 1) % GatherData.images.length)}
+				enableZoom={false}
+			/>}
 		</HomeLayout>
 	);
 };

@@ -1,29 +1,24 @@
 /* eslint-disable */
 import { Box, HStack, Link, Text, Image, VStack, Container, Heading, List, ListItem, SimpleGrid } from '@chakra-ui/react';
-import React from 'react';
+import React, {useState} from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';
-import projectsData from '../Data/projects.json';
-import { useNavigate, useParams } from 'react-router-dom';
+import CrispData from '../Data/Crisp.json';
+import { useNavigate } from 'react-router-dom';
 import { Link as RLink } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
 import { CtaButton } from '../Components/CtaButton';
 import { NavigationButton } from '../Components/NavigationButton';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 export const Crisp = () => {
 	const navigate = useNavigate();
-	const location = useParams();
-	let projectId = 0; 
-	
-	if(location.projectId !== undefined){
-		projectId = parseInt(location.projectId); 
-	}
+	const [isOpen, setIsOpen] = useState(false);
+  	const [imgIndex, setImgIndex] = useState(0);
 
-	const handleNavigate = () => {
-		navigate(`project/${projectId}` );
-	};
 
 	return(
 		<HomeLayout>
@@ -33,7 +28,7 @@ export const Crisp = () => {
 				borderRadius={'24px'}
 				h={['85vh','74vh']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-				overflow={'auto'}
+				overflow={'hidden'}
 				cursor={'pointer'}
 			>
 				<HStack
@@ -46,7 +41,7 @@ export const Crisp = () => {
 					boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
 					position={'sticky'}
 					top={0}
-					zIndex={'99999'}
+					// zIndex={'99999'}
 					spacing={'20px'}
 					justify={'flex-start'}
 					pl={6}
@@ -60,18 +55,20 @@ export const Crisp = () => {
 						fontSize={'16px'}
 						fontWeight={'700'}
 					>
-						{projectsData[projectId].name}
+						{CrispData.name}
 					</Text>
 				</HStack> 
 				<VStack
-					align={'flex-start'}
-					justify={'center'}
+					align={'baseline'}
+					justify={'start'}
 					spacing={'10px'}
 					p={4}
+					h={'90%'}
+					overflowY={'scroll'}
 				>
-					<ImageBox imageTitle={projectsData[projectId].images[0].title} width={'60%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[0].title} width={'60%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[0].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[0].imageUrl} 
 							width= '100%'
 							vertical-align= 'top'
 						/>
@@ -93,7 +90,7 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].background}
+							{CrispData.background}
 						</Text>
 					</VStack>
 					<VStack 
@@ -114,18 +111,18 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].objective}
+							{CrispData.objective}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={projectsData[projectId].images[1].title} width={'60%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[1].title} width={'60%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[1].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[1].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={projectsData[projectId].images[2].title} width={'60%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[2].title} width={'60%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[2].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[2].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
@@ -147,7 +144,7 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].problemStatement}
+							{CrispData.problemStatement}
 						</Text>
 					</VStack>
 					<VStack 
@@ -168,7 +165,7 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].solutionProffered}
+							{CrispData.solutionProffered}
 						</Text>
 					</VStack>
 					<VStack 
@@ -191,7 +188,7 @@ export const Crisp = () => {
 							fontSize={'sm'}
 						>
 							{
-								projectsData[projectId].roles. map((item, index) => {
+								CrispData.roles. map((item, index) => {
 									return (
 										<ListItem key={index}>{item}</ListItem>
 									);
@@ -217,7 +214,7 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].research}
+							{CrispData.research}
 						</Text>
 					</VStack>
 					<VStack 
@@ -238,7 +235,7 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].competitiveAnalysis}
+							{CrispData.competitiveAnalysis}
 						</Text>
 						<SimpleGrid columns={2} spacing={28}>
 							<VStack align={'flex-start'}>
@@ -252,7 +249,7 @@ export const Crisp = () => {
 									fontSize={'sm'}
 								>
 									{
-										projectsData[projectId].yamaha. map((item, index) => {
+										CrispData.yamaha. map((item, index) => {
 											return (
 												<ListItem key={index}>{item}</ListItem>
 											);
@@ -271,7 +268,7 @@ export const Crisp = () => {
 									fontSize={'sm'}
 								>
 									{
-										projectsData[projectId].fender. map((item, index) => {
+										CrispData.fender. map((item, index) => {
 											return (
 												<ListItem key={index}>{item}</ListItem>
 											);
@@ -299,12 +296,12 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].ideation}
+							{CrispData.ideation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={projectsData[projectId].images[3].title} width={'60%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[3].title} width={'60%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[3].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[3].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
@@ -326,12 +323,12 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].userFlows}
+							{CrispData.userFlows}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={projectsData[projectId].images[4].title} width={'40%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[4].title} width={'40%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[4].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[4].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
@@ -353,59 +350,69 @@ export const Crisp = () => {
 							color={'#CA4F29'}
 							fontSize={'sm'}
 						>
-							{projectsData[projectId].implemtation}
+							{CrispData.implemtation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={projectsData[projectId].images[5].title} width={'80%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[5].title} width={'80%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[5].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[5].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={projectsData[projectId].images[6].title} width={'80%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[6].title} width={'80%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[6].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[6].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={projectsData[projectId].images[7].title} width={'80%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[7].title} width={'80%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[7].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[7].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={projectsData[projectId].images[8].title} width={'90%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[8].title} width={'90%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[8].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[8].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={projectsData[projectId].images[9].title} width={'90%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[9].title} width={'90%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[9].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[9].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={projectsData[projectId].images[10].title} width={'90%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[10].title} width={'90%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[10].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[10].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={projectsData[projectId].images[11].title} width={'90%'}  content={'view'}>
+					<ImageBox imageTitle={CrispData.images[11].title} width={'90%'}  content={'view'}  onclick={() => setIsOpen(true)}>
 						<Image 
-							src={process.env.PUBLIC_URL + projectsData[projectId].images[11].imageUrl} 
+							src={process.env.PUBLIC_URL + CrispData.images[11].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-				</VStack>
-				<VStack
-					mr={4}
-					my={'48px'}
-				>
-					<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
+					<VStack
+						alignSelf={'flex-end'}
+						mr={4}
+						py={'48px'}
+					>
+						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
+					</VStack>
 				</VStack>
 			</Box>
+			{isOpen && <Lightbox
+				mainSrc={CrispData.images[imgIndex].imageUrl}
+				nextSrc={CrispData.images[(imgIndex + 1) % CrispData.images.length].imageUrl}
+				prevSrc={CrispData.images[(imgIndex + 1) % CrispData.images.length].imageUrl}
+				onCloseRequest={() => setIsOpen(false)}
+				onMovePrevRequest={() =>setImgIndex((imgIndex + CrispData.images.length - 1) % CrispData.images.length)}
+				onMoveNextRequest={() => setImgIndex((imgIndex + 1) % CrispData.images.length)}
+				enableZoom={false}
+			/>}
 		</HomeLayout>
 	);
 };

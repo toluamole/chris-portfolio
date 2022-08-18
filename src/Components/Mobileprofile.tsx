@@ -15,9 +15,14 @@ import {
 } from '@chakra-ui/react';
 import profileImage from '../Assets/profileImage.svg';
 import ExpandedImage from '../Assets/ExpandedImage.png';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 
-export const Mobileprofile = () => {
+interface IProfileProp{
+	handleClick: () => void;
+	show: boolean;
+}
+
+export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<HStack
@@ -30,15 +35,23 @@ export const Mobileprofile = () => {
 			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 		>
 			<Box 
-				border={'1px'} 
+				border={'2px'} 
+				w={'40px'}
+				h={'40px'}
 				borderRadius={'50%'}
-				borderColor={'#C6C6D3'} 
+				borderColor={'#686875'} 
+				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 				p={2}
 			>
-				<HamburgerIcon 
-					color={'#C6C6D3'} 
+				{show === false ?<HamburgerIcon 
+					color={'#686875'} 
 					w={'5'} h={'5'}
-				/>
+					onClick= {handleClick}
+				/> : <CloseIcon
+					color={' #686875'} 
+					w={'5'} h={'5'}
+					onClick= {handleClick}
+				/> }
 			</Box>
 			<Text 
 				color={'#F4F0EB'} 

@@ -3,7 +3,9 @@ import { BsPinAngleFill } from 'react-icons/bs';
 import React from 'react';
 import { HomeLayout } from '../Layouts/HomeLayout';
 // import { projects } from '../Constants/ProjectsConstant';
-import projectsData from '../Data/projects.json';
+import CrispData from '../Data/Crisp.json';
+import GatherData from '../Data/Gather.json';
+import CooklyData from '../Data/Cookly.json';
 // import { motion } from 'framer-motion';
 import { CtaButton } from '../Components/CtaButton';
 import { useNavigate } from 'react-router-dom';
@@ -21,16 +23,17 @@ export const Projects = () => {
 				borderRadius={'24px'}
 				h={['85vh','74vh']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-				overflow={'auto'}
 				cursor={'pointer'}
+				overflow={'hidden'}
+				position={'relative'}
 			>
 				<HStack
 					border={'none'}
 					borderColor={'white'}
 					borderRadius={'24px 24px 0px 0px'}
-					bg={'white'}
+					bg={'#F4F0EB'}
 					height={'56px'}
-					max-width={'full'}
+					width={'100%'}
 					boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
 					position={'sticky'}
 					top={0}
@@ -49,10 +52,13 @@ export const Projects = () => {
 					</Text>
 				</HStack> 
 				<VStack
-					align={'flex-start'}
-					justify={'center'}
-					spacing={'30px'}
+					align={'baseline'}
+					justify={'start'}
+					spacing={'20px'}
 					p={4}
+					// h={'65vh'} w={'100%'}
+					h={'90%'}
+					overflowY={'scroll'}
 				>
 					<VStack 
 						border={'1px'}
@@ -68,11 +74,11 @@ export const Projects = () => {
 							fontWeight={700}
 							py={2}
 						>
-							{projectsData[0].name}
+							{CrispData.name}
 						</Text>
 						<ImageBox display='none' width={'100%'} content={'Open'}>
 							<Image 
-								src={process.env.PUBLIC_URL + projectsData[0].images[0].imageUrl} 
+								src={process.env.PUBLIC_URL + CrispData.images[0].imageUrl} 
 								width= '100%'
 								vertical-align= 'top'
 							/>
@@ -92,7 +98,7 @@ export const Projects = () => {
 							fontWeight={700}
 							py={2}
 						>
-							{projectsData[1].name}
+							{GatherData.name}
 						</Text>
 						<ImageBox display='none' width={'100%'} content={'Open'}>
 							<Image 
@@ -116,7 +122,7 @@ export const Projects = () => {
 							fontWeight={700}
 							py={2}
 						>
-							{projectsData[2].name}
+							{CooklyData.name}
 						</Text>
 						<ImageBox display='none' width={'100%'} content={'Open'}>
 							<Image 
@@ -141,8 +147,14 @@ export const Projects = () => {
 							I&apos;m sure you like what you see,you can always reach out, let&apos;s collaborate!.
 						</Text>
 					</Box>
+					<VStack
+						alignSelf={'flex-end'}
+						mr={4}
+						py={'48px'}
+					>
+						<CtaButton title={'Reach Out'} onClick={() => navigate(AppRoutes.contact)}  />
+					</VStack>
 				</VStack>
-				<CtaButton title={'Reach Out'} />
 			</Box>
 		</HomeLayout>
 	);

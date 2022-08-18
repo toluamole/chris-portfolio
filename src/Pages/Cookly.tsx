@@ -1,10 +1,9 @@
 /* eslint-disable */
 import { Box, HStack, Link, Text, Image, VStack,  List, ListItem, SimpleGrid, chakra, UnorderedList, ListIcon } from '@chakra-ui/react';
-import React from 'react';
+import React, {useState} from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import CooklyData from '../Data/Cookly.json';
-// import { useNavigate, useParams } from 'react-router-dom';
 import { Link as RLink, useNavigate } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { AppRoutes } from '../Routes/AppRoutes';
@@ -12,9 +11,13 @@ import { ImageBox } from '../Components/ImageBox';
 import { CtaButton } from '../Components/CtaButton';
 import { NavigationButton } from '../Components/NavigationButton';
 import {BsDot} from 'react-icons/bs';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 export const Cookly = () => {
 	const navigate = useNavigate();
+	const [isOpen, setIsOpen] = useState(false);
+  	const [imgIndex, setImgIndex] = useState(0);
 
 	return(
 		<HomeLayout>
@@ -24,7 +27,7 @@ export const Cookly = () => {
 				borderRadius={'24px'}
 				h={['85vh','74vh']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-				overflow={'auto'}
+				overflow={'hidden'}
 				cursor={'pointer'}
 			>
 				<HStack
@@ -37,7 +40,7 @@ export const Cookly = () => {
 					boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
 					position={'sticky'}
 					top={0}
-					zIndex={'99999'}
+					// zIndex={'99999'}
 					spacing={'20px'}
 					justify={'flex-start'}
 					pl={6}
@@ -55,12 +58,14 @@ export const Cookly = () => {
 					</Text>
 				</HStack> 
 				<VStack
-					align={'flex-start'}
-					justify={'center'}
+					align={'baseline'}
+					justify={'start'}
 					spacing={'10px'}
 					p={4}
+					h={'90%'}
+					overflowY={'scroll'}
 				>
-					<ImageBox imageTitle={CooklyData.images[0].title} width={'60%'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[0].title} width={'60%'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[0].imageUrl} 
 							width= '100%'
@@ -262,7 +267,7 @@ export const Cookly = () => {
 							</Text>
 						</Box>
 					</VStack>
-					<ImageBox imageTitle={CooklyData.images[1].title} width={'700px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[1].title} width={'700px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[1].imageUrl} 
 							vertical-align= 'top'
@@ -308,7 +313,7 @@ export const Cookly = () => {
 							</List>
 						</VStack>
 					</VStack>
-					<ImageBox imageTitle={CooklyData.images[2].title} width={'639px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[2].title} width={'639px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[2].imageUrl} 
 							vertical-align= 'top'
@@ -446,7 +451,7 @@ export const Cookly = () => {
 							</List>
 						</VStack>
 					</VStack>
-					<ImageBox imageTitle={CooklyData.images[3].title} width={'639px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[3].title} width={'639px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[3].imageUrl} 
 							vertical-align= 'top'
@@ -473,20 +478,20 @@ export const Cookly = () => {
 							{CooklyData.ideation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={CooklyData.images[4].title} width={'639px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[4].title} width={'639px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[4].imageUrl} 
 							vertical-align= 'top'
 							// height={[null, '446px']}
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CooklyData.images[5].title} width={'500px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[5].title} width={'500px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[5].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CooklyData.images[6].title} width={'500px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[6].title} width={'500px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[6].imageUrl} 
 							vertical-align= 'top'
@@ -513,56 +518,68 @@ export const Cookly = () => {
 							{CooklyData.implemtation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={CooklyData.images[7].title} width={'500px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[7].title} width={'500px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[7].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CooklyData.images[8].title} width={'427px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[8].title} width={'427px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[8].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CooklyData.images[9].title} width={'664px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[9].title} width={'664px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[9].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CooklyData.images[10].title} width={'765px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[10].title} width={'765px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[10].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CooklyData.images[11].title} width={'765px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[11].title} width={'765px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[11].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CooklyData.images[12].title} width={'765px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[12].title} width={'765px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[12].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CooklyData.images[13].title} width={'710px'}  content={'View'}>
+					<ImageBox imageTitle={CooklyData.images[13].title} width={'710px'}  content={'View'} onclick={() => setIsOpen(true)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[13].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
+					<VStack
+						alignSelf={'flex-end'}
+						mr={4}
+						py={'48px'}
+					>
+						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
+					</VStack>
 				</VStack>
-				<VStack
-					mr={4}
-					my={'48px'}
-				>
-					{/* <NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'right'}  /> */}
-					<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.gather)} direction={'left'} />
-				</VStack>
+				{isOpen && <Lightbox
+					// imageTitle={images[imgIndex].title}
+					// imageCaption={images[imgIndex].caption}
+					// CooklyData.images[(imgIndex +1 % CooklyData.images.length)].imageUrl
+					mainSrc={CooklyData.images[imgIndex].imageUrl}
+					nextSrc={CooklyData.images[(imgIndex + 1 ) % CooklyData.images.length].imageUrl}
+					prevSrc={CooklyData.images[(imgIndex + 1 )% CooklyData.images.length].imageUrl}
+					onCloseRequest={() => setIsOpen(false)}
+					onMovePrevRequest={() => setImgIndex((imgIndex + CooklyData.images.length - 1) % CooklyData.images.length)}
+					onMoveNextRequest={() => setImgIndex((imgIndex + 1) % CooklyData.images.length)}
+					enableZoom={false}
+				/>}
 			</Box>
 		</HomeLayout>
 	);

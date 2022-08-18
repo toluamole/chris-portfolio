@@ -8,9 +8,10 @@ interface IImageBoxProps{
 	width: string
 	content: string
 	display?: 'none' | 'block'
+	onclick?: () => void;
 }
 
-export const ImageBox = ({children, imageTitle, width,content, display}:IImageBoxProps) => {
+export const ImageBox = ({children, imageTitle, width,content, display, onclick}:IImageBoxProps) => {
 	const animationKeyframes = keyframes`
 		0% { opacity: 0; transform: scale(5); }
 		50% {opacity: 0.7; transform: scale3d(1.5,1.5,1);}
@@ -24,7 +25,8 @@ export const ImageBox = ({children, imageTitle, width,content, display}:IImageBo
 			borderRadius={'16px'}
 			bgColor={'#F4F0EB'}
 			p={2} mb={'28px'}
-			width={['60%',width]}
+			width={['100%',width]}
+			onClick={onclick}
 		>
 			<Box
 				as={motion.div}
