@@ -3,7 +3,11 @@ import { Flex, Text,  Link,} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
 
-export const  NavBar = () => {
+// interface IMobileNav{
+// 	show: boolean
+// }
+
+export const  MobileNavBar = () => {
 	const location = useLocation();
 	const isActive = location.pathname;
 	return (
@@ -16,14 +20,14 @@ export const  NavBar = () => {
 			borderColor={'#686875'}
 			borderRadius={'24px'}
 			// h={'100%'}
-			w={['25vw','18vw']}
+			w={'50%'}
 			boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 			mr={'20px'}
 		>
 			<Flex
 				direction={'column'}
 				alignItems={'center'}
-				px={8} py={'20px'}
+				px={[20, 10]} py={'20px'}
 			>
 				{
 					links.map(({label, path}) => (
@@ -44,8 +48,7 @@ export const  NavBar = () => {
 								position: 'relative',
 								borderBottom:'1.4px solid #686875',
 								boxShadow: '0 0 5px rgba(198,198,211,0.4)',
-								width: {base:'80px', md:'80px', lg: '100px', xl: '200px', '2xl': '350px'},
-								
+								width: {base:'150px', md:'200px'},
 								mt: '20px',
 							}}
 							_hover={{
@@ -71,6 +74,8 @@ export const  NavBar = () => {
 				direction={'column'}
 				py={10}
 				textAlign={'start'}
+				// w={'auto'}
+				px={2}
 			>
 				<Text 
 					color={'#CA4F29'}
@@ -90,7 +95,7 @@ export const  NavBar = () => {
 						bg: '#D83636',
 						w: '7px',
 						h: '7px',
-						left: '-10%',
+						left: '-8%',
 						bottom: '30%',
 						borderRadius:'50%'
 					}}

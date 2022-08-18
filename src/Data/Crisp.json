@@ -1,0 +1,80 @@
+
+{
+    "title": "Crisp",
+    "name": "#1. Crisp",
+    "background": "Crisp is a brand that designs and sells top quality high end musical instruments.",
+    "objective": "The goal of this project is to increase conversion, develop a never before seen feature and give an exotic feeling to the entire website, users pay a good amount of money for these products so they might as well have a nice time while browsing through the catalogue.",
+    "problemStatement": "Music Lovers/entusiast pay a lot of money to purchase high end musical instrusments and from observation, humans tend to judge a book by it's cover. That is, if a brands website doesn't scream luxury most consumers will not be convinced at first glance and would rather not take the risk of purchasinf luxury from such brands.",
+    "solutionProffered": "As a means of keeping users interested in the product, I came up with an idea where users can hear the sound of a musical instrument live from their devices. Each sound will be a live recording of the instrument. I also decided to go with a more elegant design style, by using smooth gradients, subtle animations and interactions that keep users engaged and want them to stay on the sit -  also created an experience where from the first time of getting onto the site, you are being led on by subtle interactions that will eventually lead to you buying and instrument.",
+    "roles": [
+        "UI Design",
+        "UX Design",
+        "Research",
+        "Wireframing",
+        "Prototyping"
+    ],
+    "research": "To get started, i reached out to some intrumentalist and also analysed some of the main competitors, I reviewed several similar websites to better understand what the competitors were doing right and wrong.",
+    "competitiveAnalysis": "After carefully analysing some of the competitors, here are some of the problems i found.",
+    "yamaha": [
+        "Complex and difficult to navigate",
+        "Difficulty to purchase"
+    ],
+    "fender": [
+        "Difficulty to navigate",
+        "Uses poor quality images"
+    ],
+    "ideation": "Once i got a clear picture of the users. I started adapting user flows and started generating design solutions in form paper wireframes - keeping in mind that the website had to be functional, easy to use and aesthetically pleasing to the users.",
+    "userFlows": "I broke down the purchase flow into a few simple steps so that users do not get confused.",
+    "implemtation": "When it was time to turn the wireframes into digital mockups, i started working on the homepage. To ensure that users are informed about the unique feature of the website, I showed a number of examples of what the feature is and how it works.",
+    "images": [
+        {
+            "title": "Landing page",
+            "imageUrl": "/images/Crisp.png"
+        },
+        {
+            "title": "Signup",
+            "imageUrl": "/images/Crisp/signup.png"
+        },
+        {
+            "title": "Login",
+            "imageUrl": "/images/Crisp/login.png"
+        },
+        {
+            "title": "Sketches",
+            "imageUrl": "/images/Crisp/sketch.png"
+        },
+        {
+            "title": "Purchase flow",
+            "imageUrl": "/images/Crisp/steps.png"
+        },
+        {
+            "title": "Special feature",
+            "imageUrl": "/images/Crisp/listen.png"
+        },
+        {
+            "title": "Special feature {product page",
+            "imageUrl": "/images/Crisp/magic.png"
+        },
+        {
+            "title": "Categories",
+            "imageUrl": "/images/Crisp/categories.png"
+        },
+        {
+            "title": "Best seller",
+            "imageUrl": "/images/Crisp/top4.png"
+        },
+        {
+            "title": "Product page",
+            "imageUrl": "/images/Crisp/shopPage.png"
+        },
+        {
+            "title": "Product page",
+            "imageUrl": "/images/Crisp/shopPage2.png"
+        },
+        {
+            "title": "Footer",
+            "imageUrl": "/images/Crisp/footer.png"
+        }
+    ],
+    "id": 0
+}

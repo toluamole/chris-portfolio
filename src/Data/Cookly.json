@@ -1,0 +1,126 @@
+{
+    "title": "Cookly",
+    "name": "#3. Cookly",
+    "background": "One thing Nigerians love is food! From cooking, to eating, to exploring. But what I’ve noticed is that it’s one thing to see the food you like, and it’s another thing to know how it’s made and have a step by step guide on how to make that same exact meal that has captured your belly. Most especially when it’s a local dish and you might need some extra assistance or further clarifications from the chef.In comes, COOKLY, an app that helps making cooking your favourite meal a whole lot easier, by connecting users with chefs … stress free.",
+    "problemStatement": "After carrying out some survey, I came to the conclusion that getting recipes for Nigerian dishes proves to be a very difficult task for people who enjoy and wish to learn how to make certain types of meals. This is due to the fact that most recipe platforms do not offer Nigerian meal options and the ones that do have poor user experiences and interfaces.It was also deteremined that most users require some extra assistance from the chefs which no existing platforms provide.",
+    "solutionProffered": [
+        " The solution to this problem is to design a product with an appealing User Interface without leaving out functionality and usability. ",
+        "The product will allow chefs upload recipes and video walkthroughs, while giving users the ability to interact with chefs personally if needed."
+    ],
+    "roles": [
+        "UI Design",
+        "UX Design",
+        "Research",
+        "Wireframing",
+        "Prototyping"
+    ],
+    "research": " I conducted user interviews with a number of users who I would like to refer to as “foodies”, meaning these users do not only enjoy eating good food, but they also enjoy making them. I wanted to get a deeper insight behind the frustrations they might face while searching for recipes online so I  prepared some questions and conducted the interview.", 
+   "interviewQuestions":[
+        "How often do you cook?",
+        " What are some of the current means you use to get recipes?",
+        "Tell me about the last time you tried to find a recipe online. How did it turn out?",
+        "How would you descibe your use of recipes while cooking?",
+        "Describe your deepest frustration while trying to get a recipe online.",
+        "  What are your thoughts on paying a fee to access quality recipes?"
+    ],
+   "challenges": {
+       "firstChallenge":[
+         " One major challenge was getting chefs to use the product.Chefs would ask;",
+         "'What exactly is in this for me', 'how do i benefit from this, good recipes are not cheap"
+       ],
+       "secondChallenge": [
+            "Another challenge was determining how and what chefs would get paid"
+       ],
+       "firstSolution": [
+            "In other to motivate chefs to use the product and upload quality content, chef's contents can be monetized depending on how well they are going on the platform."
+       ],
+       "secondSolution": [
+            "To determine what chefs get paid, i designed a rating system which allows users to rate chef's content out of 5.",
+            "The more ratings a chef gets, the more money they stand to make on the platform. This also keeps the chefs on their toes, pushing them to create more quality content and get interactive with users."
+       ]
+   },
+
+
+    "competitiveAnalysis": "After personally using and observing the listed applications, I identified major problems which I took note of and implemented solutions to while designing my product.",
+    "naijaFood": [
+        "Poor user interface desgin",
+        "poor user experience design",
+        "No search function.",
+        "No user-chef communication function"
+    ],
+    "Recipeas": [
+       "Poor User Experience design.",
+       "Poor User Interface design.",
+       "Too many distracting ads.",
+       "No user-chef communication function.",
+       "Low image upload quality.",
+       "No video tutorial."
+    
+    ],
+    "revenueModel": "In order to be generate enough income so as to be able to pay all eligible chefs, monthly and yearly consumer subscription packages were designed.",
+    "subscription": [
+        " For users who want to be eased into the functionality of the product before making any monetary commitments. These users have very limited functionality and cannot fully access recipes or message chefs.",
+        " These users have access to all functionality of the product asides from the ability to message chefs directly for assistance if needed.",
+        " These users have all the available functionality of the product."
+    ],
+    "ideation": "Based on my personal experience, i found that the best way to start the design process is by sketching out multiple layout options and building from there.",
+    "implemtation": "  After multiple sketches and iterations to the design layout, i came out with this final product design. Below are a few screens from the product.",
+    "images": [
+        {
+            "title": "User onboarding",
+            "imageUrl": "/images/Cookly/Onboarding.png"
+        },
+        {
+            "title": "Chef transactions page",
+            "imageUrl": "/images/Cookly/transactions.png"
+        },
+        {
+            "title": "Chef ratings",
+            "imageUrl": "/images/Cookly/ratings.png"
+        },
+        {
+            "title": "Subscription packages",
+            "imageUrl": "/images/Cookly/subscription.png"
+        },
+        {
+            "title": "Sketches",
+            "imageUrl": "/images/Cookly/sketch.png"
+        },
+        {
+            "title": "Low fidelity wireframes",
+            "imageUrl": "/images/Cookly/lowFidelity.png"
+        },
+        {
+            "title": "High fidelity mockups",
+            "imageUrl": "/images/Cookly/highFidelity.png"
+        },
+        {
+            "title": "User onboarding",
+            "imageUrl": "/images/Cookly/userOnboarding.png"
+        },
+        {
+            "title": "Sign up",
+            "imageUrl": "/images/Cookly/signUp.png"
+        },
+        {
+            "title": "Follow chefs",
+            "imageUrl": "/images/Cookly/followChefs.png"
+        },
+        {
+            "title": "User main pages",
+            "imageUrl": "/images/Cookly/mainPages.png"
+        },
+        {
+            "title": "Chef main pages",
+            "imageUrl": "/images/Cookly/chefMainPages.png"
+        },
+        {
+            "title": "Messenger",
+            "imageUrl": "/images/Cookly/messenger.png"
+        },
+        {
+            "title": "Video player",
+            "imageUrl": "/images/Cookly/videoPlayer.png"
+        }
+    ]
+}

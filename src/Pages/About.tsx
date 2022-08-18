@@ -1,9 +1,8 @@
-import { Box, Button, Text, VStack } from '@chakra-ui/react';
+import { Box, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import {Bio } from '../Constants/BioConstant';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { ScrollUpBtn } from '../Components/ScrollUpBtn';
+import { CtaButton } from '../Components/CtaButton';
 
 export const About = () => {
 	return (
@@ -12,12 +11,13 @@ export const About = () => {
 				border={'2px'}
 				borderColor={'#686875'}
 				borderRadius={'24px'}
-				h={['85vh','74vh']}
+				// maxH={'100'}
+				h={['86vh', '80vh', '80vh', '79vh', null, '86vh']}
+				// h={{base:'85vh', md:'80vh', lg: '74vh', '2xl': '86vh' }}
 				// w={['90vw','78vw']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				p={'20px'}
 				overflow={'auto'}
-				
 			>
 				<VStack
 					align={'flex-start'}
@@ -79,35 +79,7 @@ export const About = () => {
 						</Text>
 					</Box>
 				</VStack>
-				<Button 
-					float={'right'}
-					size={'lg'}
-					h={'40px'} px={'28px'}
-					color={'#F4F0EB'} 
-					fontSize={'14px'} 
-					bg={'#CA4F29'}
-					fontWeight={'400'}
-					borderRadius={'16px'}
-					lineHeight={'150%'}
-					mb={24}
-					_hover={{
-						bg:'#fff',
-						color:'#CA4F29',
-						borderLeftWidth: '10px',
-						borderRightWidth:'2px',
-						borderLeftColor: '#fff',
-						// transform: 'scaleX(1)',
-						transition: '0.2s all ease-in',
-					}}
-					p={6}
-				>
-					Reach out 
-					<ArrowForwardIcon 
-						ml={4}
-						h={'16px'} w={'16px'}
-					/>
-				</Button>
-				<ScrollUpBtn />
+				<CtaButton title={'Reach Out'}/>
 			</Box>
 		</HomeLayout>
 	);

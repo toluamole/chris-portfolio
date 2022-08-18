@@ -5,7 +5,7 @@ export const links: {label: string, path:string}[] = [
 	},
 	{
 		label: 'Projects',
-		path: '/project'
+		path: '/projects'
 	},
 	{
 		label: 'About',

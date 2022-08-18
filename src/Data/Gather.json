@@ -1,0 +1,127 @@
+{
+    "title": "Gather",
+    "name": "#2. Gather",
+    "background": "Gather is a mobile application that helps connects peers and people with similar interests by enabling users create groups aka gatherings, and also create and attend various events.",
+    "objective": "The goals of this project are simple; identify the pain points the ideal users encounter while searching for groups and events of interest and explore feasible ideas that best solves these needs.",
+    "problemStatement": "Finding groups of people and also events that align with a persons personality/interests can be very difficult, especially with how heavily saturated social media is with various contents that do not necessarily always match a users interests.People want a platform where they can easily meet their peers and organise/hosts events with them.",
+    "solutionProffered": [
+        "Gather is an app designed with a user-centred approach. Groups and Events are customised around the users Location and Interests.",
+        "Furthermore, everything the user needs to know is provided within the app including payment for tickets and in-app private/group chat feature to enjoy peer-to-peer communication with other attendees sharing similar interests.",
+        "Also organizers can esasily create groups and events, receive payments, communicate and track event attendees all within the app."
+    ],
+    "roles": [
+        "UI Design",
+        "UX Design",
+        "Research",
+        "Wireframing",
+        "Prototyping"
+    ],
+    "research": "To get started, I reached out to some of the target users, who are; event organisers and attendees. And also analysed some of the main competitors to better understand what the competitors were doing right and wrong, and how they were able to solve the problem.",
+    "interviews": "I conducted interviews with some of the target users to get a better understanding of their frustrations and needs when trying to create or attend events.",
+   "interviewQuestions":{
+        "attendees": [
+            "How do you hear about events around you?",
+            "What information about an even is most important to you?",
+            "How do you book tickets for events?",
+            "How do you connect/network with your peers?",
+            "What is it like tracking your events schedule?"
+        ],
+        "organizers": [
+            "Is knowing the attendees of your events important to you?",
+            "How do you create events",
+            "How do you get the right audience to your events?",
+            "How do you track events funds/payments?",
+            "How do you track attendees of your event"
+            
+        ]
+   },
+   "keyTakeAways": {
+        "attendees": [
+            "Users don’t only want to attend events, they also want to connect with their peers even before the event takes place.",
+            "Users go through a whole lot of stress to find events that align with their interests.",
+            "Users want a secure way to pay for events via the platform so as to avoid being scammed.",
+            "Users might miss events due to lack of reminders"
+        ],
+        "organizers": [
+            "Organisers would like to track the attendees of their events",
+            "Organisers would like a medium where they can interact with attendees prior an event.",
+            "Organizers need a way to track event funds/payments easily"
+                        
+        ]
+   },
+    "competitiveAnalysis": "Here are some of the key takeaways i arrived at from analysing some of the competitors.",
+    "eventBrite": {
+        "pros": [
+            "Easy to use",
+            "Easily accessible"
+        ],
+        "cons": [
+            "No chat feature",
+            "Can't track attendees"
+        ]
+    },
+    "meetUp": {
+        "pros": [
+            "Easy to use",
+            "Easily track Events"
+        ],
+        "cons": [
+            "There is no medium to unify attendees"
+        ]
+    },
+
+    "revenueModel": "Monthly or yearly Organiser Subscription packages.",
+    "subscription": [
+        "Regular plan is for users who only want to explore groups and events, these users do not wish to create groups or organise events.",
+        "Organiser plan is for users who want to create groups and organise events."
+    ],
+    "ideation": "Once i got a clear picture of the users. I started adapting user flows and started generating design solutions in form paper wireframes - keeping in mind that the website had to be functional, easy to use and aesthetically pleasing to the users.",
+    "userFlows": "Users (mainly organizers) have the “Piggybank” feature which is where they can track all poyments made for events.",
+    "implemtation": "When it was time to turn the wireframes into digital mockups, i started working on the homepage. To ensure that users are informed about the unique feature of the website, I showed a number of examples of what the feature is and how it works.",
+    "images": [
+        {
+            "title": "Onboarding",
+            "imageUrl": "/images/Gather.png"
+        },
+        {
+            "title": "User Personas",
+            "imageUrl": "/images/Gather/userPersonas.png"
+        },
+        {
+            "title": "Subscription plans",
+            "imageUrl": "/images/Gather/subscription.png"
+        },
+        {
+            "title": "Signup / Login",
+            "imageUrl": "/images/Gather/signin.png"
+        },
+        {
+            "title": "Account setup",
+            "imageUrl": "/images/Gather/setup.png"
+        },
+        {
+            "title": "Main pages",
+            "imageUrl": "/images/Gather/mainPages.png"
+        },
+        {
+            "title": "Messenger",
+            "imageUrl": "/images/Gather/messager.png"
+        },
+        {
+            "title": "Profiles",
+            "imageUrl": "/images/Gather/profiles.png"
+        },
+        {
+            "title": "Group porfile, event page and piggybank",
+            "imageUrl": "/images/Gather/groupEvents.png"
+        },
+        {
+            "title": "Create event",
+            "imageUrl": "/images/Gather/createEvents.png"
+        },
+        {
+            "title": "Create gathering and add card details",
+            "imageUrl": "/images/Gather/createGathering.png"
+        }
+    ]
+}
