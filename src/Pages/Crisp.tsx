@@ -19,6 +19,10 @@ export const Crisp = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [imgIndex, setImgIndex] = useState(0);
 
+	const _handleClick = (id:number) => {
+		setIsOpen(true);
+		setImgIndex(id);
+	}
 
 	return(
 		<HomeLayout>
@@ -66,7 +70,7 @@ export const Crisp = () => {
 					h={'90%'}
 					overflowY={'scroll'}
 				>
-					<ImageBox imageTitle={CrispData.images[0].title} width={'60%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[0].title} width={'60%'}  content={'view'}  onclick={() => -_handleClick(0)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[0].imageUrl} 
 							width= '100%'
@@ -114,13 +118,13 @@ export const Crisp = () => {
 							{CrispData.objective}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={CrispData.images[1].title} width={'60%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[1].title} width={'60%'}  content={'view'}  onclick={() => -_handleClick(1)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[1].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CrispData.images[2].title} width={'60%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[2].title} width={'60%'}  content={'view'}  onclick={() => -_handleClick(2)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[2].imageUrl} 
 							vertical-align= 'top'
@@ -299,7 +303,7 @@ export const Crisp = () => {
 							{CrispData.ideation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={CrispData.images[3].title} width={'60%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[3].title} width={'60%'}  content={'view'}  onclick={() => -_handleClick(3)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[3].imageUrl} 
 							vertical-align= 'top'
@@ -326,7 +330,7 @@ export const Crisp = () => {
 							{CrispData.userFlows}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={CrispData.images[4].title} width={'40%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[4].title} width={'40%'}  content={'view'}  onclick={() => -_handleClick(4)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[4].imageUrl} 
 							vertical-align= 'top'
@@ -353,43 +357,43 @@ export const Crisp = () => {
 							{CrispData.implemtation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={CrispData.images[5].title} width={'80%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[5].title} width={'80%'}  content={'view'}  onclick={() => -_handleClick(5)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[5].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CrispData.images[6].title} width={'80%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[6].title} width={'80%'}  content={'view'}  onclick={() => -_handleClick(6)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[6].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CrispData.images[7].title} width={'80%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[7].title} width={'80%'}  content={'view'}  onclick={() => -_handleClick(7)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[7].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CrispData.images[8].title} width={'90%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[8].title} width={'765px'}  content={'view'}  onclick={() => -_handleClick(8)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[8].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CrispData.images[9].title} width={'90%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[9].title} width={'765px'}  content={'view'}  onclick={() => -_handleClick(9)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[9].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CrispData.images[10].title} width={'90%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[10].title} width={'765px'}  content={'view'}  onclick={() => -_handleClick(10)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[10].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={CrispData.images[11].title} width={'90%'}  content={'view'}  onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={CrispData.images[11].title} width={'765px'}  content={'view'}  onclick={() => -_handleClick(11)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[11].imageUrl} 
 							vertical-align= 'top'

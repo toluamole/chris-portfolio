@@ -30,13 +30,15 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 		> 
 			{isLargerThan768 && <NavBar />}
 			{!isLargerThan768 && show && <MobileNavBar  />}
-			<Flex width={'100%'} direction={'column'}>
+			{/* <Flex width={'100%'} direction={'column'}> */}
+			<Box w={'100%'}>
 				<Box mb={[2,'20px']} >
 					{isLargerThan768 && <Profile />}
 					{!isLargerThan768 && <Mobileprofile handleClick={_handleClick} show={show}/>}
 				</Box>
-				<Box>{children}</Box>
-			</Flex>
+				{children}
+			</Box>
+			{/* </Flex> */}
 		</Flex>
 	);
 };
