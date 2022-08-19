@@ -38,7 +38,7 @@ export const GlobalStyles = css`
     
     .ril__navButtonPrev {
         display: block;
-        left: 8%;
+        // left: 8%;
         background: #fff url(process.env.PUBLIC_URL + /public/images/prevBtn.svg) no-repeat center;
         background-size: 10px 15px;
         backdrop-filter: opacity(1);
@@ -50,7 +50,7 @@ export const GlobalStyles = css`
 
     .ril__navButtonNext {
         display: block;
-        right: 8%;
+        // right: 8%;
         background: transparent url(process.env.PUBLIC_URL + /public/images/vector.svg) no-repeat center;
         background-size: 10px 15px;
         backdrop-filter: opacity(1);
@@ -72,7 +72,7 @@ export const GlobalStyles = css`
     .ril__toolbar {
         top: 40px;
         height: 50px;
-        right: 132px;
+        // right: 132px;
         cursor: pointer;
     }
     .ril__inner {
@@ -92,4 +92,8 @@ export const GlobalStyles = css`
     //     width: 800px;
     //     height: auto;
     // }
+
+    // @media (hover: hover) and (pointer: fine) {
+    //     :hover { opacity: 0; }
+    //   }
 `;

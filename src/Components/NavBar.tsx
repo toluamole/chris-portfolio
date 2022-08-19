@@ -2,6 +2,7 @@ import React from 'react';
 import { Flex, Text,  Link,} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
+import AnimatedCursor from 'react-animated-cursor';
 
 export const  NavBar = () => {
 	const location = useLocation();
@@ -15,7 +16,7 @@ export const  NavBar = () => {
 			border={'2px'}
 			borderColor={'#686875'}
 			borderRadius={'24px'}
-			// h={'100%'}
+			h={'100%'}
 			w={['25vw','18vw']}
 			boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 			mr={'20px'}
@@ -105,6 +106,7 @@ export const  NavBar = () => {
 					collaborations and jobs
 				</Text>
 			</Flex> 
+			<AnimatedCursor innerSize={20} clickables={['button', 'a']} />
 		</Flex>
 	);
 };

@@ -11,9 +11,10 @@ export const About = () => {
 				border={'2px'}
 				borderColor={'#686875'}
 				borderRadius={'24px'}
-				// maxH={'100'}
-				h={['86vh', '80vh', '80vh', '79vh', null, '86vh']}
-				// h={{base:'85vh', md:'80vh', lg: '74vh', '2xl': '86vh' }}
+				// maxH={'auto'}
+				// h={[sm:'86vh']}
+				h={{base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				// h={{base:'85vh', lg: '74vh', xl: '86vh', '2xl': '86vh' }}
 				// w={['90vw','78vw']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				p={'20px'}

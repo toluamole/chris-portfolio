@@ -25,7 +25,7 @@ export const Profile = () => {
 			border={'2px'}
 			borderColor={'#686875'}
 			borderRadius={'24px'}
-			height={'79px'}
+			height={'10vh'}
 			// width={['90vw','78vw']}
 			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 		>

@@ -12,7 +12,7 @@ export const Home = () => {
 				border={'2px'}
 				borderColor={'#686875'}
 				borderRadius={'24px'}
-				h={['85vh','74vh']}
+				h={{base:'85%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				p={4}
 			>
@@ -37,7 +37,7 @@ export const Home = () => {
 							color={'#CA4F29'} 
 							// px={6}
 						>
-							{HomeContents[0].text}
+							Hi! I’m Oladapo, a <b>product designer</b> from Lagos, Nigeria.Welcome to my portfolio!
 						</Text>
 					</Flex>
 					<Flex 

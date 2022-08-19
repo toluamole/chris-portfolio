@@ -21,7 +21,7 @@ export const Projects = () => {
 				border={'2px'}
 				borderColor={'#686875'}
 				borderRadius={'24px'}
-				h={['85vh','74vh']}
+				h={{base:'85%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				cursor={'pointer'}
 				overflow={'hidden'}

@@ -5,14 +5,14 @@ import { theme } from './Theme/BaseTheme';
 import '@fontsource/jura';
 import {Global} from '@emotion/react';
 import {GlobalStyles} from './Theme/GlobalStyles';
-import AnimatedCursor from 'react-animated-cursor';
+// import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
 	return (
 		<ChakraProvider theme={theme}>
 			<Global styles={GlobalStyles}/>
 			<MainRoute />
-			<AnimatedCursor innerSize={20} clickables={['button', 'a']} />
+			{/* <AnimatedCursor innerSize={20} clickables={['button', 'a']} /> */}
 		</ChakraProvider>
 	);
 }

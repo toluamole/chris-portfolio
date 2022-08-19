@@ -19,6 +19,11 @@ export const Gather = () => {
 	const [isOpen, setIsOpen] = useState(false);
   	const [imgIndex, setImgIndex] = useState(0);
 
+	const _handleClick = (id:number) => {
+		setIsOpen(true);
+		setImgIndex(id);
+	}
+
 	return(
 		<HomeLayout>
 			<Box
@@ -65,7 +70,7 @@ export const Gather = () => {
 					h={'90%'}
 					overflowY={'scroll'}
 				>
-					<ImageBox imageTitle={GatherData.images[0].title} width={'60%'}  content={'View'} onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={GatherData.images[0].title} width={'60%'}  content={'View'} onclick={() => _handleClick(0)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[0].imageUrl} 
 							width= '100%'
@@ -210,7 +215,7 @@ export const Gather = () => {
 							{GatherData.research}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[1].title} width={'685px'}  content={'View'} onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={GatherData.images[1].title} width={'685px'}  content={'View'} onclick={() => _handleClick(1)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[1].imageUrl} 
 							vertical-align= 'top'
@@ -488,7 +493,7 @@ export const Gather = () => {
 							</List>
 						</VStack>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[2].title} width={'427px'}  content={'View'} onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={GatherData.images[2].title} width={'427px'}  content={'View'} onclick={() => _handleClick(2)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[2].imageUrl} 
 							vertical-align= 'top'
@@ -536,25 +541,25 @@ export const Gather = () => {
 							{GatherData.implemtation}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[3].title} width={'427px'}  content={'View'} onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={GatherData.images[3].title} width={'427px'}  content={'View'} onclick={() => _handleClick(3)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[3].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[4].title} width={'800px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[4].title} width={'765px'}  content={'View'} onclick={() => _handleClick(4)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[4].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[5].title} width={'664px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[5].title} width={'664px'}  content={'View'} onclick={() => _handleClick(5)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[5].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[6].title} width={'664px'}  content={'View'}>
+					<ImageBox imageTitle={GatherData.images[6].title} width={'664px'}  content={'View'} onclick={() => _handleClick(6)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[6].imageUrl} 
 							vertical-align= 'top'
@@ -574,25 +579,25 @@ export const Gather = () => {
 							{GatherData.userFlows}
 						</Text>
 					</VStack>
-					<ImageBox imageTitle={GatherData.images[7].title} width={'765px'}  content={'View'} onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={GatherData.images[7].title} width={'765px'}  content={'View'} onclick={() => _handleClick(7)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[7].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[8].title} width={'658px'}  content={'View'} onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={GatherData.images[8].title} width={'658px'}  content={'View'} onclick={() => _handleClick(8)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[8].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[9].title} width={'80%'}  content={'View'} onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={GatherData.images[9].title} width={'765px'}  content={'View'} onclick={() => _handleClick(9)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[9].imageUrl} 
 							vertical-align= 'top'
 						/>
 					</ImageBox>
-					<ImageBox imageTitle={GatherData.images[10].title} width={'446px'}  content={'View'} onclick={() => setIsOpen(true)}>
+					<ImageBox imageTitle={GatherData.images[10].title} width={'446px'}  content={'View'} onclick={() => _handleClick(10)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[10].imageUrl} 
 							vertical-align= 'top'

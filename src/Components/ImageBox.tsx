@@ -63,11 +63,11 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 				}}
 				_hover={{
 					_after: {
-						opacity: 1,
-						animation: animation
+						opacity: {base: 0, lg:1},
+						animation: {base: 'none', lg:animation}
 					},
 					_before: {
-						opacity: 1
+						opacity: {base: 0, lg:1},
 					}
 				}}
 			>
