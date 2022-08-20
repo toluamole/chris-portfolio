@@ -8,7 +8,7 @@ export const GlobalStyles = css`
     },
 
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 5px;
         display: block;
     }
       
@@ -27,18 +27,18 @@ export const GlobalStyles = css`
 
     ::-webkit-scrollbar-track-piece:end {
         background: transparent;
-        margin-bottom: 50px; 
+        margin-bottom: 20px; 
     }
     
     ::-webkit-scrollbar-track-piece:start {
         background: transparent;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     
     .ril__navButtonPrev {
         display: block;
-        // left: 8%;
+        left: 30px;
         background: #fff url(process.env.PUBLIC_URL + /public/images/prevBtn.svg) no-repeat center;
         background-size: 10px 15px;
         backdrop-filter: opacity(1);
@@ -50,7 +50,7 @@ export const GlobalStyles = css`
 
     .ril__navButtonNext {
         display: block;
-        // right: 8%;
+        right: 30px;
         background: transparent url(process.env.PUBLIC_URL + /public/images/vector.svg) no-repeat center;
         background-size: 10px 15px;
         backdrop-filter: opacity(1);
@@ -70,7 +70,8 @@ export const GlobalStyles = css`
     }
 
     .ril__toolbar {
-        top: 40px;
+        top: 25px;
+        right: 10px;
         height: 50px;
         // right: 132px;
         cursor: pointer;

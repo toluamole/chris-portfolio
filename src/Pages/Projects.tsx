@@ -37,7 +37,7 @@ export const Projects = () => {
 					boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
 					position={'sticky'}
 					top={0}
-					zIndex={'99999'}
+					// zIndex={'99999'}
 					spacing={'20px'}
 					justify={'flex-start'}
 					pl={6}
@@ -54,7 +54,7 @@ export const Projects = () => {
 				<VStack
 					align={'baseline'}
 					justify={'start'}
-					spacing={'20px'}
+					spacing={'48px'}
 					p={4}
 					// h={'65vh'} w={'100%'}
 					h={'90%'}
@@ -64,7 +64,7 @@ export const Projects = () => {
 						border={'1px'}
 						borderRadius={'16px'}
 						bgColor={'#F4F0EB'}
-						p={'8px'}
+						// p={'8px'}
 						onClick={() => navigate(AppRoutes.crisp)}
 					>
 						<Text 
@@ -72,7 +72,7 @@ export const Projects = () => {
 							color={'#CA4F29'}
 							fontSize={'20px'}
 							fontWeight={700}
-							py={2}
+							p={2}
 						>
 							{CrispData.name}
 						</Text>
@@ -88,7 +88,7 @@ export const Projects = () => {
 						border={'1px'}
 						borderRadius={'16px'}
 						bgColor={'#F4F0EB'}
-						p={'8px'}
+						// p={2}
 						onClick={() => navigate(AppRoutes.gather)}
 					>
 						<Text 
@@ -96,7 +96,7 @@ export const Projects = () => {
 							color={'#CA4F29'}
 							fontSize={'20px'}
 							fontWeight={700}
-							py={2}
+							p={2} 
 						>
 							{GatherData.name}
 						</Text>
@@ -112,7 +112,7 @@ export const Projects = () => {
 						border={'1px'}
 						borderRadius={'16px'}
 						bgColor={'#F4F0EB'}
-						p={'8px'}
+						// p={'8px'}
 						onClick={() => navigate(AppRoutes.cookly)}
 					>
 						<Text 
@@ -120,7 +120,7 @@ export const Projects = () => {
 							color={'#CA4F29'}
 							fontSize={'20px'}
 							fontWeight={700}
-							py={2}
+							p={2}
 						>
 							{CooklyData.name}
 						</Text>
@@ -134,13 +134,13 @@ export const Projects = () => {
 					</VStack>
 					<Box
 						bgColor={'#F4F0EB'}
-						w={['260px','600px']}
-						h={['auto','auto']}
+						// w={['260px','600px']}
+						// h={['auto','auto']}
 						borderRadius={'16px'}
-						p={4}
+						px={'40px'} py={'16px'}
 					>
 						<Text 
-							fontSize={'sm'} 
+							fontSize={'16px'} 
 							fontWeight={500}
 							color={'#CA4F29'}
 						>
@@ -150,7 +150,7 @@ export const Projects = () => {
 					<VStack
 						alignSelf={'flex-end'}
 						mr={4}
-						py={'48px'}
+						// py={'48px'}
 					>
 						<CtaButton title={'Reach Out'} onClick={() => navigate(AppRoutes.contact)}  />
 					</VStack>

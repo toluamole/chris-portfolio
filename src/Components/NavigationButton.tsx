@@ -16,7 +16,7 @@ export const NavigationButton = ({title, onClick, direction}:ICtaButtonProps) =>
 			size={'xl'}
 			h={'30px'} px={'28px'}
 			color={'#F4F0EB'} 
-			fontSize={'14px'} 
+			fontSize={'16px'} 
 			bg={'#CA4F29'}
 			fontWeight={'400'}
 			borderRadius={'16px'}
