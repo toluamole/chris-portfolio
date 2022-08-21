@@ -40,7 +40,7 @@ export const Gather = () => {
 					<HStack
 						border={'none'}
 						borderColor={'white'}
-						borderRadius={'24px 24px 0px 0px'}
+						borderRadius={'20px 20px 0px 0px'}
 						bg={'#F4F0EB'}
 						height={'56px'}
 						width={'full'}
