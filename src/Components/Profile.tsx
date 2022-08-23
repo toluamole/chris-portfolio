@@ -45,22 +45,23 @@ export const Profile = () => {
 					Oladapo Awosika
 				</Text>
 			</Flex>
-			<Modal isOpen={isOpen} onClose={onClose}>
-				<ModalOverlay />
+			<Modal isCentered isOpen={isOpen} onClose={onClose}>
+				<ModalOverlay bg={'rgb(0 0 0 / 80%)'} />
 				<ModalCloseButton 
 					position={'fixed'}
 					color={'#F4F0EB'} 
-					top={'2%'}
-					right={'3%'} 
-					w='50px'
-					h={'50px'}
+					top={{base:'5%', lg:'5%'}}
+					right={'2.5%'} 
+					w='35px'
+					h={'35px'}
 					border={'2px'} 
 					borderColor={'#F4F0EB'} 
 					borderRadius={'50%'}
+					zIndex={'99999'}
 				/>
-				<ModalContent bg={'none'}>
-					<ModalBody w={'500px'}>
-						<Image src={ExpandedImage} boxSize={'100%'} />
+				<ModalContent bg={'none'}  >
+					<ModalBody  cursor={'pointer'}>
+						<Image  src={ExpandedImage} boxSize={'100%'} />
 					</ModalBody>
 				</ModalContent>
 			</Modal>

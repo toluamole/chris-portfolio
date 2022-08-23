@@ -33,6 +33,7 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 			borderRadius={'16px'}
 			height={'60px'}
 			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
+			cursor={'pointer'}
 		>
 			<Box 
 				border={'2px'} 
