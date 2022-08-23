@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Box, HStack, Link, Text, Image, VStack, Container, Heading, List, ListItem, SimpleGrid, Flex, Spacer } from '@chakra-ui/react';
+import { Box, HStack, Link, Text, Image, VStack, List, ListItem, SimpleGrid,} from '@chakra-ui/react';
 import React, {useState} from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';

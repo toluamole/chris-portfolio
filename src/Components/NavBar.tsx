@@ -38,7 +38,6 @@ export const  NavBar = () => {
 							textAlign={'center'}
 							fontSize={'14px'}
 							fontWeight={isActive === path ? '700' : '400'}
-							// position={'relative'}
 							_after={{
 								content: '""',
 								display: 'flex',
@@ -54,16 +53,22 @@ export const  NavBar = () => {
 								color:'#CA4F29',
 								fontWeight: 'bold',
 								textShadow: '0 0 8px #CA4F29',
-								// transform: 'scaleY(1.15)',
+								// transform: 'translateY(-5px)',
 								transition: 'all .3s ease',
-								paddingY: '32px',
-								_after: {
-									mt: '32px',
-									transition: 'all .3s ease',
-								}
+								// _after: {
+								// 	// mt: '32px',
+								// 	transform: 'translateY(-5px)',
+								// 	transition: 'all .3s ease',
+								// }
 							}}
 						>
-							{label}
+							<Text
+								_hover={{
+									// transform: 'translateY(-10px)',
+									top: '10px',
+									transition: 'all .3s ease',
+								}}
+							>{label}</Text>
 						</Link>
 					))
 				}

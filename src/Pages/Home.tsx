@@ -1,12 +1,14 @@
 import React from 'react';
-import { Box, Flex, Text, Link, VStack } from '@chakra-ui/react';
+import { Box, Flex, Text, VStack } from '@chakra-ui/react';
 import { HomeLayout } from '../Layouts/HomeLayout';
-import { HomeContents, Links } from '../Constants/HomeConstant';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { Link as RLink } from 'react-router-dom';
+import { HomeContents } from '../Constants/HomeConstant';
+import { useNavigate } from 'react-router-dom';
 import { AnimatedPages } from '../Components/AnimatedPages';
+import { NavigationButton } from '../Components/NavigationButton';
+import { AppRoutes } from '../Routes/AppRoutes';
 
 export const Home = () => {
+	const navigate = useNavigate();
 	return(
 		<AnimatedPages>
 			<HomeLayout >
@@ -17,11 +19,12 @@ export const Home = () => {
 					h={{base:'85%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 					boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 					p={4}
+					overflowY={'scroll'}
 				>
 					<Flex
 						direction={'column'}
 						alignItems={'flex-start'}
-						mb={'48px'}
+						// pb={'48px'}
 
 					>
 						<Flex 
@@ -79,49 +82,12 @@ export const Home = () => {
 						</Flex>
 					</Flex>
 					<VStack
-						spacing={10}
 						align={'flex-end'}
+						py={'48px'}
 					>
-						{
-							Links.map(link => {
-								return (
-									<Box
-										key={link.label}
-									>
-										<Link
-											as={RLink}
-											to={link.path}
-											lineHeight='1.2'
-											border='1px'
-											px={'40px'} py={'16px'}
-											borderRadius='16px'
-											fontSize='16px'
-											fontWeight='500'
-											bg='#CA4F29'
-											borderColor='#CA4F29'
-											color='#F4F0EB'
-											_hover={{
-												bg: '#fff',
-												color: '#CA4F29',
-												borderLeftWidth: '18px',
-												borderRightWidth: '2px',
-												borderLeftColor: '#fff',
-												// transform: 'scaleX(0.98)',
-												transition: '0.2s all ease-in',
-												borderColor: '#fff',
-												outline: 'none'
-											}}
-										>
-											{link.label}
-											<ArrowForwardIcon 
-												ml={8}
-												h={'16px'} w={'16px'}
-											/>
-										</Link>
-									</Box>
-								);
-							})
-						}
+						<NavigationButton title={'View Projects'} onClick={() => navigate(AppRoutes.projects)} direction={'right'}  />
+						<NavigationButton title={'About'} onClick={() => navigate(AppRoutes.about)} direction={'right'} />
+						<NavigationButton title={'Contact'} onClick={() => navigate(AppRoutes.contact)} direction={'right'} />
 					</VStack>
 				</Box>
 			</HomeLayout>

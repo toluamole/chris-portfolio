@@ -17,7 +17,7 @@ export const  AnimatedPages = ({children}: IAnimatedPages) => {
 			// x: 0,
 			transition: {
 				duration: .5,
-				ease: 'easeIn'
+				ease: 'linear'
 			},
 		},
 		exit: {opacity: 0},

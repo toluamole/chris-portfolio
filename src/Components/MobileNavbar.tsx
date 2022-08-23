@@ -2,32 +2,45 @@ import React from 'react';
 import { Flex, Text,  Link,} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
+import { MotionBox } from './AnimatedPages';
 
-// interface IMobileNav{
-// 	show: boolean
-// }
+interface IMobileNav{
+	show: boolean
+}
 
-export const  MobileNavBar = () => {
+export const  MobileNavBar = ({show}:IMobileNav) => {
 	const location = useLocation();
 	const isActive = location.pathname;
 	return (
-		<Flex 
-			// display={['none', 'none', null, 'flex']}
-			direction={'column'}
+		<MotionBox
+			animate={{
+				transform: show ? '0' : 'translateX(-30vw)',
+				width: show ? '250px' : 0,
+				padding:show ? '20px' : 0,
+				opacity: show ? 1 : 0,
+				marginRight: show ? '20px' : 0,
+				transition: {
+					duration: 0.5
+				}
+			}}
+			display={'flex'}
+			flexDirection={'column'}
 			justifyContent={'space-between'}
 			alignItems={'center'}
 			border={'2px'}
 			borderColor={'#686875'}
 			borderRadius={'24px'}
 			// h={'100%'}
-			w={'50%'}
+			w={'55vw'}
+			h={'92vh'}
 			boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
-			mr={'20px'}
+			// mr={'20px'}
+			cursor={'pointer'}
 		>
 			<Flex
 				direction={'column'}
 				alignItems={'center'}
-				px={[20, 10]} py={'20px'}
+				py={'20px'}
 			>
 				{
 					links.map(({label, path}) => (
@@ -48,7 +61,7 @@ export const  MobileNavBar = () => {
 								position: 'relative',
 								borderBottom:'1.4px solid #686875',
 								boxShadow: '0 0 5px rgba(198,198,211,0.4)',
-								width: {base:'150px', md:'200px'},
+								width: {base:'170px', md:'200px'},
 								mt: '20px',
 							}}
 							_hover={{
@@ -110,6 +123,6 @@ export const  MobileNavBar = () => {
 					collaborations and jobs
 				</Text>
 			</Flex> 
-		</Flex>
+		</MotionBox>
 	);
 };
