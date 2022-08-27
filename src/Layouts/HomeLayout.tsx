@@ -25,11 +25,11 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
-			p={['10px', '30px']}
+			p={['10px',null, '20px',null, '30px']}
 			overflow={'hidden'}
 		> 
-			{isLargerThan768 && <NavBar />}
-			{!isLargerThan768 && <MobileNavBar show={show}  />}
+			{isLargerThan768 ? <NavBar /> : <MobileNavBar show={show}  /> }
+			{/* {!isLargerThan768 && <MobileNavBar show={show}  />} */}
 			{/* <Flex width={'100%'} direction={'column'}> */}
 			<MotionBox
 				w={'100%'}
@@ -41,8 +41,8 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 				}}
 			>
 				<Box mb={[2,'20px']} >
-					{isLargerThan768 && <Profile />}
-					{!isLargerThan768 && <Mobileprofile handleClick={_handleClick} show={show}/>}
+					{isLargerThan768 ? <Profile /> : <Mobileprofile handleClick={_handleClick} show={show}/>}
+					{/* {!isLargerThan768 && <Mobileprofile handleClick={_handleClick} show={show}/>} */}
 				</Box>
 				{children}
 			</MotionBox>

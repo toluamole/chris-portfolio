@@ -54,8 +54,8 @@ export const Projects = () => {
 				<VStack
 					align={'baseline'}
 					justify={'start'}
-					spacing={'48px'}
-					p={4}
+					spacing={[4, '48px']}
+					p={[2,4]}
 					// h={'65vh'} w={'100%'}
 					h={'90%'}
 					overflowY={'scroll'}
@@ -76,7 +76,7 @@ export const Projects = () => {
 						>
 							{CrispData.name}
 						</Text>
-						<ImageBox imageTitle={CrispData.images[0].title} width={'100%'}  content={'view'}>
+						<ImageBox display='none' width={'100%'}  content={'Open'}>
 							<Image 
 								src={process.env.PUBLIC_URL + '/images/Crisp.png'} 
 								width= '100%'
@@ -137,7 +137,7 @@ export const Projects = () => {
 						// w={['260px','600px']}
 						// h={['auto','auto']}
 						borderRadius={'16px'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={'16px'}
 					>
 						<Text 
 							fontSize={'16px'} 
