@@ -5,6 +5,7 @@ export const GlobalStyles = css`
         font-size: 12px;
         font-family: 'Jura', sans-serif;
         scroll-behavior: smooth-scroll;
+        background: #0F0E0E;
     },
 
     ::-webkit-scrollbar {
@@ -94,7 +95,8 @@ export const GlobalStyles = css`
     //     height: auto;
     // }
 
-    // @media (hover: hover) and (pointer: fine) {
-    //     :hover { opacity: 0; }
-    //   }
+    // @media (hover: hover) {
+    //     button:hover { bg: #CA4F29; color:#F4F0EB }
+    //     button p:hover{transform: none; margin: 0; transition: none}
+    // }
 `;

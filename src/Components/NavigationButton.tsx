@@ -24,14 +24,14 @@ export const NavigationButton = ({title, onClick, direction}:ICtaButtonProps) =>
 			lineHeight={'150%'}
 			onClick={onClick}
 			_hover={{
-				bg:'#F4F0EB',
-				color:'#CA4F29',
+				bg:{lg:'#F4F0EB'},
+				color:{lg:'#CA4F29'},
 				transition: '0.2s all ease-in',
 			}}
 		>
 			<Text
 				_hover={{
-					marginRight: '10px',
+					marginRight: {lg:'10px'},
 					transition: '0.2s all ease-in'
 				}}
 			>{title}</Text>

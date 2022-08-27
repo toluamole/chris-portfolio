@@ -23,8 +23,8 @@ export const CtaButton = ({title, onClick}:ICtaButtonProps) => {
 			my={'48px'} mr={4}
 			onClick={onClick}
 			_hover={{
-				bg:'#F4F0EB',
-				color:'#CA4F29',
+				bg:{lg:'#F4F0EB'},
+				color:{base:'#F4F0EB',lg:'#CA4F29'},
 				// borderLeftWidth: '10px',
 				// borderRightWidth:'2px',
 				// borderLeftColor: '#fff',
@@ -35,7 +35,7 @@ export const CtaButton = ({title, onClick}:ICtaButtonProps) => {
 		>
 			<Text
 				_hover={{
-					marginRight: '10px',
+					marginRight: {base:'0',lg:'10px'},
 					transform: 'scale(1)',
 					transition: '0.2s all ease-in'
 				}}
