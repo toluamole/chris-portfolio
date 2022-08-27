@@ -16,11 +16,25 @@ import {
 import profileImage from '../Assets/profileImage.svg';
 import ExpandedImage from '../Assets/ExpandedImage.png';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { MotionBox } from './AnimatedPages';
 
 interface IProfileProp{
 	handleClick: () => void;
 	show: boolean;
 }
+const online = {
+	initial: {
+		backgroundColor: '#D83636',
+	},
+	animate: {
+		backgroundColor: ['#D83636','#4DD836', '#D83636'],
+		transition: {
+			duration: 3,
+			ease: 'linear',
+			delay: 25
+		}
+	}
+};
 
 export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -62,7 +76,11 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 				Oladapo Awosika
 			</Text>
 			<Avatar size={'sm'} src={profileImage} cursor={'pointer'} onClick={onOpen}>
-				<AvatarBadge  boxSize='.8em' bg='#D83636' borderColor={'#15191A'} />
+				<MotionBox
+					variants={online}
+					initial={'initial'}
+					animate={'animate'}
+				><AvatarBadge  boxSize='.8em' bg='#4DD836'  borderColor={'#15191A'} /></MotionBox>
 			</Avatar>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />

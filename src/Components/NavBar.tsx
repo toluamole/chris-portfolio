@@ -93,7 +93,7 @@ export const  NavBar = () => {
 					_before={{
 						content:  '""',
 						position: 'absolute',
-						bg: '#D83636',
+						bg: '#4DD836',
 						w: '7px',
 						h: '7px',
 						left: '-10%',

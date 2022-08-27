@@ -1,4 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
+import { ProgressTheme as Progress, } from './Components/Progress';
 
 const breakpoints = {
 	sm: '30em',
@@ -18,5 +19,8 @@ export const theme = extendTheme({
 	fonts: {
 		heading: 'Jura',
 		body: 'Jura'
+	},
+	components: {
+		Progress
 	}
 });

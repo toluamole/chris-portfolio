@@ -34,7 +34,7 @@ export const Profile = () => {
 				ml={4}
 			>
 				<Avatar src={profileImage} cursor={'pointer'} onClick={onOpen}>
-					<AvatarBadge  boxSize='.8em' bg='#D83636' borderColor={'#15191A'} />
+					<AvatarBadge  boxSize='.8em' bg='#4DD836' borderColor={'#15191A'} />
 				</Avatar>
 				<Text 
 					color={'#F4F0EB'} 
