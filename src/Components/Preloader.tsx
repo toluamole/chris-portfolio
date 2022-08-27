@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import backgroundImage from '../Assets/backgroundImage.svg';
 import { Progress } from '@chakra-ui/react';
 import { MotionBox } from './AnimatedPages';
+import { AnimatePresence } from 'framer-motion';
 
 const firstVariant = {
 	initial: {
@@ -10,7 +11,7 @@ const firstVariant = {
 	},
 	hidden: {
 		opacity:[0, 1, 1, 0],
-		y: ['0', '-1em', '-1em', '-1.5em'],
+		y: ['0', '-.5em', '-.5em', '-.5em'],
 		translateZ: '10px',
 		transition: {
 			duration: 2,
@@ -18,6 +19,9 @@ const firstVariant = {
 			delay: 0.8
 		},
 		transitionEnd: {y: '-1.5em'}
+	},
+	exit: {
+		y: '-1em'
 	}
 };
 
@@ -27,14 +31,14 @@ const secondVariant = {
 		opacity: 0,
 	},
 	hidden: {
-		opacity:[0, 1, 1, 0],
-		y: ['0', '-1em', '-1em', '-1.5em'],
+		opacity:[0, 0, 0, 1, 1],
+		y:  '-1.5em',
 		transition: {
-			duration: 2,
-			ease: 'easeOut',
-			delay: 3
+			duration: 3,
+			ease: 'anticipate',
+			delay: 1
 		},
-		transitionEnd: {opacity: 0}
+		transitionEnd: {opacity:0}
 	}
 };
 
@@ -45,7 +49,7 @@ const blinkingText = {
 	animate: {
 		opacity: 1,
 		transition: {
-			ease: 'easeIn',
+			ease: [0.42, 0, 0.58, 1],
 			duration: 0.5,
 			repeat: Infinity,
 			delay: 5
@@ -57,12 +61,13 @@ const thirdVariant = {
 		opacity: 0,
 	},
 	hidden: {
-		opacity: 1,
+		opacity: [0, 0, 0, 1, 1],
 		// y: '-1em',
+		y: '-4em',
 		transition: {
 			duration: 0.8,
-			ease: [0.42, 0, 0.58, 1],
-			delay: 5
+			ease: 'anticipate',
+			delay: 4
 		},
 	}
 };
@@ -96,83 +101,92 @@ export const Preloader = () => {
 		}, 5000);
 	}, [width]);
 	return(
-		<Flex
-			h={'100vh'}
-			bgImage={`url('${backgroundImage}')`}
-			bgPosition='center'
-			bgSize={'cover'}
-			bgRepeat={'no-repeat'}
-			direction={'column'}
-			alignItems={'center'}
-			justifyContent={'center'}
-			color={' rgba(217, 217, 217, 1)'}
-		>
-			<VStack
-				// spacing={'4px'}
+		<AnimatePresence key={'box'}>
+			<Flex
+				h={'100vh'}
+				bgImage={`url('${backgroundImage}')`}
+				bgPosition='center'
+				bgSize={'cover'}
+				bgRepeat={'no-repeat'}
+				direction={'column'}
+				alignItems={'center'}
+				justifyContent={'center'}
+				color={' rgba(217, 217, 217, 1)'}
 			>
-				<MotionBox 
-					variants={firstVariant}
-					initial={'initial'}
-					animate={'hidden'}
-				><Text fontSize={['20px','36px']}>I DESIGNED THIS EXPERINCE FOR YOU</Text></MotionBox>
-				<MotionBox
-					variants={secondVariant}
-					initial={'initial'}
-					animate={'hidden'}
+				<VStack
+					// spacing={'4px'}
 				>
-					<Text fontSize={['20px','36px']}>AND ME</Text>
-				</MotionBox>
-			</VStack>
-			<VStack
-				spacing={4}
-			>
-				<MotionBox
-					variants={blinkingText}
-					initial={'initial'}
-					animate={'animate'}
-				>
-					<Text fontSize={['20px','24px']}>Decrypting messages</Text>
-				</MotionBox>
-				<MotionBox
-					variants={thirdVariant}
-					initial={'initial'}
-					animate={'hidden'}
-				>
-					<Progress 
-						value={width} 
-						size='xs' 
-						width={'380px'}
-						variant="primary"
-						className='progressBar'
-						transitionTimingFunction={'ease'}
-						transition={'all'}
-						transitionDuration={'0.2'}
-						// isIndeterminate
-					/>
-				</MotionBox>
-			</VStack>
-			<VStack
-				alignSelf={'flex-end'}
-				justifyContent={'flex-end'}
-				position={'fixed'}
-				bottom={10}
-				right={10}
-			>
-				<MotionBox
-					variants={quoteVariant}
-					initial={'initial'}
-					animate={'hidden'}
-				>
-					<Text 
-						textAlign={'right'}
-						w={'200px'}
-						fontSize={'20px'}
+					<MotionBox 
+						variants={firstVariant}
+						initial={'initial'}
+						animate={'hidden'}
+						exit={'exit'}
+					><Text fontSize={['20px','36px']}>I DESIGNED THIS EXPERINCE FOR YOU</Text></MotionBox>
+					<MotionBox
+						variants={secondVariant}
+						initial={'initial'}
+						animate={'hidden'}
 					>
-						&quot;Look at usual things with unusual eyes&quot; <br/>
-						<chakra.span textAlign={'right'}> -Vico Magistretti</chakra.span>
-					</Text>
-				</MotionBox>
-			</VStack>
-		</Flex>
+						<Text fontSize={['20px','36px']}>AND ME</Text>
+					</MotionBox>
+				</VStack>
+				<VStack
+					spacing={4}
+				>
+					<MotionBox
+						variants={thirdVariant}
+						initial={'initial'}
+						animate={'hidden'}
+						display={'flex'}
+						flexDirection={'column'}
+						alignItems={'center'}
+						justifyContent={'center'}
+					>
+						<MotionBox
+
+							variants={blinkingText}
+							initial={'initial'}
+							animate={'animate'}
+							mb={4}
+						>
+							<Text fontSize={['20px','24px']}>Decrypting messages</Text>
+						</MotionBox>
+						<Progress 
+							value={width} 
+							size='xs' 
+							width={'380px'}
+							variant="primary"
+							className='progressBar'
+							transitionTimingFunction={'0.42, 0, 0.58, 1'}
+							transition={'all'}
+							transitionDuration={'0.2'}
+							// isIndeterminate
+						/>
+					</MotionBox>
+				</VStack>
+				<VStack
+					alignSelf={'flex-end'}
+					justifyContent={'flex-end'}
+					position={'fixed'}
+					bottom={10}
+					right={10}
+				>
+					<MotionBox
+						variants={quoteVariant}
+						initial={'initial'}
+						animate={'hidden'}
+					>
+						<Text 
+							textAlign={'right'}
+							w={'200px'}
+							fontSize={'20px'}
+						>
+							&quot;Look at usual things with unusual eyes&quot; <br/>
+							<chakra.span textAlign={'right'}> -Vico Magistretti</chakra.span>
+						</Text>
+					</MotionBox>
+				</VStack>
+			</Flex>
+		</AnimatePresence>
 	);
 };

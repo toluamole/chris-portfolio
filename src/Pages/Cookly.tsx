@@ -66,8 +66,8 @@ export const Cookly = () => {
 				<VStack
 					align={'baseline'}
 					justify={'start'}
-					spacing={'10px'}
-					p={4}
+					spacing={[4,'8px']}
+					p={[2,4]}
 					h={'90%'}
 					overflowY={'scroll'}
 				>
@@ -81,9 +81,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -102,9 +102,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'87%'}
+						w={['320px ','87%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -123,9 +123,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -144,7 +144,7 @@ export const Cookly = () => {
 					<Box
 						alignItems={'center'}
 						bg={'#F4F0EB'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
 						// w={['auto', '15%']}
 					>
@@ -171,9 +171,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 						spacing={4}
 					>
 						<VStack
@@ -223,9 +223,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 						spacing={4}
 					>
 						<Text 
@@ -282,9 +282,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 					>
 						<VStack 
 							align={'flex-start'}
@@ -329,9 +329,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 						spacing={'16px'}
 					>
 						<Text 
@@ -347,7 +347,7 @@ export const Cookly = () => {
 						>
 							{CooklyData.competitiveAnalysis}
 						</Text>
-						<SimpleGrid columns={2} spacing={16}>
+						<SimpleGrid columns={[1,2]} spacing={[10,16]}>
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
@@ -397,9 +397,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 						// spacing={'16px'}
 					>
 						<Text 
@@ -466,9 +466,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -506,9 +506,9 @@ export const Cookly = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}

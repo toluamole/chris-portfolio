@@ -65,8 +65,8 @@ export const Crisp = () => {
 				<VStack
 					align={'baseline'}
 					justify={'start'}
-					spacing={'8px'}
-					p={4}
+					spacing={[4,'8px']}
+					p={[2,4]}
 					h={'90%'}
 					overflowY={'scroll'}
 				>
@@ -80,8 +80,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
+						w={['320px', 'auto']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -100,9 +101,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -133,9 +134,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -154,9 +155,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -175,7 +176,7 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
 						// w={'15%'}
 					>
@@ -203,9 +204,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -224,9 +225,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'60%'}
+						w={['320px','60%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -241,7 +242,7 @@ export const Crisp = () => {
 						>
 							{CrispData.competitiveAnalysis}
 						</Text>
-						<SimpleGrid columns={2} spacing={28}>
+						<SimpleGrid columns={2} spacing={[10,28]}>
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
@@ -285,9 +286,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -312,9 +313,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -339,9 +340,9 @@ export const Crisp = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						px={'40px'} py={'16px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}

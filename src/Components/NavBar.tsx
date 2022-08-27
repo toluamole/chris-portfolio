@@ -75,7 +75,7 @@ export const  NavBar = () => {
 			</Flex>
 			<Flex 
 				direction={'column'}
-				py={10}
+				py={10} px={[6]}
 				textAlign={'start'}
 			>
 				<Text 

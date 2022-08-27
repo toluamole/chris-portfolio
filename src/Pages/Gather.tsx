@@ -65,8 +65,8 @@ export const Gather = () => {
 				<VStack
 					align={'baseline'}
 					justify={'start'}
-					spacing={'10px'}
-					p={4}
+					spacing={[4,'8px']}
+					p={[2,4]}
 					h={'90%'}
 					overflowY={'scroll'}
 				>
@@ -80,9 +80,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -101,9 +101,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -122,7 +122,7 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
 						w={'87%'}
 					>
@@ -143,9 +143,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'90%'}
+						w={['320px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -170,7 +170,7 @@ export const Gather = () => {
 					<Box
 						alignItems={'center'}
 						bg={'#F4F0EB'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
 						// w={['auto', '15%']}
 					>
@@ -197,9 +197,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'83%'}
+						w={['320px ','83%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -224,9 +224,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'83%'}
+						w={['320px ','83%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -245,9 +245,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'60%'}
+						w={['320px ','60%']}
 					>
 						<VStack 
 							align={'flex-start'}
@@ -302,9 +302,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'83%'}
+						w={['320px ','83%']}
 						spacing={'16px'}
 					>
 						<Text
@@ -355,9 +355,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'70%'}
+						w={['320px ','70%']}
 						spacing={'16px'}
 					>
 						<Text 
@@ -373,7 +373,7 @@ export const Gather = () => {
 						>
 							{GatherData.competitiveAnalysis}
 						</Text>
-						<SimpleGrid columns={2} spacing={28}>
+						<SimpleGrid columns={[1,2]} spacing={[10,28]}>
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
@@ -451,9 +451,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'83%'}
+						w={['320px ','83%']}
 						// spacing={'16px'}
 					>
 						<Text 
@@ -502,9 +502,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -523,9 +523,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -568,9 +568,9 @@ export const Gather = () => {
 					<VStack 
 						bg={'#F4F0EB'}
 						align={'flex-start'}
-						py={'16px'} px={'40px'}
+						px={['24px','40px']}  py={['12px','16px']}
 						borderRadius={'24px'}
-						w={'80%'}
+						w={['320px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
