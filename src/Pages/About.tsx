@@ -10,7 +10,7 @@ import { Link as RLink } from 'react-router-dom';
 
 export const About = () => {
 	return (
-		<HomeLayout>
+		<HomeLayout collapse={false}>
 			<Box
 				border={'2px'}
 				borderColor={'#686875'}

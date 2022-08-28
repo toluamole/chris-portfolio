@@ -9,7 +9,7 @@ import { AppRoutes } from '../Routes/AppRoutes';
 export const Home = () => {
 	const navigate = useNavigate();
 	return(
-		<HomeLayout >
+		<HomeLayout collapse={false}>
 			<Box
 				border={'2px'}
 				borderColor={'#686875'}

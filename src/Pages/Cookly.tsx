@@ -13,25 +13,31 @@ import { NavigationButton } from '../Components/NavigationButton';
 import {BsDot} from 'react-icons/bs';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import { AnimatedPages } from '../Components/AnimatedPages';
+import { AnimatedPages, MotionBox } from '../Components/AnimatedPages';
+import MAX from '../Assets/MAX.svg';
 
 export const Cookly = () => {
 	const navigate = useNavigate();
 	const [isOpen, setIsOpen] = useState(false);
   	const [imgIndex, setImgIndex] = useState(0);
+	const [collapse, setCollapse] = useState(false);
 
-	  const _handleClick = (id:number) => {
+	const _handleClick = (id:number) => {
 		setIsOpen(true);
 		setImgIndex(id);
 	}
 
+	const _handleCollapse = () => {
+		setCollapse(!collapse);
+	}
+
 	return(
-		<HomeLayout>
-			<Box
+		<HomeLayout  collapse={collapse} >
+			<MotionBox layout
 				border={'2px'}
 				borderColor={'#686875'}
 				borderRadius={'24px'}
-				h={{base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={ collapse == true ? {base:'90%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				overflow={'hidden'}
 				cursor={'pointer'}
@@ -47,21 +53,26 @@ export const Cookly = () => {
 					position={'sticky'}
 					top={0}
 					// zIndex={'99999'}
-					spacing={'20px'}
-					justify={'flex-start'}
+					justify={'space-between'}
 					pl={6}
 				>
-					<Link as={RLink} to={AppRoutes.projects}>
-						<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
-					</Link>
-					<BsPinAngleFill size={'20px'} />
-					<Text
-						color={'#CA4F29'}
-						fontSize={'16px'}
-						fontWeight={'700'}
+					<HStack
+						spacing={'20px'}
+						justify={'flex-start'}
 					>
-						{CooklyData.name}
-					</Text>
+						<Link as={RLink} to={AppRoutes.projects}>
+							<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
+						</Link>
+						<BsPinAngleFill size={'20px'} />
+						<Text
+							color={'#CA4F29'}
+							fontSize={'16px'}
+							fontWeight={'700'}
+						>
+							{CooklyData.name}
+						</Text>
+					</HStack>
+					<Box display={['none', null, null, 'block']}><Image src={MAX} pr='9px' onClick={_handleCollapse}/></Box>
 				</HStack> 
 				<VStack
 					align={'baseline'}
@@ -571,7 +582,7 @@ export const Cookly = () => {
 						mr={4}
 						py={'48px'}
 					>
-						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
+						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.gather)} direction={'left'}  />
 					</VStack>
 				</VStack>
 				{isOpen && <Lightbox
@@ -586,7 +597,7 @@ export const Cookly = () => {
 					onMoveNextRequest={() => setImgIndex((imgIndex + 1) % CooklyData.images.length)}
 					enableZoom={false}
 				/>}
-			</Box>
+			</MotionBox>
 		</HomeLayout>
 	);
 };
