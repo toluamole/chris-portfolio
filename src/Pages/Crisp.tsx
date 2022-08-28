@@ -13,24 +13,31 @@ import { ImageBox } from '../Components/ImageBox';
 import { NavigationButton } from '../Components/NavigationButton';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import MAX from '../Assets/MAX.svg';
+import { MotionBox } from '../Components/AnimatedPages';
 
 export const Crisp = () => {
 	const navigate = useNavigate();
 	const [isOpen, setIsOpen] = useState(false);
 	const [imgIndex, setImgIndex] = useState(0);
+	const [collapse, setCollapse] = useState(false);
 
 	const _handleClick = (id:number) => {
 		setIsOpen(true);
 		setImgIndex(id);
 	}
 
+	const _handleCollapse = () => {
+		setCollapse(!collapse);
+	}
+
 	return(
-		<HomeLayout>
-			<Box
+		<HomeLayout collapse={collapse}>
+			<MotionBox layout
 				border={'2px'}
 				borderColor={'#686875'}
 				borderRadius={'24px'}
-				h={{base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={ collapse == true ? {base:'90%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				overflow={'hidden'}
 				cursor={'pointer'}
@@ -41,27 +48,32 @@ export const Crisp = () => {
 					borderRadius={'20px 20px 0px 0px'}
 					bg={'#F4F0EB'}
 					height={'56px'}
-					max-width={'full'}
+					width={'full'}
 					boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
 					position={'sticky'}
 					top={0}
 					// zIndex={'99999'}
-					spacing={'20px'}
-					justify={'flex-start'}
+					justify={'space-between'}
 					pl={6}
 				>
-					<Link as={RLink} to={AppRoutes.projects}>
-						<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
-					</Link>
-					<BsPinAngleFill size={'20px'} />
-					<Text
-						color={'#CA4F29'}
-						fontSize={'16px'}
-						fontWeight={'700'}
+					<HStack
+						spacing={'20px'}
+						justify={'flex-start'}
 					>
-						{CrispData.name}
-					</Text>
-				</HStack> 
+						<Link as={RLink} to={AppRoutes.projects}>
+							<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
+						</Link>
+						<BsPinAngleFill size={'20px'} />
+						<Text
+							color={'#CA4F29'}
+							fontSize={'16px'}
+							fontWeight={'700'}
+						>
+							{CrispData.name}
+						</Text>
+					</HStack>
+					<Box display={['none', null, null, 'block']}><Image src={MAX} pr='9px' onClick={_handleCollapse}/></Box>
+				</HStack>
 				<VStack
 					align={'baseline'}
 					justify={'start'}
@@ -408,7 +420,7 @@ export const Crisp = () => {
 						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
 					</VStack>
 				</VStack>
-			</Box>
+			</MotionBox>
 			{isOpen && <Lightbox
 				mainSrc={CrispData.images[imgIndex].imageUrl}
 				nextSrc={CrispData.images[(imgIndex + 1) % CrispData.images.length].imageUrl}

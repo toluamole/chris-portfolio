@@ -99,4 +99,10 @@ export const GlobalStyles = css`
     //     button:hover { bg: #CA4F29; color:#F4F0EB }
     //     button p:hover{transform: none; margin: 0; transition: none}
     // }
+
+    @media(max-width: 1000px){
+        .ril__navButtonPrev, .ril__navButtonNext  {
+            top: 60%;
+        }
+    }
 `;

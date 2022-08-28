@@ -82,7 +82,7 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 					animate={'animate'}
 				><AvatarBadge  boxSize='.8em' bg='#4DD836'  borderColor={'#15191A'} /></MotionBox>
 			</Avatar>
-			<Modal isOpen={isOpen} onClose={onClose}>
+			<Modal isCentered isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
 				<ModalCloseButton 
 					position={'fixed'}
@@ -96,8 +96,8 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 					borderRadius={'50%'}
 				/>
 				<ModalContent bg={'none'}>
-					<ModalBody w={'500px'}>
-						<Image src={ExpandedImage} boxSize={'100%'} />
+					<ModalBody w={'auto'}>
+						<Image  src={ExpandedImage} boxSize={'100%'} />
 					</ModalBody>
 				</ModalContent>
 			</Modal>

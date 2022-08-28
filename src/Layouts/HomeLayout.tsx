@@ -9,13 +9,19 @@ import { MotionBox } from '../Components/AnimatedPages';
 
 interface IHomeLayoutProps{
     children: React.ReactNode;
+	collapse: boolean;
 }
 
-export const HomeLayout = ({children}: IHomeLayoutProps) => {
+export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 	const [isLargerThan768] = useMediaQuery('(min-width: 1000px)');
 	const [show, setShow] = useState(false);
+	// const [collapse, setCollapse] = useState(false);
 
 	const _handleClick =  () => setShow(!show);
+
+	// const _handleCollapse = () => {
+	// 	setCollapse(true);
+	// }
 
 	return (
 		<Flex
@@ -25,10 +31,10 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 			bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
-			p={['10px',null, '20px',null, '30px']}
+			p={['10px',null, '10px',null, '30px']}
 			overflow={'hidden'}
 		> 
-			{isLargerThan768 ? <NavBar /> : <MobileNavBar show={show}  /> }
+			{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
 			{/* {!isLargerThan768 && <MobileNavBar show={show}  />} */}
 			{/* <Flex width={'100%'} direction={'column'}> */}
 			<MotionBox
@@ -41,7 +47,7 @@ export const HomeLayout = ({children}: IHomeLayoutProps) => {
 				}}
 			>
 				<Box mb={[2,'20px']} >
-					{isLargerThan768 ? <Profile /> : <Mobileprofile handleClick={_handleClick} show={show}/>}
+					{isLargerThan768 ? <Profile collapse={collapse} /> : <Mobileprofile handleClick={_handleClick} show={show}/>}
 					{/* {!isLargerThan768 && <Mobileprofile handleClick={_handleClick} show={show}/>} */}
 				</Box>
 				{children}
