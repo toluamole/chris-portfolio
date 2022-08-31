@@ -17,25 +17,11 @@ import {
 import profileImage from '../Assets/profileImage.svg';
 import ExpandedImage from '../Assets/ExpandedImage.png';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { MotionBox } from './AnimatedPages';
 
 interface IProfileProp{
 	handleClick: () => void;
 	show: boolean;
 }
-const online = {
-	initial: {
-		backgroundColor: '#D83636',
-	},
-	animate: {
-		backgroundColor: ['#D83636','#4DD836', '#D83636'],
-		transition: {
-			duration: 3,
-			ease: 'linear',
-			delay: 25
-		}
-	}
-};
 
 export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
