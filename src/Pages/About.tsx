@@ -112,8 +112,8 @@ export const About = () => {
 							So yeah, if you ever want to collaborate, I’m only a phone call/ email away.
 						</Text>
 					</Box>
+					<Box py={'48px'} alignSelf={'flex-end'}><CtaButton title={'Reach Out'}/></Box>
 				</VStack>
-				<CtaButton title={'Reach Out'}/>
 			</Box>
 		</HomeLayout>
 	);

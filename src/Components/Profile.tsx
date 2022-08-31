@@ -12,6 +12,7 @@ import {
 	ModalBody,
 	ModalCloseButton,
 	useDisclosure,
+	keyframes,
 } from '@chakra-ui/react';
 import profileImage from '../Assets/profileImage.svg';
 import ExpandedImage from '../Assets/ExpandedImage.png';
@@ -23,6 +24,12 @@ interface IProfileProps{
 
 export const Profile = ({collapse}: IProfileProps) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	const animationKeyframes = keyframes`
+		0% { background-color: #D83636};
+		50%{ background-color: #D83636};
+		100% {background-color: #4DD836};
+	`;
+
 	return (
 		<MotionBox layout>
 			{ collapse === false && 
@@ -42,7 +49,10 @@ export const Profile = ({collapse}: IProfileProps) => {
 						ml={4}
 					>
 						<Avatar src={profileImage} cursor={'pointer'} onClick={onOpen}>
-							<AvatarBadge  boxSize='.8em' bg='#4DD836' borderColor={'#15191A'} />
+							<AvatarBadge  
+								animation={`${animationKeyframes} 2s ease`}
+								boxSize='.8em' bg={'#4DD836'} borderColor={'#15191A'}
+							/>
 						</Avatar>
 						<Text 
 							color={'#F4F0EB'} 
@@ -53,15 +63,15 @@ export const Profile = ({collapse}: IProfileProps) => {
 							Oladapo Awosika
 						</Text>
 					</Flex>
-					<Modal isCentered isOpen={isOpen} onClose={onClose}>
+					<Modal isCentered isOpen={isOpen} size={'lg'} onClose={onClose}>
 						<ModalOverlay bg={'rgb(0 0 0 / 80%)'} />
 						<ModalCloseButton 
 							position={'fixed'}
 							color={'#F4F0EB'} 
 							top={{base:'5%', lg:'5%'}}
 							right={'2.5%'} 
-							w='35px'
-							h={'35px'}
+							w='40px'
+							h={'40px'}
 							border={'2px'} 
 							borderColor={'#F4F0EB'} 
 							borderRadius={'50%'}
@@ -69,7 +79,7 @@ export const Profile = ({collapse}: IProfileProps) => {
 						/>
 						<ModalContent bg={'none'}  >
 							<ModalBody  cursor={'pointer'}>
-								<Image src={ExpandedImage} boxSize={'100%'} />
+								<Image src={ExpandedImage} />
 							</ModalBody>
 						</ModalContent>
 					</Modal>

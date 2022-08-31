@@ -35,7 +35,7 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 				_before={{
 					content:'" "',
 					position:'absolute',
-					width:'100%',
+					width:{base:'100%', lg: '100%'},
 					height:'100%',
 					top:0, 
 					left:0,
