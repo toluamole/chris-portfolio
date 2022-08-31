@@ -1,9 +1,10 @@
 import React from 'react';
-import { Flex, Text,  Link,} from '@chakra-ui/react';
+import { Flex, Text,  Link, keyframes} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
 import AnimatedCursor from 'react-animated-cursor';
 import { MotionBox } from './AnimatedPages';
+import { motion } from 'framer-motion';
 
 interface INavbarProps{
 	collapse: boolean;
@@ -12,6 +13,11 @@ interface INavbarProps{
 export const  NavBar = ({collapse}:INavbarProps) => {
 	const location = useLocation();
 	const isActive = location.pathname;
+	const animationKeyframes = keyframes`
+	0% { background-color: #D83636};
+	50%{ background-color: #D83636};
+	100% {background-color: #4DD836};
+`;
 	return (
 		<MotionBox layout>
 			{ collapse === false && <Flex 
@@ -92,6 +98,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 						Status
 					</Text>
 					<Text 
+						as={motion.div}
 						color={'#B2B6C7'}
 						position={'relative'}
 						fontSize={'14px'}
@@ -104,7 +111,8 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 							h: '7px',
 							left: '-10%',
 							bottom: '30%',
-							borderRadius:'50%'
+							borderRadius:'50%',
+							animation: `${animationKeyframes} 2s ease`
 						}}
 					>
 						Available for

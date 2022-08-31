@@ -61,7 +61,7 @@ export const Contact = () => {
 					overflowY={'scroll'}
 					overflowX={'hidden'}
 					p={4}
-					h={'90%'}
+					h={'100%'}
 				>
 					<Box
 						// w={['', '240px']}
@@ -91,7 +91,7 @@ export const Contact = () => {
 									<HStack
 										key={items.id}
 										bgColor={'#F4F0EB'}
-										w={['auto',`${items.width}`]}
+										w={['auto','auto']}
 										h={['auto','auto']}
 										borderRadius={'16px'}
 										px={['24px','40px']}  py={'16px'}

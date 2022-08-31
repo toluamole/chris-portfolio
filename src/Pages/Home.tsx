@@ -40,7 +40,7 @@ export const Home = () => {
 							color={'#CA4F29'} 
 							// px={6}
 						>
-							Hi! I’m Oladapo, a <b>product designer</b> from Lagos, Nigeria.Welcome to my portfolio!
+							Hi! I’m Oladapo, a <b>product designer</b> from Lagos, Nigeria. Welcome to my portfolio!
 						</Text>
 					</Flex>
 					<Flex 

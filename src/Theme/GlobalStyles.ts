@@ -49,6 +49,12 @@ export const GlobalStyles = css`
         opacity: 1
     }
 
+    // .ril__navButtonPrev:hover{
+    //     transform: scale(1.2);
+    //     // max-width: 100px;
+    //     // margin-right: 45px;
+    // }
+
     .ril__navButtonNext {
         display: block;
         right: 30px;
