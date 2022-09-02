@@ -88,6 +88,7 @@ export const Gather = () => {
 							src={process.env.PUBLIC_URL + GatherData.images[0].imageUrl} 
 							width= '100%'
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -232,6 +233,7 @@ export const Gather = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[1].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -510,6 +512,7 @@ export const Gather = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[2].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -558,24 +561,28 @@ export const Gather = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[3].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={GatherData.images[4].title} width={'765px'}  content={'View'} onclick={() => _handleClick(4)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[4].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={GatherData.images[5].title} width={'664px'}  content={'View'} onclick={() => _handleClick(5)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[5].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={GatherData.images[6].title} width={'664px'}  content={'View'} onclick={() => _handleClick(6)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[6].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -596,24 +603,28 @@ export const Gather = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[7].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={GatherData.images[8].title} width={'658px'}  content={'View'} onclick={() => _handleClick(8)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[8].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={GatherData.images[9].title} width={'765px'}  content={'View'} onclick={() => _handleClick(9)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[9].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={GatherData.images[10].title} width={'446px'}  content={'View'} onclick={() => _handleClick(10)}>
 						<Image 
 							src={process.env.PUBLIC_URL + GatherData.images[10].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack
@@ -628,12 +639,13 @@ export const Gather = () => {
 			</MotionBox>
 			{isOpen && <Lightbox
 				mainSrc={GatherData.images[imgIndex].imageUrl}
-				nextSrc={GatherData.images[(imgIndex + 1) % GatherData.images.length].imageUrl}
-				prevSrc={GatherData.images[(imgIndex + 1) % GatherData.images.length].imageUrl}
+				nextSrc={GatherData.images[imgIndex] === GatherData.images[GatherData.images.length - 1 ] ? undefined : GatherData.images[(imgIndex + 1) % GatherData.images.length].imageUrl}
+				prevSrc={GatherData.images[imgIndex] === GatherData.images[0] ? undefined : GatherData.images[(imgIndex + 1) % GatherData.images.length].imageUrl}
 				onCloseRequest={() => setIsOpen(false)}
 				onMovePrevRequest={() => setImgIndex((imgIndex + GatherData.images.length - 1) % GatherData.images.length)}
 				onMoveNextRequest={() => setImgIndex((imgIndex + 1) % GatherData.images.length)}
 				enableZoom={false}
+				animationDisabled
 			/>}
 		</HomeLayout>
 	);

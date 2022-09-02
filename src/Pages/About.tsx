@@ -6,9 +6,10 @@ import { CtaButton } from '../Components/CtaButton';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { AppRoutes } from '../Routes/AppRoutes';
-import { Link as RLink } from 'react-router-dom';
+import { Link as RLink, useNavigate } from 'react-router-dom';
 
 export const About = () => {
+	const navigate = useNavigate();
 	return (
 		<HomeLayout collapse={false}>
 			<Box
@@ -112,7 +113,7 @@ export const About = () => {
 							So yeah, if you ever want to collaborate, I’m only a phone call/ email away.
 						</Text>
 					</Box>
-					<Box py={'48px'} alignSelf={'flex-end'}><CtaButton title={'Reach Out'}/></Box>
+					<Box py={'48px'} alignSelf={'flex-end'}><CtaButton onClick={() => navigate(AppRoutes.contact)} title={'Reach Out'}/></Box>
 				</VStack>
 			</Box>
 		</HomeLayout>

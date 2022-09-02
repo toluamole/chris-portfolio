@@ -9,20 +9,21 @@ import { Preloader } from './Components/Preloader';
 // import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
-	const [loading, setLoading] = useState(true);
+	// const [loading, setLoading] = useState(true);
 
-	useEffect(()=> {
-		setLoading(true);
-		setTimeout(()=> {
-			setLoading(false);
-		}, 12000);
-	}, []);
+	// useEffect(()=> {
+	// 	setLoading(true);
+	// 	setTimeout(()=> {
+	// 		setLoading(false);
+	// 	}, 12000);
+	// }, []);
 	return (
 		<ChakraProvider theme={theme}>
 			<Global styles={GlobalStyles}/>
-			{
+			{/* {
 				loading === false ? (<MainRoute />) : (<Preloader />)
-			}
+			} */}
+			<MainRoute />
 			{/* <AnimatedCursor innerSize={20} clickables={['button', 'a']} /> */}
 		</ChakraProvider>
 	);

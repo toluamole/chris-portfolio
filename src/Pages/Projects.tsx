@@ -76,11 +76,12 @@ export const Projects = () => {
 						>
 							{CrispData.name}
 						</Text>
-						<ImageBox display='none' width={'100%'}  content={'Open'}>
+						<ImageBox display='none' width={'50vw'}  content={'Open'}>
 							<Image 
-								src={process.env.PUBLIC_URL + '/images/Crisp.png'} 
+								src={process.env.PUBLIC_URL + '/images/Crisp/crisp.png'} 
 								width= '100%'
 								vertical-align= 'top'
+								borderRadius={'16px'}
 							/>
 						</ImageBox>
 					</VStack>
@@ -100,11 +101,12 @@ export const Projects = () => {
 						>
 							{GatherData.name}
 						</Text>
-						<ImageBox display='none' width={'100%'} content={'Open'}>
+						<ImageBox display='none' width={'50vw'} content={'Open'}>
 							<Image 
-								src={process.env.PUBLIC_URL + '/images/Gather.png'} 
-								width= '100%'
+								src={process.env.PUBLIC_URL + '/images/Gather/onboarding.png'} 
+								// width= '100%'
 								vertical-align= 'top'
+								borderRadius={'16px'}
 							/>
 						</ImageBox>
 					</VStack>
@@ -124,11 +126,12 @@ export const Projects = () => {
 						>
 							{CooklyData.name}
 						</Text>
-						<ImageBox display='none' width={'100%'} content={'Open'}>
+						<ImageBox display='none' width={'50vw'} content={'Open'}>
 							<Image 
-								src={process.env.PUBLIC_URL + '/images/Cookly.png'} 
+								src={process.env.PUBLIC_URL + '/images/Cookly/Onboarding.png'} 
 								width= '100%'
 								vertical-align= 'top'
+								borderRadius={'16px'}
 							/>
 						</ImageBox>
 					</VStack>

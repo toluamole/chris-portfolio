@@ -44,7 +44,7 @@ export const Crisp = () => {
 			>
 				<HStack
 					border={'none'}
-					borderColor={'white'}
+					borderColor={'#F4F0EB'}
 					borderRadius={'20px 20px 0px 0px'}
 					bg={'#F4F0EB'}
 					height={'56px'}
@@ -87,6 +87,7 @@ export const Crisp = () => {
 							src={process.env.PUBLIC_URL + CrispData.images[0].imageUrl} 
 							width= '100%'
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -135,12 +136,14 @@ export const Crisp = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[1].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[2].title} width={'60%'}  content={'view'}  onclick={() => -_handleClick(2)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[2].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -320,6 +323,7 @@ export const Crisp = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[3].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -347,6 +351,7 @@ export const Crisp = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[4].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -374,42 +379,49 @@ export const Crisp = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[5].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[6].title} width={'80%'}  content={'view'}  onclick={() => -_handleClick(6)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[6].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[7].title} width={'80%'}  content={'view'}  onclick={() => -_handleClick(7)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[7].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[8].title} width={'765px'}  content={'view'}  onclick={() => -_handleClick(8)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[8].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[9].title} width={'765px'}  content={'view'}  onclick={() => -_handleClick(9)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[9].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[10].title} width={'765px'}  content={'view'}  onclick={() => -_handleClick(10)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[10].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[11].title} width={'765px'}  content={'view'}  onclick={() => -_handleClick(11)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CrispData.images[11].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack
@@ -423,12 +435,13 @@ export const Crisp = () => {
 			</MotionBox>
 			{isOpen && <Lightbox
 				mainSrc={CrispData.images[imgIndex].imageUrl}
-				nextSrc={CrispData.images[(imgIndex + 1) % CrispData.images.length].imageUrl}
-				prevSrc={CrispData.images[(imgIndex + 1) % CrispData.images.length].imageUrl}
+				nextSrc={CrispData.images[imgIndex] === CrispData.images[CrispData.images.length - 1 ] ? undefined : CrispData.images[(imgIndex + 1) % CrispData.images.length].imageUrl}
+				prevSrc={CrispData.images[imgIndex] === CrispData.images[0] ? undefined : CrispData.images[(imgIndex + 1) % CrispData.images.length].imageUrl}
 				onCloseRequest={() => setIsOpen(false)}
 				onMovePrevRequest={() =>setImgIndex((imgIndex + CrispData.images.length - 1) % CrispData.images.length)}
 				onMoveNextRequest={() => setImgIndex((imgIndex + 1) % CrispData.images.length)}
 				enableZoom={false}
+				animationDisabled
 			/>}
 		</HomeLayout>
 	);

@@ -50,22 +50,24 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 								key={label}
 								as={RLink}
 								to={path}
+								borderBottom={'1.4px solid #686875'}
+								width={'40vw'}
 								color={isActive === path ? '#CA4F29' : '#F4F0EB'} 
 								textShadow={isActive === path ? '0 0 8px #CA4F29' : 'none'}
-								py={'10px'}
+								py={'20px'}
 								textAlign={'center'}
 								fontSize={'14px'}
 								fontWeight={isActive === path ? '700' : '400'}
-								// position={'relative'}
-								_after={{
-									content: '""',
-									display: 'flex',
-									position: 'relative',
-									borderBottom:'1.4px solid #686875',
-									boxShadow: '0 0 5px rgba(198,198,211,0.4)',
-									width: {base:'170px', md:'200px'},
-									mt: '20px',
-								}}
+								position={'relative'}
+								// _after={{
+								// 	content: '""',
+								// 	display: 'flex',
+								// 	position: 'relative',
+								// 	borderBottom:'1.4px solid #686875',
+								// 	boxShadow: '0 0 5px rgba(198,198,211,0.4)',
+								// 	width: {base:'170px', md:'200px'},
+								// 	mt: '20px',
+								// }}
 								// _hover={{
 								// 	textDecoration: 'none',
 								// 	color:'#CA4F29',

@@ -79,7 +79,7 @@ export const Cookly = () => {
 					justify={'start'}
 					spacing={[4,'8px']}
 					p={[2,4]}
-					h={'90%'}
+					h={'100%'}
 					overflowY={'scroll'}
 				>
 					<ImageBox imageTitle={CooklyData.images[0].title} width={'60%'}  content={'View'} onclick={() => _handleClick(0)}>
@@ -87,6 +87,7 @@ export const Cookly = () => {
 							src={process.env.PUBLIC_URL + CooklyData.images[0].imageUrl} 
 							width= '100%'
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -288,6 +289,7 @@ export const Cookly = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[1].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -335,6 +337,7 @@ export const Cookly = () => {
 							src={process.env.PUBLIC_URL + CooklyData.images[2].imageUrl} 
 							vertical-align= 'top'
 							height={['auto','446px']}
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -472,6 +475,7 @@ export const Cookly = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[3].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -499,6 +503,7 @@ export const Cookly = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[4].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 							// height={[null, '446px']}
 						/>
 					</ImageBox>
@@ -506,12 +511,14 @@ export const Cookly = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[5].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CooklyData.images[6].title} width={'500px'}  content={'View'} onclick={() => _handleClick(6)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[6].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack 
@@ -539,42 +546,49 @@ export const Cookly = () => {
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[7].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CooklyData.images[8].title} width={'427px'}  content={'View'} onclick={() => _handleClick(8)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[8].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CooklyData.images[9].title} width={'664px'}  content={'View'} onclick={() => _handleClick(9)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[9].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CooklyData.images[10].title} width={'765px'}  content={'View'} onclick={() => _handleClick(10)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[10].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CooklyData.images[11].title} width={'765px'}  content={'View'} onclick={() => _handleClick(11)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[11].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CooklyData.images[12].title} width={'765px'}  content={'View'} onclick={() => _handleClick(12)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[12].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CooklyData.images[13].title} width={'710px'}  content={'View'} onclick={() => _handleClick(13)}>
 						<Image 
 							src={process.env.PUBLIC_URL + CooklyData.images[13].imageUrl} 
 							vertical-align= 'top'
+							borderRadius={'16px'}
 						/>
 					</ImageBox>
 					<VStack
@@ -590,12 +604,13 @@ export const Cookly = () => {
 					// imageCaption={images[imgIndex].caption}
 					// CooklyData.images[(imgIndex +1 % CooklyData.images.length)].imageUrl
 					mainSrc={CooklyData.images[imgIndex].imageUrl}
-					nextSrc={CooklyData.images[(imgIndex + 1 ) % CooklyData.images.length].imageUrl}
-					prevSrc={CooklyData.images[(imgIndex + 1 )% CooklyData.images.length].imageUrl}
+					nextSrc={CooklyData.images[imgIndex] === CooklyData.images[CooklyData.images.length - 1 ] ? undefined : CooklyData.images[(imgIndex + 1 ) % CooklyData.images.length].imageUrl}
+					prevSrc={CooklyData.images[imgIndex] === CooklyData.images[0] ? undefined : CooklyData.images[(imgIndex + 1 )% CooklyData.images.length].imageUrl}
 					onCloseRequest={() => setIsOpen(false)}
 					onMovePrevRequest={() => setImgIndex((imgIndex + CooklyData.images.length - 1) % CooklyData.images.length)}
 					onMoveNextRequest={() => setImgIndex((imgIndex + 1) % CooklyData.images.length)}
 					enableZoom={false}
+					animationDisabled
 				/>}
 			</MotionBox>
 		</HomeLayout>

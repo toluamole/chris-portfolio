@@ -5,6 +5,9 @@ import {links} from '../Constants/NavLinks';
 import AnimatedCursor from 'react-animated-cursor';
 import { MotionBox } from './AnimatedPages';
 import { motion } from 'framer-motion';
+import useSound from 'use-sound';
+import buttonClickSound from '../Assets/buttonClickSound.wav';
+import menuHoverSound from '../Assets/menuHoverSound.wav';
 
 interface INavbarProps{
 	collapse: boolean;
@@ -13,11 +16,18 @@ interface INavbarProps{
 export const  NavBar = ({collapse}:INavbarProps) => {
 	const location = useLocation();
 	const isActive = location.pathname;
+	const [buttonClick] = useSound(buttonClickSound);
+	const [play, {stop}] = useSound(menuHoverSound);
 	const animationKeyframes = keyframes`
 	0% { background-color: #D83636};
 	50%{ background-color: #D83636};
 	100% {background-color: #4DD836};
 `;
+
+	const _handleClick = () => {
+		buttonClick();
+	};
+
 	return (
 		<MotionBox layout>
 			{ collapse === false && <Flex 
@@ -44,42 +54,46 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 								key={label}
 								as={RLink}
 								to={path}
+								display={'flex'}
+								flexDirection={'column'}
+								justifyContent={'center'}
+								borderBottom={'1.4px solid #686875'}
+								width={'15vw'}
 								color={isActive === path ? '#CA4F29' : '#F4F0EB'} 
 								textShadow={isActive === path ? '0 0 8px #CA4F29' : 'none'}
-								py={'10px'}
+								py={isActive == path ? '20px' : '16px' }
 								textAlign={'center'}
 								fontSize={'14px'}
-								fontWeight={isActive === path ? '700' : '400'}
-								_after={{
-									content: '""',
-									display: 'flex',
-									position: 'relative',
-									borderBottom:'1.4px solid #686875',
-									boxShadow: '0 0 5px rgba(198,198,211,0.4)',
-									width: {base:'80px', md:'80px', lg: '100px', xl: '200px', '2xl': '350px'},
-									
-									mt: '20px',
-								}}
+								fontWeight={isActive === path ? 'bold' : 'medium'}
+								position={'relative'}
+								onClick={_handleClick}
+								onMouseEnter={() => play()}
+								onMouseLeave={() => stop()}
+								// _after={{
+								// 	content: '""',
+								// 	display: 'flex',
+								// 	position: 'relative',
+								// 	borderBottom:'1.4px solid #686875',
+								// 	boxShadow: '0 0 5px rgba(198,198,211,0.4)',
+								// 	width: {base:'80px', md:'80px', lg: '100px', xl: '200px', '2xl': '350px'},
+								// 	mt: '20px',
+								// }}
+
 								_hover={{
 									textDecoration: 'none',
 									color:'#CA4F29',
 									fontWeight: 'bold',
 									textShadow: '0 0 8px #CA4F29',
-									// transform: 'translateY(-5px)',
+									pt: '20px',
+									pb: '20px',
 									transition: 'all .3s ease',
-									// _after: {
-									// 	// mt: '32px',
-									// 	transform: 'translateY(-5px)',
-									// 	transition: 'all .3s ease',
-									// }
 								}}
 							>
 								<Text
-									_hover={{
-										// transform: 'translateY(-10px)',
-										top: '10px',
-										transition: 'all .3s ease',
-									}}
+									// _hover={{
+									// 	top: '10px',
+									// 	transition: 'all .3s ease',
+									// }}
 								>{label}</Text>
 							</Link>
 						))

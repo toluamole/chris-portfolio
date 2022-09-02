@@ -1,4 +1,7 @@
 import { css } from '@emotion/react';
+import prevBtn from '../Assets/prevBtn.svg';
+import nextBtn from '../Assets/nextBtn.svg';
+import closeIcon from '../Assets/closeIcon.svg';
 
 export const GlobalStyles = css`
     body {
@@ -40,8 +43,9 @@ export const GlobalStyles = css`
     .ril__navButtonPrev {
         display: block;
         left: 30px;
-        background: #fff url(process.env.PUBLIC_URL + /public/images/prevBtn.svg) no-repeat center;
-        background-size: 10px 15px;
+        background: transparent url(${prevBtn}) no-repeat center;
+        background-size: 8px;
+        // background-postion: 2px;
         backdrop-filter: opacity(1);
         border-radius: 50%;
         border: 2px solid white;
@@ -49,32 +53,43 @@ export const GlobalStyles = css`
         opacity: 1
     }
 
-    // .ril__navButtonPrev:hover{
-    //     transform: scale(1.2);
-    //     // max-width: 100px;
-    //     // margin-right: 45px;
-    // }
+    .ril__navButtonPrev:hover{
+        transform: scale(1.1);
+        background-position: 1em;
+        transition: all .3s ease-out;
+    }
+
+    .ril__navButtonNext: hover{
+        transform: scale(1.1);
+        background-position: right 1em center;
+        transition: all .3s ease-out;
+    }
+
 
     .ril__navButtonNext {
         display: block;
         right: 30px;
-        background: transparent url(process.env.PUBLIC_URL + /public/images/vector.svg) no-repeat center;
-        background-size: 10px 15px;
+        background: transparent url(${nextBtn}) no-repeat center;
+        background-size: 8px;
         backdrop-filter: opacity(1);
-        color: white;
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
         opacity : 1
     }
 
+    .ril__closeButton {
+        background: transparent url(${closeIcon}) no-repeat center;
+        background-size: 12px;
+    }
+
     ril__caption, .ril__toolbar {
         background-color: transparent;
     }
 
-    .ril__image, .ril__imagePrev, .ril__imageNext {
-        cursor: progress;
-    }
+    // .ril__image, .ril__imagePrev, .ril__imageNext {
+    //     cursor: pointer;
+    // }
 
     .ril__toolbar {
         top: 25px;
@@ -96,14 +111,22 @@ export const GlobalStyles = css`
         opacity: 1;
     }
 
-    // .ril__image, .ril__imagePrev, .ril__imageNext {
-    //     width: 800px;
-    //     height: auto;
-    // }
+    .chakra-button:hover p{
+        // max-width: 100px; 
+         padding-right: 10px ;
+        transition: all .3s ease;
+    }
 
-    // @media (hover: hover) {
-    //     button:hover { bg: #CA4F29; color:#F4F0EB }
-    //     button p:hover{transform: none; margin: 0; transition: none}
+    // .chakra-link p:before {
+    //     content: " ",
+    //     position: absolute;
+    //     bottom: -20px;
+    //     right: 0;
+    //     left: 0;
+    // }
+    // .chakra-link:hover p {
+    //    transform: translateY(-10px);
+    //     transition: all .3s ease;
     // }
 
     @media(max-width: 1000px){
