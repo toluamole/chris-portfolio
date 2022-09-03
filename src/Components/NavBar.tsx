@@ -70,6 +70,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 								borderBottom={'1.4px solid #686875'}
 								width={'15vw'}
 								color={isActive === path ? '#CA4F29' : '#F4F0EB'} 
+								boxShadow= { ' inset 0 -4px 5px -5px rgba(198,198,211,0.4)'}
 								textShadow={isActive === path ? '0 0 8px #CA4F29' : 'none'}
 								py={isActive == path ? '20px' : '16px' }
 								textAlign={'center'}

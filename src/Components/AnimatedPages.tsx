@@ -6,7 +6,6 @@ interface IAnimatedPages{
     children: React.ReactNode;
 }
 
-
 export const MotionBox = motion<BoxProps>(Box);
 
 export const  AnimatedPages = ({children}: IAnimatedPages) => {
@@ -15,12 +14,18 @@ export const  AnimatedPages = ({children}: IAnimatedPages) => {
 		animate: {
 			opacity: 1,
 			// x: 0,
-			// transition: {
-			// 	duration: .5,
-			// 	ease: 'easeIn'
-			// },
+			transition: {
+				duration: 0.01,
+				ease: 'linear'
+			},
 		},
-		exit: {opacity: 0},
+		exit: {
+			opacity: 0,
+			transition: {
+				duration: 0.01,
+				ease: 'linear'
+			},
+		},
 	};
 	return (
 		<MotionBox
