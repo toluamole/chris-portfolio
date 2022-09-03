@@ -57,7 +57,7 @@ export const Projects = () => {
 					spacing={[4, '48px']}
 					p={[2,4]}
 					// h={'65vh'} w={'100%'}
-					h={'90%'}
+					h={{base:'100%', lg:'90%'}}
 					overflowY={'scroll'}
 				>
 					<VStack 

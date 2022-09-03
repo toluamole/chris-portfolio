@@ -50,7 +50,7 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 				p={2}
 			>
-				{show === false ?<HamburgerIcon 
+				{show ?<HamburgerIcon 
 					color={'#686875'} 
 					w={'5'} h={'5'}
 					onClick= {handleClick}

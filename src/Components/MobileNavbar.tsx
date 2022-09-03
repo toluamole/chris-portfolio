@@ -16,11 +16,8 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 		<AnimatePresence initial={false}>
 			<MotionBox
 				animate={{
-					transform: show ? '0' : 'translateX(-30vw)',
-					width: show ? '250px' : 0,
-					padding:show ? '20px' : 0,
-					opacity: show ? 1 : 0,
-					marginRight: show ? '20px' : 0,
+					// opacity: show ? 1 : 0,
+					marginLeft: show ? '-56vw' : 0,
 					transition: {
 						duration: 0.5
 					}
@@ -33,16 +30,17 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				borderColor={'#686875'}
 				borderRadius={'24px'}
 				// h={'100%'}
-				w={'55vw'}
-				h={'92vh'}
+				w={'55%'}
+				h={{base:'92vh', md:'95vh'}}
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
-				// mr={'20px'}
+				mr={'20px'}
 				cursor={'pointer'}
 			>
 				<Flex
 					direction={'column'}
 					alignItems={'center'}
 					py={'20px'}
+					w={{base:'55vw', md: '30vw'}}
 				>
 					{
 						links.map(({label, path}) => (
@@ -51,7 +49,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 								as={RLink}
 								to={path}
 								borderBottom={'1.4px solid #686875'}
-								width={'40vw'}
+								width={['40vw', '20vw', '20vw']}
 								color={isActive === path ? '#CA4F29' : '#F4F0EB'} 
 								textShadow={isActive === path ? '0 0 8px #CA4F29' : 'none'}
 								py={'20px'}

@@ -38,6 +38,7 @@ export const Crisp = () => {
 				borderColor={'#686875'}
 				borderRadius={'24px'}
 				h={ collapse == true ? {base:'90%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				// w={ collapse == true ? '100%' : 'auto'}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				overflow={'hidden'}
 				cursor={'pointer'}
@@ -79,7 +80,7 @@ export const Crisp = () => {
 					justify={'start'}
 					spacing={[4,'8px']}
 					p={[2,4]}
-					h={'90%'}
+					h={{base:'100%', lg:'90%'}}
 					overflowY={'scroll'}
 				>
 					<ImageBox imageTitle={CrispData.images[0].title} width={'60%'}  content={'view'}  onclick={() => -_handleClick(0)}>

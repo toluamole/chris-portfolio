@@ -80,7 +80,7 @@ export const Gather = () => {
 					justify={'start'}
 					spacing={[4,'8px']}
 					p={[2,4]}
-					h={'90%'}
+					h={{base:'100%', lg:'90%'}}
 					overflowY={'scroll'}
 				>
 					<ImageBox imageTitle={GatherData.images[0].title} width={'60%'}  content={'View'} onclick={() => _handleClick(0)}>

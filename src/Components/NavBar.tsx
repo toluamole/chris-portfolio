@@ -29,8 +29,17 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 	};
 
 	return (
-		<MotionBox layout>
-			{ collapse === false && <Flex 
+		<MotionBox 
+			layout
+			animate={{
+				opacity: collapse ? 0 : 1,
+				marginLeft: collapse ? '-250px' : 0,
+				transition: {
+					layout: {duration: 0.5}
+				}
+			}}
+		>
+			<Flex 
 				// display={['none', 'none', null, 'flex']}
 				direction={'column'}
 				justifyContent={'space-between'}
@@ -42,6 +51,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 				w={['25vw','18vw']}
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 				mr={'20px'}
+				// transform={'translateX(-50%)'}
 			>
 				<Flex
 					direction={'column'}
@@ -140,7 +150,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 					</Text>
 				</Flex> 
 				<AnimatedCursor innerSize={20} clickables={['button', 'a']} />
-			</Flex>}
+			</Flex>
 		</MotionBox>
 	);
 };
