@@ -82,8 +82,6 @@ export const Projects = () => {
 								<Image 
 									src={process.env.PUBLIC_URL + '/images/Crisp/crisp.png'} 
 									width= '100%'
-									vertical-align= 'top'
-									borderRadius={'16px'}
 								/>
 							</ImageBox>
 						</VStack>
@@ -106,9 +104,7 @@ export const Projects = () => {
 							<ImageBox display='none' width={'50vw'} content={'Open'}>
 								<Image 
 									src={process.env.PUBLIC_URL + '/images/Gather/onboarding.png'} 
-									// width= '100%'
-									vertical-align= 'top'
-									borderRadius={'16px'}
+									width= '100%'
 								/>
 							</ImageBox>
 						</VStack>
@@ -132,8 +128,6 @@ export const Projects = () => {
 								<Image 
 									src={process.env.PUBLIC_URL + '/images/Cookly/Onboarding.png'} 
 									width= '100%'
-									vertical-align= 'top'
-									borderRadius={'16px'}
 								/>
 							</ImageBox>
 						</VStack>
@@ -155,7 +149,7 @@ export const Projects = () => {
 						<VStack
 							alignSelf={'flex-end'}
 							mr={4}
-							// py={'48px'}
+							pb={'48px'}
 						>
 							<CtaButton title={'Reach Out'} onClick={() => navigate(AppRoutes.contact)}  />
 						</VStack>
