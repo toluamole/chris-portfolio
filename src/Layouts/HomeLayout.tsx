@@ -6,6 +6,7 @@ import {Mobileprofile} from '../Components/Mobileprofile';
 import backgroundImage from '../Assets/backgroundImage.svg';
 import { MobileNavBar } from '../Components/MobileNavbar';
 import { MotionBox } from '../Components/AnimatedPages';
+import Div100vh from 'react-div-100vh';
 
 interface IHomeLayoutProps{
     children: React.ReactNode;
@@ -24,28 +25,30 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 	// }
 
 	return (
-		<Flex
-			h={'100vh'}
-			minW={'100%'}
-			bgImage={`url('${backgroundImage}')`}
-			bgPosition='center'
-			bgSize={'cover'}
-			bgRepeat={'no-repeat'}
-			p={['8px',null, '10px',null, '30px']}
-			overflow={'hidden'}
-			wrap='nowrap'
-			alignItems={'stretch'}
-		> 
-			{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
-			<MotionBox
-				w={'100%'}
-			>
-				<Box mb={['8px','20px']} >
-					{isLargerThan768 ? <Profile collapse={collapse} /> : 
-						<Mobileprofile handleClick={_handleClick} show={show}/>}
-				</Box>
-				{children}
-			</MotionBox>
-		</Flex>
+		<Div100vh>
+			<Flex
+				h={'100vh'}
+				minW={'100%'}
+				bgImage={`url('${backgroundImage}')`}
+				bgPosition='center'
+				bgSize={'cover'}
+				bgRepeat={'no-repeat'}
+				p={['8px',null, '10px',null, '30px']}
+				overflow={'hidden'}
+				wrap='nowrap'
+				alignItems={'stretch'}
+			> 
+				{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
+				<MotionBox
+					w={'100%'}
+				>
+					<Box mb={['8px','20px']} >
+						{isLargerThan768 ? <Profile collapse={collapse} /> : 
+							<Mobileprofile handleClick={_handleClick} show={show}/>}
+					</Box>
+					{children}
+				</MotionBox>
+			</Flex>
+		</Div100vh>
 	);
 };
