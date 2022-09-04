@@ -4,10 +4,6 @@ import nextBtn from '../Assets/nextBtn.svg';
 import closeIcon from '../Assets/closeIcon.svg';
 
 export const GlobalStyles = css`
-    html, body{
-        min-height: 100%;
-        height: auto;
-    }
     body {
         font-size: 12px;
         font-family: 'Jura', sans-serif;
