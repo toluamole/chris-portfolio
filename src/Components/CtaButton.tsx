@@ -24,12 +24,12 @@ export const CtaButton = ({title, onClick}:ICtaButtonProps) => {
 			size={'lg'}
 			h={'40px'} px={'28px'}
 			color={'#F4F0EB'} 
-			fontSize={'16px'} 
+			fontSize={['14px','16px']} 
 			bg={'#CA4F29'}
 			fontWeight={'400'}
-			borderRadius={'16px'}
+			borderRadius={['12px','16px']}
 			lineHeight={'150%'}
-			my={'48px'} mr={4}
+			my={['28px','48px']} mr={4}
 			onClick={_handleClick}
 			_hover={{
 				bg:{lg:'#F4F0EB'},

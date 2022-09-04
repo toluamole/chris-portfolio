@@ -26,14 +26,14 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				flexDirection={'column'}
 				justifyContent={'space-between'}
 				alignItems={'center'}
-				border={'2px'}
+				border={'1px'}
 				borderColor={'#686875'}
 				borderRadius={'24px'}
 				// h={'100%'}
 				w={'55%'}
-				h={{base:'92vh', md:'95vh'}}
+				h={{base:'96vh', md:'95vh'}}
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
-				mr={'20px'}
+				mr={['auto','20px']}
 				cursor={'pointer'}
 			>
 				<Flex

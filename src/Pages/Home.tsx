@@ -13,10 +13,11 @@ export const Home = () => {
 		<AnimatedPages>
 			<HomeLayout collapse={false}>
 				<Box
-					border={'2px'}
+					borderWidth={['1px', '2px']}
+					borderStyle={'solid'}
 					borderColor={'#686875'}
-					borderRadius={'24px'}
-					h={{base:'85%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
+					borderRadius={['16px','24px']}
+					h={{base:'90%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 					boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 					p={4}
 					overflowY={'scroll'}
@@ -33,11 +34,11 @@ export const Home = () => {
 							bgColor={'#F4F0EB'}
 							w={['320px','510px']}
 							// h={['90px','65px']}
-							borderRadius={'16px'}
-							mb={'8px'} px={['24px','40px']}  py={'16px'}
+							borderRadius={['12px','16px']}
+							mb={'8px'} px={['16px','40px']}  py={'16px'}
 						>
 							<Text 
-								fontSize={'16px'} 
+								fontSize={['14px','16px']} 
 								fontWeight={500} 
 								color={'#CA4F29'} 
 								// px={6}
@@ -51,11 +52,11 @@ export const Home = () => {
 							bgColor={'#F4F0EB'}
 							w={['320px','500px']}
 							// h={['100px','70px']}
-							borderRadius={'16px'}
-							mb={'8px'} px={['24px','40px']}  py={'16px'}
+							borderRadius={['12px','16px']}
+							mb={'8px'} px={['16px','40px']}  py={'16px'}
 						>
 							<Text 
-								fontSize={'16px'} 
+								fontSize={['14px','16px']} 
 								fontWeight={500}
 								color={'#CA4F29'}
 							>
@@ -68,12 +69,12 @@ export const Home = () => {
 							bgColor={'#F4F0EB'}
 							// w={['240px','270px']}
 							// h={'50px'}
-							px={['24px','40px']}  py={'16px'}
-							borderRadius={'16px'}
+							px={['16px','40px']}  py={'16px'}
+							borderRadius={['12px','16px']}
 							// p={['10px', null]}
 						>
 							<Text 
-								fontSize={'16px'} 
+								fontSize={['14px','16px']} 
 								fontWeight={500} 
 								color={'#CA4F29'}
 							>
@@ -83,7 +84,7 @@ export const Home = () => {
 					</Flex>
 					<VStack
 						align={'flex-end'}
-						py={'48px'}
+						py={['28px','48px']}
 					>
 						<NavigationButton title={'View Projects'} onClick={() => navigate(AppRoutes.projects)} direction={'right'}  />
 						<NavigationButton title={'About'} onClick={() => navigate(AppRoutes.about)} direction={'right'} />

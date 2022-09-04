@@ -17,10 +17,11 @@ export const Contact = () => {
 		<AnimatedPages>
 			<HomeLayout collapse={false}>
 				<Box
-					border={'2px'}
+					borderWidth={['1px', '2px']}
+					borderStyle={'solid'}
 					borderColor={'#686875'}
-					borderRadius={'24px'}
-					h={{base:'85%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
+					borderRadius={['16px','24px']}
+					h={{base:'90%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 					// w={['90vw','78vw']}
 					boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 					// p={'20px'}
@@ -30,9 +31,9 @@ export const Contact = () => {
 						display={['flex', 'none']}
 						border={'none'}
 						borderColor={'white'}
-						borderRadius={'20px 20px 0px 0px'}
+						borderRadius={['16px 16px 0px 0px','20px 20px 0px 0px']}
 						bg={'#F4F0EB'}
-						height={'56px'}
+						height={['45px','56px']}
 						width={'100%'}
 						// max-width={'100%'}
 						boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
@@ -63,12 +64,12 @@ export const Contact = () => {
 						overflowY={'scroll'}
 						overflowX={'hidden'}
 						p={4}
-						h={'100%'}
+						h={['92%','100%']}
 					>
 						<Box
 							// w={['', '240px']}
 							// h={['', '45px']}
-							borderRadius={'16px'}
+							borderRadius={['12px','16px']}
 							bgColor={'#CA4F29'}
 							alignSelf={'flex-end'}
 							mb={'48px'}
@@ -77,7 +78,7 @@ export const Contact = () => {
 								centerContent
 								color={'#F4F0EB'}
 								fontSize={'16px'}
-								px={['24px','40px']}  py={'16px'}
+								px={['16px','40px']}  py={'16px'}
 							>
 								How do i reach you,<br/>
 								I&apos;d love to collaborate?
@@ -95,8 +96,8 @@ export const Contact = () => {
 											bgColor={'#F4F0EB'}
 											w={['auto','auto']}
 											h={['auto','auto']}
-											borderRadius={'16px'}
-											px={['24px','40px']}  py={'16px'}
+											borderRadius={['12px','16px']}
+											px={['16px','40px']}  py={'16px'}
 										>
 											<Text 
 												fontSize={'16px'} 
@@ -123,7 +124,7 @@ export const Contact = () => {
 							}
 							<VStack
 								bgColor={'#F4F0EB'}
-								borderRadius={'16px'}
+								borderRadius={['12px','16px']}
 								w={['320px','335px']}
 								h={'150px'}
 								align={'flex-start'}

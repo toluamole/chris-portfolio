@@ -1,5 +1,5 @@
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
-import { Box, Button, Text } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 import React from 'react';
 import useSound from 'use-sound';
 import buttonClickSound from '../Assets/buttonClickSound.wav';
@@ -28,10 +28,10 @@ export const NavigationButton = ({title, onClick, direction}:ICtaButtonProps) =>
 			height={'56px'}
 			px={'40px'} py={'16px'}
 			color={'#F4F0EB'} 
-			fontSize={'16px'} 
+			fontSize={['14px','16px']}  
 			bg={'#CA4F29'}
 			fontWeight={'400'}
-			borderRadius={'16px'}
+			borderRadius={['12px','16px']}
 			lineHeight={'150%'}
 			onClick={_handleClick}
 			transition= '0.2'

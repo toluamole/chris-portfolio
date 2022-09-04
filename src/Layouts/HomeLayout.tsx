@@ -31,7 +31,7 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 			bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
-			p={['10px',null, '10px',null, '30px']}
+			p={['8px',null, '10px',null, '30px']}
 			overflow={'hidden'}
 			wrap='nowrap'
 			alignItems={'stretch'}
@@ -40,7 +40,7 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 			<MotionBox
 				w={'100%'}
 			>
-				<Box mb={[2,'20px']} >
+				<Box mb={['8px','20px']} >
 					{isLargerThan768 ? <Profile collapse={collapse} /> : 
 						<Mobileprofile handleClick={_handleClick} show={show}/>}
 				</Box>

@@ -29,9 +29,9 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 	return (
 		<VStack 
 			// border={'1px'}
-			borderRadius={'16px'}
+			borderRadius={['8px','16px']}
 			bgColor={'#F4F0EB'}
-			p={2} mb={'28px'}
+			p={['4px',2]} mb={'28px'}
 			width={['85vw',null, null, width]}
 			onClick={onclick}
 		>
@@ -94,9 +94,9 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 			<Text 
 				alignSelf={'flex-start'}
 				color={'#CA4F29'}
-				fontSize={'16px'}
+				fontSize={'16px'} 
 				fontWeight={700}
-				py={2}
+				py={['4px',2]}
 				display={display}
 			>
 				{imageTitle}

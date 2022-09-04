@@ -16,7 +16,8 @@ import {
 } from '@chakra-ui/react';
 import profileImage from '../Assets/profileImage.svg';
 import ExpandedImage from '../Assets/ExpandedImage.png';
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { CloseIcon} from '@chakra-ui/icons';
+import hamburger from '../Assets/hamburger.svg';
 
 interface IProfileProp{
 	handleClick: () => void;
@@ -35,14 +36,14 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 			justify='space-between'
 			px={2}
 			border={'1px'}
-			borderColor={'#686875'}
+			borderColor={'rgba(198, 198, 211, 0.4)'}
 			borderRadius={'16px'}
 			height={'60px'}
-			boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
+			boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 			cursor={'pointer'}
 		>
 			<Box 
-				border={'2px'} 
+				border={['1px','2px']} 
 				w={'40px'}
 				h={'40px'}
 				borderRadius={'50%'}
@@ -50,11 +51,11 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 				p={2}
 			>
-				{show ?<HamburgerIcon 
-					color={'#686875'} 
+				{show ? <Image src={hamburger}
 					w={'5'} h={'5'}
+					color={'#686875'}
 					onClick= {handleClick}
-				/> : <CloseIcon
+				/>  : <CloseIcon
 					color={' #686875'} 
 					w={'5'} h={'5'}
 					onClick= {handleClick}
@@ -62,8 +63,8 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 			</Box>
 			<Text 
 				color={'#F4F0EB'} 
-				fontSize={'sm'}
-				fontWeight={'500'}
+				fontSize={'14px'}
+				fontWeight={'bold'}
 			>
 				Oladapo Awosika
 			</Text>
@@ -75,18 +76,19 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 					animation={`${animationKeyframes} 2s ease`}
 				/>
 			</Avatar>
-			<Modal isCentered isOpen={isOpen} onClose={onClose}>
-				<ModalOverlay />
+			<Modal isCentered isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
+				<ModalOverlay bg={'rgb(0 0 0 / 80%)'} />
 				<ModalCloseButton 
 					position={'fixed'}
 					color={'#F4F0EB'} 
 					top={'2%'}
 					right={'3%'} 
-					w='50px'
-					h={'50px'}
+					w='45px'
+					h={'45px'}
 					border={'2px'} 
 					borderColor={'#F4F0EB'} 
 					borderRadius={'50%'}
+					zIndex={'99999'}
 				/>
 				<ModalContent bg={'none'}>
 					<ModalBody w={'auto'}>

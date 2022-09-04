@@ -5,7 +5,7 @@ export const HomeContents: {id:number, text: string }[] =[
 	},
 	{
 		id: 1,
-		text: 'I design beautiul digital products and create amazing experiences for people while driving business impact.'
+		text: 'I design beautiful digital products and create amazing experiences for people while driving business impact.'
 	},
 	{
 		id: 2,

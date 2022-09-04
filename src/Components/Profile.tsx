@@ -70,7 +70,7 @@ export const Profile = ({collapse}: IProfileProps) => {
 						Oladapo Awosika
 					</Text>
 				</Flex>
-				<Modal isCentered isOpen={isOpen} size={'lg'} onClose={onClose}>
+				<Modal isCentered isOpen={isOpen} size={'lg'} onClose={onClose}  closeOnOverlayClick={false}>
 					<ModalOverlay bg={'rgb(0 0 0 / 80%)'} />
 					<ModalCloseButton 
 						position={'fixed'}

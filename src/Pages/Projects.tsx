@@ -20,10 +20,11 @@ export const Projects = () => {
 		<AnimatedPages>
 			<HomeLayout collapse={false}>
 				<Box
-					border={'2px'}
+					borderWidth={['1px', '2px']}
+					borderStyle={'solid'}
 					borderColor={'#686875'}
-					borderRadius={'24px'}
-					h={{base:'85%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
+					borderRadius={['16px','24px']}
+					h={{base:'90%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 					boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 					cursor={'pointer'}
 					overflow={'hidden'}
@@ -32,9 +33,9 @@ export const Projects = () => {
 					<HStack
 						border={'none'}
 						borderColor={'white'}
-						borderRadius={'20px 20px 0px 0px'}
+						borderRadius={['16px 16px 0px 0px','20px 20px 0px 0px']}
 						bg={'#F4F0EB'}
-						height={'56px'}
+						height={['45px','56px']}
 						width={'100%'}
 						boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
 						position={'sticky'}
@@ -56,7 +57,7 @@ export const Projects = () => {
 					<VStack
 						align={'baseline'}
 						justify={'start'}
-						spacing={[4, '48px']}
+						spacing={['36px', '48px']}
 						p={[2,4]}
 						// h={'65vh'} w={'100%'}
 						h={{base:'100%', lg:'95%'}}
@@ -64,7 +65,7 @@ export const Projects = () => {
 					>
 						<VStack 
 							border={'1px'}
-							borderRadius={'16px'}
+							borderRadius={['8px','16px']}
 							bgColor={'#F4F0EB'}
 							// p={'8px'}
 							onClick={() => navigate(AppRoutes.crisp)}
@@ -72,9 +73,9 @@ export const Projects = () => {
 							<Text 
 								alignSelf={'flex-start'}
 								color={'#CA4F29'}
-								fontSize={'20px'}
-								fontWeight={700}
-								p={2}
+								fontSize={['16px','20px']}
+								fontWeight={'bold'}
+								p={['4px',2]}
 							>
 								{CrispData.name}
 							</Text>
@@ -87,7 +88,7 @@ export const Projects = () => {
 						</VStack>
 						<VStack 
 							border={'1px'}
-							borderRadius={'16px'}
+							borderRadius={['8px','16px']}
 							bgColor={'#F4F0EB'}
 							// p={2}
 							onClick={() => navigate(AppRoutes.gather)}
@@ -95,9 +96,9 @@ export const Projects = () => {
 							<Text 
 								alignSelf={'flex-start'}
 								color={'#CA4F29'}
-								fontSize={'20px'}
-								fontWeight={700}
-								p={2} 
+								fontSize={['16px','20px']}
+								fontWeight={'bold'}
+								p={['4px',2]}
 							>
 								{GatherData.name}
 							</Text>
@@ -110,7 +111,7 @@ export const Projects = () => {
 						</VStack>
 						<VStack 
 							border={'1px'}
-							borderRadius={'16px'}
+							borderRadius={['8px','16px']}
 							bgColor={'#F4F0EB'}
 							// p={'8px'}
 							onClick={() => navigate(AppRoutes.cookly)}
@@ -118,9 +119,9 @@ export const Projects = () => {
 							<Text 
 								alignSelf={'flex-start'}
 								color={'#CA4F29'}
-								fontSize={'20px'}
-								fontWeight={700}
-								p={2}
+								fontSize={['16px','20px']}
+								fontWeight={'bold'}
+								p={['4px',2]}
 							>
 								{CooklyData.name}
 							</Text>
@@ -135,11 +136,11 @@ export const Projects = () => {
 							bgColor={'#F4F0EB'}
 							// w={['260px','600px']}
 							// h={['auto','auto']}
-							borderRadius={'16px'}
-							px={['24px','40px']}  py={'16px'}
+							borderRadius={['12px','16px']}
+							px={['16px','40px']}  py={'16px'}
 						>
 							<Text 
-								fontSize={'16px'} 
+								fontSize={['14px','16px']} 
 								fontWeight={500}
 								color={'#CA4F29'}
 							>
