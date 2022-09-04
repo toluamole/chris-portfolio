@@ -1,13 +1,22 @@
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { Button, Text } from '@chakra-ui/react';
 import React from 'react';
+import useSound from 'use-sound';
+import buttonClickSound from '../Assets/buttonClickSound.wav';
 
 interface ICtaButtonProps{
     title: string;
-    onClick?: () => void;
+    onClick: () => void;
 }
 
 export const CtaButton = ({title, onClick}:ICtaButtonProps) => {
+	const [buttonClick] = useSound(buttonClickSound);
+
+	const _handleClick = () => {
+		buttonClick();
+		onClick();
+	};
+
 	return (
 		<Button 
 			alignSelf={'flex-end'}
@@ -15,30 +24,20 @@ export const CtaButton = ({title, onClick}:ICtaButtonProps) => {
 			size={'lg'}
 			h={'40px'} px={'28px'}
 			color={'#F4F0EB'} 
-			fontSize={'16px'} 
+			fontSize={['14px','16px']} 
 			bg={'#CA4F29'}
 			fontWeight={'400'}
-			borderRadius={'16px'}
+			borderRadius={['12px','16px']}
 			lineHeight={'150%'}
-			my={'48px'} mr={4}
-			onClick={onClick}
+			my={['28px','48px']} mr={4}
+			onClick={_handleClick}
 			_hover={{
 				bg:{lg:'#F4F0EB'},
 				color:{base:'#F4F0EB',lg:'#CA4F29'},
-				// borderLeftWidth: '10px',
-				// borderRightWidth:'2px',
-				// borderLeftColor: '#fff',
-				// transform: 'scaleX(1)',
-				transition: '0.2s all ease-in',
 			}}
 			p={6}
 		>
 			<Text
-				_hover={{
-					marginRight: {base:'0',lg:'10px'},
-					transform: 'scale(1)',
-					transition: '0.2s all ease-in'
-				}}
 			>{title}</Text>
 			<ArrowForwardIcon 
 				ml={4}
