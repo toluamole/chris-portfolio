@@ -19,7 +19,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 					// opacity: show ? 1 : 0,
 					marginLeft: show ? '-56vw' : 0,
 					transition: {
-						duration: 0.5
+						duration: 0.2
 					}
 				}}
 				display={'flex'}
@@ -33,7 +33,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				w={'55%'}
 				h={{base:'96vh', md:'95vh'}}
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
-				mr={['auto','20px']}
+				mr={['12px','20px']}
 				cursor={'pointer'}
 			>
 				<Flex
