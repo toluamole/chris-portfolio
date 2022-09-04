@@ -28,10 +28,10 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				alignItems={'center'}
 				border={'1px'}
 				borderColor={'#686875'}
-				borderRadius={'24px'}
+				borderRadius={'16px'}
 				// h={'100%'}
 				w={'55%'}
-				h={{base:'96vh', md:'95vh'}}
+				h={{base:'87vh', md:'95vh'}}
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 				mr={['12px','20px']}
 				cursor={'pointer'}

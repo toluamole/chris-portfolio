@@ -39,7 +39,7 @@ export const Crisp = () => {
 					borderStyle={'solid'}
 					borderColor={'#686875'}
 					borderRadius={['16px','24px']}
-					h={ collapse == true ? {base:'95%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'90%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+					h={ collapse == true ? {base:'95%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'80%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 					// w={ collapse == true ? '100%' : 'auto'}
 					boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 					overflow={'hidden'}
