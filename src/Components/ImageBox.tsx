@@ -1,5 +1,4 @@
 import { VStack, Box, Text, keyframes, Skeleton } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 import React, { useCallback, useState } from 'react';
 
 interface IImageBoxProps{
@@ -36,7 +35,6 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 		>
 			<>
 				<Box
-					as={motion.div}
 					position={'relative'}
 					display={loaded ? 'block' : 'none'}
 					onLoad={handleImageOnLoad}

@@ -647,7 +647,6 @@ export const Gather = () => {
 				onMoveNextRequest={() => setImgIndex((imgIndex + 1) % GatherData.images.length)}
 				enableZoom={false}
 				animationDisabled
-				clickOutsideToClose={false}
 			/>}
 		</HomeLayout>
 	);

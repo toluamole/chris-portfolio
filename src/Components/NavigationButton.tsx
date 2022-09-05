@@ -44,7 +44,7 @@ export const NavigationButton = ({title, onClick, direction}:ICtaButtonProps) =>
 				ml={4}
 				h={'16px'} w={'16px'}
 				_hover={{
-					transform: 'scale(1.2)'
+					transform: {base: 'none', lg:'scale(1.2)'}
 				}}
 			/> : <ArrowBackIcon
 				ml={4}

@@ -609,7 +609,6 @@ export const Cookly = () => {
 					onMoveNextRequest={() => setImgIndex((imgIndex + 1) % CooklyData.images.length)}
 					enableZoom={false}
 					animationDisabled
-					clickOutsideToClose={false}
 				/>}
 			</MotionBox>
 		</HomeLayout>

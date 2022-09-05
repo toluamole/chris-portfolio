@@ -22,7 +22,7 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 			h={'100vh'}
 			w={'100%'}
 			bgImage={`url('${backgroundImage}')`}
-			bgPosition='center'
+			// bgPosition='center'
 			bgSize={'cover'}
 			bgRepeat={'no-repeat'}
 			p={['8px',null, '10px',null, '30px']}

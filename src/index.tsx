@@ -1,7 +1,6 @@
 import { ColorModeScript } from '@chakra-ui/react';
 import React from 'react';
 // import ReactDOM from 'react-dom';
-import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
@@ -13,12 +12,12 @@ const root = createRoot(rootElement!);
 
 
 root.render(
-	<StrictMode>
+	<>
 		<ColorModeScript />
 		<BrowserRouter>
 			<App />
 		</BrowserRouter>
-	</StrictMode>,
+	</>
 );
 
 // If you want to start measuring performance in your app, pass a function
