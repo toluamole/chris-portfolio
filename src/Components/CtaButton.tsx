@@ -1,8 +1,6 @@
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { Button, Text } from '@chakra-ui/react';
 import React from 'react';
-import useSound from 'use-sound';
-import buttonClickSound from '../Assets/buttonClickSound.wav';
 
 interface ICtaButtonProps{
     title: string;
@@ -10,12 +8,6 @@ interface ICtaButtonProps{
 }
 
 export const CtaButton = ({title, onClick}:ICtaButtonProps) => {
-	const [buttonClick] = useSound(buttonClickSound);
-
-	const _handleClick = () => {
-		buttonClick();
-		onClick();
-	};
 
 	return (
 		<Button 
@@ -30,7 +22,7 @@ export const CtaButton = ({title, onClick}:ICtaButtonProps) => {
 			borderRadius={['12px','16px']}
 			lineHeight={'150%'}
 			my={['28px','48px']} mr={4}
-			onClick={_handleClick}
+			onClick={onClick}
 			_hover={{
 				bg:{lg:'#F4F0EB'},
 				color:{base:'#F4F0EB',lg:'#CA4F29'},

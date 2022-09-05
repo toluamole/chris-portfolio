@@ -16,7 +16,6 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 
 	const handleImageOnLoad = useCallback(() => {
 		setLoaded(true);
-		console.log(loaded);
 	}, []);
 
 	const animationKeyframes = keyframes`
@@ -51,7 +50,7 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 						background:'rgba(0,0,0,0.5)',
 						opacity:0,
 						transition: 'all 0.5s',
-						borderRadius: '16px'
+						borderRadius: {base:'4px',lg:'10px'}
 					}}
 					_after={{
 						content: `'${content}'`,

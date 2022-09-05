@@ -15,6 +15,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 	return (
 		<AnimatePresence initial={false}>
 			<MotionBox
+				layout
 				animate={{
 					// opacity: show ? 1 : 0,
 					marginLeft: show ? '-56vw' : 0,
@@ -22,7 +23,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 						duration: 0.2
 					}
 				}}
-				display={'flex'}
+				display={['flex', 'none']}
 				flexDirection={'column'}
 				justifyContent={'space-between'}
 				alignItems={'center'}
