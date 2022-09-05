@@ -2,11 +2,11 @@ import { Box, HStack, Link, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import {Bio } from '../Constants/BioConstant';
-import { CtaButton } from '../Components/CtaButton';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { Link as RLink, useNavigate } from 'react-router-dom';
+import { NavigationButton } from '../Components/NavigationButton';
 
 export const About = () => {
 	const navigate = useNavigate();
@@ -114,7 +114,7 @@ export const About = () => {
 							So yeah, if you ever want to collaborate, I’m only a phone call/ email away.
 						</Text>
 					</Box>
-					<Box py={'48px'} alignSelf={'flex-end'}><CtaButton onClick={() => navigate(AppRoutes.contact)} title={'Reach Out'}/></Box>
+					<Box py={'48px'} alignSelf={'flex-end'}><NavigationButton onClick={() => navigate(AppRoutes.contact)} title={'Reach Out'} direction={'right'}/></Box>
 				</VStack>
 			</Box>
 		</HomeLayout>

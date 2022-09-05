@@ -119,5 +119,10 @@ export const GlobalStyles = css`
         .ril__navButtonPrev, .ril__navButtonNext  {
             top: 60%;
         }
+
+        .chakra-button:hover p{
+            padding-right: 0 ;
+           transition: none;
+       }
     }
 `;

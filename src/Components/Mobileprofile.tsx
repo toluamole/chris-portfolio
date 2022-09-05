@@ -41,7 +41,7 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 			height={'60px'}
 			boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 			cursor={'pointer'}
-			display={['flex', 'none']}
+			display={['flex', null, null, 'none']}
 		>
 			<Box 
 				border={['1px','2px']} 

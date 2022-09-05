@@ -23,7 +23,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 						duration: 0.2
 					}
 				}}
-				display={['flex', 'none']}
+				display={['flex', null, null, 'none']}
 				flexDirection={'column'}
 				justifyContent={'space-between'}
 				alignItems={'center'}
