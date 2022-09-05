@@ -9,6 +9,7 @@ export const GlobalStyles = css`
         font-family: 'Jura', sans-serif;
         scroll-behavior: smooth-scroll;
         background: #0F0E0E;
+        overflow: hidden;
     },
 
     ::-webkit-scrollbar {
@@ -19,7 +20,6 @@ export const GlobalStyles = css`
     ::-webkit-scrollbar-track {
         background: transparent; 
         border-radius: 20px;
-        // margin-block: 5rem;
     }
        
     ::-webkit-scrollbar-thumb {
@@ -50,6 +50,7 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         opacity: 1
     }
 
@@ -75,29 +76,27 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         opacity : 1
     }
 
     .ril__closeButton {
         background: transparent url(${closeIcon}) no-repeat center;
         background-size: 12px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     ril__caption, .ril__toolbar {
         background-color: transparent;
     }
 
-    // .ril__image, .ril__imagePrev, .ril__imageNext {
-    //     cursor: pointer;
-    // }
-
     .ril__toolbar {
         top: 25px;
         right: 10px;
         height: 50px;
-        // right: 132px;
         cursor: pointer;
     }
+
     .ril__inner {
         cursor: pointer;
     }
@@ -112,22 +111,9 @@ export const GlobalStyles = css`
     }
 
     .chakra-button:hover p{
-        // max-width: 100px; 
          padding-right: 10px ;
         transition: all .3s ease;
     }
-
-    // .chakra-link p:before {
-    //     content: " ",
-    //     position: absolute;
-    //     bottom: -20px;
-    //     right: 0;
-    //     left: 0;
-    // }
-    // .chakra-link:hover p {
-    //    transform: translateY(-10px);
-    //     transition: all .3s ease;
-    // }
 
     @media(max-width: 1000px){
         .ril__navButtonPrev, .ril__navButtonNext  {
