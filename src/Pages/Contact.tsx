@@ -70,13 +70,13 @@ export const Contact = () => {
 						borderRadius={['12px','16px']}
 						bgColor={'#CA4F29'}
 						alignSelf={'flex-end'}
-						mb={'48px'}
+						mb={['28px','48px']}
 					>
 						<Container
 							centerContent
 							color={'#F4F0EB'}
 							fontSize={'16px'}
-							px={['16px','40px']}  py={'16px'}
+							px={['12px','40px']}  py={'16px'}
 						>
 							How do i reach you,<br/>
 							I&apos;d love to collaborate?
@@ -89,13 +89,14 @@ export const Contact = () => {
 						{
 							contactDetails.map(items => {
 								return(
-									<HStack
+									<Flex
+										alignItems={'flex-start'}
 										key={items.id}
 										bgColor={'#F4F0EB'}
-										w={['auto','auto']}
+										w={[items.mobileWidth,'auto']}
 										h={['auto','auto']}
 										borderRadius={['12px','16px']}
-										px={['16px','40px']}  py={'16px'}
+										px={['12px','40px']}  py={'16px'}
 									>
 										<Text 
 											fontSize={'16px'} 
@@ -106,6 +107,7 @@ export const Contact = () => {
 										</Text>
 										<Link 
 											// as={RLink} 
+											ml={'5px'}
 											color={' #0075FF'} 
 											textDecor={'underline'}
 											fontSize={'16px'} 
@@ -116,7 +118,7 @@ export const Contact = () => {
 										>
 											{items.name}
 										</Link>
-									</HStack>
+									</Flex>
 								);
 							})
 						}
@@ -131,7 +133,6 @@ export const Contact = () => {
 							<Image 
 								w={'320px'}
 								h={'130px'}
-								objectFit={'cover'}
 								src={resume}
 							/>
 							<HStack

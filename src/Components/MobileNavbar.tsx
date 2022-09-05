@@ -40,7 +40,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				<Flex
 					direction={'column'}
 					alignItems={'center'}
-					py={'20px'}
+					// py={'20px'}
 					w={{base:'55vw', md: '30vw'}}
 				>
 					{
@@ -89,9 +89,9 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				<Flex 
 					direction={'column'}
 					py={10}
-					textAlign={'start'}
+					alignSelf={'flex-start'}
 					// w={'auto'}
-					px={2}
+					px={8}
 				>
 					<Text 
 						color={'#CA4F29'}
@@ -111,7 +111,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 							bg: '#4DD836',
 							w: '7px',
 							h: '7px',
-							left: '-8%',
+							left: '-10%',
 							bottom: '30%',
 							borderRadius:'50%'
 						}}
@@ -123,7 +123,14 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 						fontSize={'14px'}
 						fontWeight={'500'}
 					>
-						collaborations and jobs
+						collaborations and 
+					</Text>
+					<Text 
+						color={'#B2B6C7'}
+						fontSize={'14px'}
+						fontWeight={'500'}
+					>
+						jobs
 					</Text>
 				</Flex> 
 			</MotionBox>

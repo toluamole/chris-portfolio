@@ -135,10 +135,10 @@ export const Projects = () => {
 					</VStack>
 					<Box
 						bgColor={'#F4F0EB'}
-						// w={['260px','600px']}
+						w={['316px','auto']}
 						// h={['auto','auto']}
 						borderRadius={['12px','16px']}
-						px={['16px','40px']}  py={'16px'}
+						px={['12px','40px']}  py={'16px'}
 					>
 						<Text 
 							fontSize={['14px','16px']} 

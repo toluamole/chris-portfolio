@@ -97,7 +97,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px', 'auto']}
+						w={['316px ', 'auto']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -118,7 +118,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','80%']}
+						w={['316px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -153,7 +153,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','80%']}
+						w={['316px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -174,7 +174,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','80%']}
+						w={['316px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -223,7 +223,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','80%']}
+						w={['316px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -244,7 +244,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px','60%']}
+						w={['316px ','60%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -259,7 +259,7 @@ export const Crisp = () => {
 						>
 							{CrispData.competitiveAnalysis}
 						</Text>
-						<SimpleGrid columns={2} spacing={[10,28]}>
+						<SimpleGrid columns={[1,2]} spacing={[4,28]}>
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
@@ -305,7 +305,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','80%']}
+						w={['316px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -333,7 +333,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','80%']}
+						w={['316px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -361,7 +361,7 @@ export const Crisp = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','80%']}
+						w={['316px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}

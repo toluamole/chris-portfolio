@@ -30,7 +30,7 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 			borderRadius={['8px','16px']}
 			bgColor={'#F4F0EB'}
 			p={['4px',2]} mb={'28px'}
-			width={['85vw',null, null, width]}
+			width={['100%',null, null, width]}
 			onClick={onclick}
 		>
 			<>
