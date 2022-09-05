@@ -65,13 +65,13 @@ export const About = () => {
 						borderRadius={['12px','16px']}
 						bgColor={'#CA4F29'}
 						alignSelf={'flex-end'}
-						mb={[10,'48px']}
+						mb={['28px','48px']}
+						px={['12px','40px']} py={'16px'}
 					>
 						<Text 
 							color={'#F4F0EB'}
 							fontSize={['14px','16px']} 
 							textAlign={'center'}
-							p={4}
 						>
 							Tell me about yourself
 						</Text>
@@ -81,12 +81,13 @@ export const About = () => {
 						Bio.map(items => {
 							return(
 								<VStack 
+									align={'flex-start'}
 									key={items.id}
 									bgColor={'#F4F0EB'}
-									w={['320px','700px']}
+									w={['316px','700px']}
 									h={['auto','auto']}
 									borderRadius={['12px','16px']}
-									px={['16px','40px']} py={'16px'}
+									px={['12px','40px']} py={'16px'}
 								>
 									<Text 
 										fontSize={['14px','16px']} 
@@ -101,10 +102,10 @@ export const About = () => {
 					}
 					<Box
 						bgColor={'#F4F0EB'}
-						w={['320px','auto']}
+						w={['316px','auto']}
 						// h={['auto','auto']}
 						borderRadius={['12px','16px']}
-						px={['16px','40px']}  py={'16px'}
+						px={['12px','40px']}  py={'16px'}
 					>
 						<Text 
 							fontSize={['14px','16px']}  

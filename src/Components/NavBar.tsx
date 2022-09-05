@@ -88,8 +88,10 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 					</Flex>
 					<Flex 
 						direction={'column'}
-						py={10} px={[6]}
-						textAlign={'start'}
+						pb={'32px'}
+						alignSelf={'flex-start'}
+						pl={8}
+						// textAlign={'start'}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -109,7 +111,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 								bg: '#4DD836',
 								w: '7px',
 								h: '7px',
-								left: '-10%',
+								left: '-8%',
 								bottom: '30%',
 								borderRadius:'50%',
 								animation: `${animationKeyframes} 2s ease`

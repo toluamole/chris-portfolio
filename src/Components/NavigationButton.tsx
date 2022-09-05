@@ -16,9 +16,7 @@ export const NavigationButton = ({title, onClick, direction}:ICtaButtonProps) =>
 			display={'flex'} 
 			alignSelf={'flex-end'}
 			position={'relative'}
-			// float={'right'}
-			// size={'xl'}
-			height={'56px'}
+			height={['45px','56px']}
 			px={['16px','40px']} py={['12px','16px']}
 			color={'#F4F0EB'} 
 			fontSize={['14px','16px']}  
@@ -35,10 +33,6 @@ export const NavigationButton = ({title, onClick, direction}:ICtaButtonProps) =>
 			}}
 		>
 			<Text
-				// _hover={{
-				// 	marginRight: {lg:'10px'},
-				// 	transition: '0.2s all ease-in'
-				// }}
 			>{title}</Text>
 			{ direction === 'right' ? <ArrowForwardIcon 
 				ml={4}

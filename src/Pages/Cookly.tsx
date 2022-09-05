@@ -96,7 +96,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','90%']}
+						w={['316px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -117,7 +117,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','87%']}
+						w={['316px ','87%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -138,7 +138,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','90%']}
+						w={['316px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -186,7 +186,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','90%']}
+						w={['316px ','90%']}
 						spacing={4}
 					>
 						<VStack
@@ -238,7 +238,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','90%']}
+						w={['316px ','90%']}
 						spacing={4}
 					>
 						<Text 
@@ -298,7 +298,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','90%']}
+						w={['316px ','90%']}
 					>
 						<VStack 
 							align={'flex-start'}
@@ -346,7 +346,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','90%']}
+						w={['316px ','90%']}
 						spacing={'16px'}
 					>
 						<Text 
@@ -414,7 +414,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','90%']}
+						w={['316px ','90%']}
 						// spacing={'16px'}
 					>
 						<Text 
@@ -452,9 +452,7 @@ export const Cookly = () => {
 								fontSize={['14px','16px']} 
 								spacing={1}
 							>
-								<ListItem
-									width={'fit-content'}
-								> 
+								<ListItem> 
 									<ListIcon as={BsDot} color='#CA4F29.700' />
 									<chakra.span fontWeight={700} >Free </chakra.span> 
 									{CooklyData.subscription[0]}
@@ -484,7 +482,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','90%']}
+						w={['316px ','90%']}
 					>
 						<Text 
 							color={'#CA4F29'}
@@ -527,7 +525,7 @@ export const Cookly = () => {
 						align={'flex-start'}
 						px={['16px','40px']}  py={['12px','16px']}
 						borderRadius={['12px','24px']}
-						w={['320px ','80%']}
+						w={['316px ','80%']}
 					>
 						<Text 
 							color={'#CA4F29'}

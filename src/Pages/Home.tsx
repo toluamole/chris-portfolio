@@ -17,7 +17,7 @@ export const Home = () => {
 				borderRadius={['16px','24px']}
 				h={{base:'80%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-				p={4}
+				p={['8px',4]}
 				overflowY={'scroll'}
 			>
 				<Flex
@@ -27,13 +27,14 @@ export const Home = () => {
 
 				>
 					<Flex 
-						alignItems={'center'}
+						direction={'column'}
+						alignItems={'flex-start'}
 						justifyContent={'center'}
 						bgColor={'#F4F0EB'}
-						w={['320px','510px']}
+						w={['285px','510px']}
 						// h={['90px','65px']}
 						borderRadius={['12px','16px']}
-						mb={'8px'} px={['16px','40px']}  py={'16px'}
+						mb={'8px'} px={['12px','40px']}  py={'16px'}
 					>
 						<Text 
 							fontSize={['14px','16px']} 
@@ -41,35 +42,48 @@ export const Home = () => {
 							color={'#CA4F29'} 
 							// px={6}
 						>
-							Hi! I’m Oladapo, a <b>product designer</b> from Lagos, Nigeria. Welcome to my portfolio!
+							Hi! I’m Oladapo, a <b>product designer</b> from Lagos, Nigeria.
+						</Text>
+						<Text 
+							fontSize={['14px','16px']} 
+							fontWeight={500} 
+							color={'#CA4F29'} 
+							// px={6}
+						>
+							Welcome to my portfolio!
 						</Text>
 					</Flex>
 					<Flex 
-						alignItems={'center'}
+						direction={'column'}
+						alignItems={'flex-start'}
 						justifyContent={'center'}
 						bgColor={'#F4F0EB'}
-						w={['320px','500px']}
+						w={['285px','500px']}
 						// h={['100px','70px']}
 						borderRadius={['12px','16px']}
-						mb={'8px'} px={['16px','40px']}  py={'16px'}
+						mb={'8px'} px={['12px','40px']}  py={'16px'}
 					>
 						<Text 
 							fontSize={['14px','16px']} 
 							fontWeight={500}
 							color={'#CA4F29'}
 						>
-							{HomeContents[1].text}
+							I design beautiful digital products and create amazing
+						</Text>
+						<Text 
+							fontSize={['14px','16px']} 
+							fontWeight={500}
+							color={'#CA4F29'}
+						>
+							experiences for people while driving business impact
 						</Text>
 					</Flex>
 					<Flex 
-						alignItems={'center'}
+						alignItems={'flex-start'}
 						justifyContent={'center'}
 						bgColor={'#F4F0EB'}
-						// w={['240px','270px']}
-						// h={'50px'}
-						px={['16px','40px']}  py={'16px'}
+						px={['12px','40px']}  py={'16px'}
 						borderRadius={['12px','16px']}
-						// p={['10px', null]}
 					>
 						<Text 
 							fontSize={['14px','16px']} 

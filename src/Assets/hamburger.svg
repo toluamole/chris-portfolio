@@ -1,7 +1,28 @@
-<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.7">
-<path d="M1 7H19" stroke="#686875" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1 1H19" stroke="#686875" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1 13H19" stroke="#686875" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.4" filter="url(#filter0_f_379_4804)">
+<path d="M16 25H34" stroke="#C6C6D3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 19H34" stroke="#C6C6D3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 31H34" stroke="#C6C6D3" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<g opacity="0.7">
+<path d="M16 25H34" stroke="#686875" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 19H34" stroke="#686875" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 31H34" stroke="#686875" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g opacity="0.6" filter="url(#filter1_f_379_4804)">
+<circle cx="25" cy="25" r="16.5" stroke="#C6C6D3"/>
+</g>
+<circle opacity="0.7" cx="25" cy="25" r="16.5" stroke="#686875"/>
+<defs>
+<filter id="filter0_f_379_4804" x="7.5" y="10.5" width="35" height="29" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_379_4804"/>
+</filter>
+<filter id="filter1_f_379_4804" x="0" y="0" width="50" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_379_4804"/>
+</filter>
+</defs>
 </svg>
