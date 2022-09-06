@@ -17,7 +17,7 @@ export const About = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={{base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={{base:'80%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				// p={'20px'}
 				overflow={'hidden'}

@@ -38,7 +38,7 @@ export const Crisp = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={ collapse ? 'full': {base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={ collapse ? 'full': {base:'80%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				// w={ collapse == true ? '100%' : 'auto'}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				overflow={'hidden'}

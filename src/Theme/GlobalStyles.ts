@@ -17,7 +17,7 @@ export const GlobalStyles = css`
         background: #0F0E0E;
         height: 100vh;
         height: -webkit-fill-available;
-        // overflow: hidden;
+        overflow: hidden;
     },
 
     ::-webkit-scrollbar {
