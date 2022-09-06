@@ -17,7 +17,7 @@ export const About = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={{base:'90vh', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={{base:'85%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				// p={'20px'}
 				overflow={'hidden'}
@@ -57,7 +57,7 @@ export const About = () => {
 					spacing={[4,'8px']}
 					overflowY={'scroll'}
 					p={4}
-					h={['92%','100%']}
+					h={['100%','100%']}
 				>
 					<Box
 						w={['', '256px']}

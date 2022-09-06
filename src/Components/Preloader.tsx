@@ -104,6 +104,7 @@ export const Preloader = () => {
 		<AnimatePresence key={'box'}>
 			<Flex
 				h={'100vh'}
+				w={'100vw'}
 				bgImage={`url('${backgroundImage}')`}
 				bgPosition='center'
 				bgSize={'cover'}

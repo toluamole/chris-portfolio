@@ -5,7 +5,6 @@ import { Profile } from '../Components/Profile';
 import {Mobileprofile} from '../Components/Mobileprofile';
 import backgroundImage from '../Assets/backgroundImage.svg';
 import { MobileNavBar } from '../Components/MobileNavbar';
-import Div100vh from 'react-div-100vh';
 
 interface IHomeLayoutProps{
     children: React.ReactNode;
