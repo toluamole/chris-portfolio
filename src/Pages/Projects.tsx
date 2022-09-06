@@ -22,7 +22,7 @@ export const Projects = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={{base:'80%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
+				h={{base:'77%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				cursor={'pointer'}
 				overflow={'hidden'}
@@ -67,6 +67,7 @@ export const Projects = () => {
 						bgColor={'#F4F0EB'}
 						// p={'8px'}
 						onClick={() => navigate(AppRoutes.crisp)}
+						w={{base:'100%', lg: 'auto'}}
 					>
 						<Text 
 							alignSelf={'flex-start'}
@@ -91,6 +92,7 @@ export const Projects = () => {
 						bgColor={'#F4F0EB'}
 						// p={2}
 						onClick={() => navigate(AppRoutes.gather)}
+						w={{base:'100%', lg: 'auto'}}
 					>
 						<Text 
 							alignSelf={'flex-start'}
@@ -115,6 +117,7 @@ export const Projects = () => {
 						bgColor={'#F4F0EB'}
 						// p={'8px'}
 						onClick={() => navigate(AppRoutes.cookly)}
+						w={{base:'100%', lg: 'auto'}}
 					>
 						<Text 
 							alignSelf={'flex-start'}
