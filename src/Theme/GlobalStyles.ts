@@ -4,11 +4,16 @@ import nextBtn from '../Assets/nextBtn.svg';
 import closeIcon from '../Assets/closeIcon.svg';
 
 export const GlobalStyles = css`
+    html {
+        height: -webkit-fill-available;
+    }
     body {
         font-size: 12px;
         font-family: 'Jura', sans-serif;
         scroll-behavior: smooth-scroll;
         background: #0F0E0E;
+        height: 100vh;
+        height: -webkit-fill-available;
         overflow: hidden;
     },
 
