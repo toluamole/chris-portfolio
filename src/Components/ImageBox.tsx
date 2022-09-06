@@ -31,6 +31,7 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 			bgColor={'#F4F0EB'}
 			p={['4px',2]} mb={'28px'}
 			width={['100%',null, null, width]}
+			h={'100%'}
 			onClick={onclick}
 		>
 			<>

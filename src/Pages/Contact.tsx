@@ -19,7 +19,7 @@ export const Contact = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={{base:'80%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
+				h={{base:'77%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 				// w={['90vw','78vw']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				// p={'20px'}
@@ -48,7 +48,7 @@ export const Contact = () => {
 					<BsPinAngleFill size={'20px'} />
 					<Text
 						color={'#CA4F29'}
-						fontSize={'16px'}
+						fontSize={['14px','16px']}
 						fontWeight={'700'}
 					>
 						Contact
@@ -75,7 +75,7 @@ export const Contact = () => {
 						<Container
 							centerContent
 							color={'#F4F0EB'}
-							fontSize={'16px'}
+							fontSize={['14px','16px']}
 							px={['12px','40px']}  py={'16px'}
 						>
 							How do i reach you,<br/>
@@ -99,7 +99,7 @@ export const Contact = () => {
 										px={['12px','40px']}  py={'16px'}
 									>
 										<Text 
-											fontSize={'16px'} 
+											fontSize={['14px','16px']} 
 											fontWeight={500}
 											color={'#CA4F29'}
 										>
@@ -110,7 +110,7 @@ export const Contact = () => {
 											ml={'5px'}
 											color={' #0075FF'} 
 											textDecor={'underline'}
-											fontSize={'16px'} 
+											fontSize={['14px','16px']}
 											fontWeight={500}
 											href={items.path}
 											target='_blank'
