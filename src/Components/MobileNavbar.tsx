@@ -31,8 +31,8 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				borderColor={'#686875'}
 				borderRadius={'16px'}
 				// h={'100%'}
-				w={'55%'}
-				h={{base:'83.7vh', md:'95vh'}}
+				w={'56%'}
+				h={{base:'85vh', md:'95vh'}}
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 				mr={['12px','20px']}
 				cursor={'pointer'}
