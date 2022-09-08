@@ -11,6 +11,7 @@ import { CtaButton } from '../Components/CtaButton';
 import { useNavigate } from 'react-router-dom';
 import { ImageBox } from '../Components/ImageBox';
 import { AppRoutes } from '../Routes/AppRoutes';
+import { ChevronLeftIcon } from '@chakra-ui/icons';
 
 export const Projects = () => {
 	const navigate = useNavigate();
@@ -22,7 +23,7 @@ export const Projects = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={{base:'80%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
+				h={{base:'78%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				cursor={'pointer'}
 				overflow={'hidden'}
@@ -43,6 +44,9 @@ export const Projects = () => {
 					justify={'flex-start'}
 					pl={6}
 				>
+					<Box  onClick={() => navigate(-1)} >
+						<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
+					</Box>
 					<BsPinAngleFill size={'20px'} />
 					<Text
 						color={'#CA4F29'}
@@ -56,7 +60,7 @@ export const Projects = () => {
 					align={'baseline'}
 					justify={'start'}
 					spacing={['36px', '48px']}
-					p={[2,4]}
+					p={[2,4]} pt={'12px'}
 					// h={'65vh'} w={'100%'}
 					h={{base:'100%', lg:'95%'}}
 					overflowY={'scroll'}
@@ -154,7 +158,7 @@ export const Projects = () => {
 					<VStack
 						alignSelf={'flex-end'}
 						mr={4}
-						pb={'48px'}
+						pb={['100px', '48px']}
 					>
 						<CtaButton title={'Reach Out'} onClick={() => navigate(AppRoutes.contact)}  />
 					</VStack>

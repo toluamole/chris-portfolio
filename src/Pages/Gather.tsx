@@ -1,15 +1,14 @@
 /* eslint-disable */
-import { Box, HStack, Link, Text, Image, VStack, List, ListItem, SimpleGrid,} from '@chakra-ui/react';
+import { Box, HStack, Text, Image, VStack, List, ListItem, SimpleGrid,} from '@chakra-ui/react';
 import React, {useState} from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import GatherData from '../Data/Gather.json';
 // import { useNavigate, useParams } from 'react-router-dom';
-import { Link as RLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
-import { CtaButton } from '../Components/CtaButton';
 import { NavigationButton } from '../Components/NavigationButton';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -39,7 +38,7 @@ export const Gather = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={ collapse == true ? {base:'85%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'80%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={ collapse == true ? {base:'85%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'78%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				overflow={'hidden'}
 				cursor={'pointer'}
@@ -62,9 +61,9 @@ export const Gather = () => {
 						spacing={'20px'}
 						justify={'flex-start'}
 					>
-						<Link as={RLink} to={AppRoutes.projects}>
+						<Box  onClick={() => navigate(-1)} >
 							<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
-						</Link>
+						</Box>
 						<BsPinAngleFill size={'20px'} />
 						<Text
 							color={'#CA4F29'}
@@ -80,7 +79,7 @@ export const Gather = () => {
 					align={'baseline'}
 					justify={'start'}
 					spacing={['28px','8px']}
-					p={[2,4]}
+					p={[2,4]} pt={'12px'}
 					h={{base:'100%', lg:'95%'}}
 					overflowY={'scroll'}
 				>
@@ -101,7 +100,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Background
@@ -122,7 +121,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Objective
@@ -143,7 +142,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Problem Statement
@@ -164,7 +163,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Solution Proffered
@@ -191,7 +190,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Roles
@@ -218,7 +217,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 								Research
@@ -246,7 +245,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 								Interviews
@@ -271,7 +270,7 @@ export const Gather = () => {
 						>
 							<Text
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>Interview questions</Text>
 							<VStack
@@ -280,7 +279,7 @@ export const Gather = () => {
 							>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Attendees</Text>
 								<List 
@@ -297,7 +296,7 @@ export const Gather = () => {
 								</List>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Organizers</Text>
 								<List 
@@ -325,7 +324,7 @@ export const Gather = () => {
 					>
 						<Text
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>Key takeaways</Text>
 						<VStack
@@ -334,7 +333,7 @@ export const Gather = () => {
 						>
 							<Text
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>Attendees</Text>
 							<List 
@@ -351,7 +350,7 @@ export const Gather = () => {
 							</List>
 							<Text
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>Organizers</Text>
 							<List 
@@ -378,7 +377,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 								Competitive Analysis
@@ -393,12 +392,12 @@ export const Gather = () => {
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Eventbrite</Text>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Pros</Text>
 								<List 
@@ -429,12 +428,12 @@ export const Gather = () => {
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Meetup</Text>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Pros</Text>
 								<List 
@@ -474,7 +473,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 								Revenue model
@@ -492,7 +491,7 @@ export const Gather = () => {
 						>
 							<Text
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>Subscription packages</Text>
 							<List 
@@ -525,7 +524,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Ideation
@@ -546,7 +545,7 @@ export const Gather = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Final Design & Implementation
@@ -631,7 +630,7 @@ export const Gather = () => {
 					<VStack
 						alignSelf={'flex-end'}
 						mr={4}
-						py={'48px'}
+						pt={'48px'} pb={['100px', '48px']}
 					>
 						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'right'}  />
 						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.crisp)} direction={'left'} />

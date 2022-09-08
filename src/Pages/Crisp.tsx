@@ -1,11 +1,10 @@
 /* eslint-disable */
-import { Box, HStack, Link, Text, Image, VStack, List, ListItem, SimpleGrid } from '@chakra-ui/react';
+import { Box, HStack, Text, Image, VStack, List, ListItem, SimpleGrid } from '@chakra-ui/react';
 import React, {useState} from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import CrispData from '../Data/Crisp.json';
 import { useNavigate } from 'react-router-dom';
-import { Link as RLink } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
@@ -38,7 +37,7 @@ export const Crisp = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={ collapse ? 'full': {base:'80%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={ collapse ? 'full': {base:'78%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				// w={ collapse == true ? '100%' : 'auto'}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				overflow={'hidden'}
@@ -62,14 +61,14 @@ export const Crisp = () => {
 						spacing={'20px'}
 						justify={'flex-start'}
 					>
-						<Link as={RLink} to={AppRoutes.projects}>
+						<Box  onClick={() => navigate(-1)} >
 							<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
-						</Link>
+						</Box>
 						<BsPinAngleFill size={'20px'} />
 						<Text
 							color={'#CA4F29'}
 							fontSize={['14px','16px']} 
-							fontWeight={'700'}
+							fontWeight={'bold'}
 						>
 							{CrispData.name}
 						</Text>
@@ -80,7 +79,7 @@ export const Crisp = () => {
 					align={'baseline'}
 					justify={'start'}
 					spacing={['28px','8px']}
-					p={[2,4]}
+					p={[2,4]} pt={'12px'}
 					h={{base:'100%', lg:'95%'}}
 					overflowY={'scroll'}
 				>
@@ -101,7 +100,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Background
@@ -122,7 +121,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Objective
@@ -157,7 +156,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Problem Statement
@@ -178,7 +177,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Solution Proffered
@@ -199,7 +198,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 							
 						>
@@ -227,7 +226,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 								Research
@@ -248,7 +247,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 								Competitive Analysis
@@ -263,7 +262,7 @@ export const Crisp = () => {
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Yamaha</Text>
 								<List 
@@ -282,7 +281,7 @@ export const Crisp = () => {
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Fender</Text>
 								<List 
@@ -309,7 +308,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Ideation
@@ -337,7 +336,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							User Flow
@@ -365,7 +364,7 @@ export const Crisp = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Final Design & Implementation
@@ -429,7 +428,7 @@ export const Crisp = () => {
 					<VStack
 						alignSelf={'flex-end'}
 						mr={4}
-						pt={'48px'} pb='10'
+						pt={'48px'} pb={['100px', '48px']}
 					>
 						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
 					</VStack>

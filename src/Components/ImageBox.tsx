@@ -29,7 +29,7 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 			// border={'1px'}
 			borderRadius={['8px','16px']}
 			bgColor={'#F4F0EB'}
-			p={['4px',2]} mb={'28px'}
+			p={['4px',2]} 
 			width={['100%',null, null, width]}
 			h={['100%', 'auto']}
 			onClick={onclick}
@@ -84,8 +84,9 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 					<Skeleton  
 						width={'100%'} 
 						height={['250px', '430px']} 
-						borderRadius={'16px'} 
-						startColor={'#F4F0EB'}
+						borderRadius={['4px','10px']} 
+						startColor={'#E5E2DD'}
+						// startColor={'#F4F0EB'}
 					/>
 				}
 			</>

@@ -1,11 +1,11 @@
-import { Box, HStack, Link, Text, VStack } from '@chakra-ui/react';
+import { Box, HStack, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import {Bio } from '../Constants/BioConstant';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { AppRoutes } from '../Routes/AppRoutes';
-import { Link as RLink, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { NavigationButton } from '../Components/NavigationButton';
 
 export const About = () => {
@@ -17,7 +17,7 @@ export const About = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={{base:'80%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={{base:'78%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				// p={'20px'}
 				overflow={'hidden'}
@@ -39,9 +39,9 @@ export const About = () => {
 					justify={'flex-start'}
 					pl={6}
 				>
-					<Link as={RLink} to={AppRoutes.home}>
+					<Box  onClick={() => navigate(-1)} >
 						<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
-					</Link>
+					</Box>
 					<BsPinAngleFill size={'20px'} />
 					<Text
 						color={'#CA4F29'}
@@ -54,9 +54,9 @@ export const About = () => {
 				<VStack
 					align={'baseline'}
 					justify={'start'}
-					spacing={[4,'8px']}
+					spacing={['8px','8px']}
 					overflowY={'scroll'}
-					p={4}
+					p={4} pt={'12px'}
 					h={['100%','100%']}
 				>
 					<Box
@@ -106,6 +106,7 @@ export const About = () => {
 						// h={['auto','auto']}
 						borderRadius={['12px','16px']}
 						px={['12px','40px']}  py={'16px'}
+						// mb={['32px']}
 					>
 						<Text 
 							fontSize={['14px','16px']}  
@@ -115,7 +116,7 @@ export const About = () => {
 							So yeah, if you ever want to collaborate, I’m only a phone call/ email away.
 						</Text>
 					</Box>
-					<Box py={'48px'} alignSelf={'flex-end'}><NavigationButton onClick={() => navigate(AppRoutes.contact)} title={'Reach Out'} direction={'right'}/></Box>
+					<Box pt={'48px'} pb={['100px', '48px']} alignSelf={'flex-end'}><NavigationButton onClick={() => navigate(AppRoutes.contact)} title={'Reach Out'} direction={'right'}/></Box>
 				</VStack>
 			</Box>
 		</HomeLayout>
