@@ -33,6 +33,20 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 			{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
 			<Box
 				w={'100%'}
+				// bg= {!show ? 'rgb(0 0 0 / 20%)' : ' '}
+				// _before={{
+				// 	display: {base: !show ? 'block' : 'none', lg:'none'},
+				// 	opacity: !show ? 1 : 0,
+				// 	content:  '" "',
+				// 	position: 'absolute',
+				// 	top: 20,
+				// 	left: 60,
+				// 	height: '76%',
+				// 	width: '100%',
+				// 	borderRadius: '12px',
+				// 	// zIndex: 9999,
+				// 	bg: 'rgb(0 0 0 / 20%)'
+				// }}
 			>
 				<Box mb={['8px','20px']} >
 					{isLargerThan768 ? <Profile collapse={collapse} /> : 

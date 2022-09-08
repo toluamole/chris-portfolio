@@ -44,7 +44,7 @@ export const GlobalStyles = css`
     
     ::-webkit-scrollbar-track-piece:start {
         background: transparent;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     
@@ -58,7 +58,7 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: 0 0 6px rgba(198, 198, 211, 0.25);
         opacity: 1
     }
 
@@ -84,7 +84,7 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: 0 0 6px rgba(198, 198, 211, 0.25);
         opacity : 1
     }
 
@@ -125,12 +125,16 @@ export const GlobalStyles = css`
 
     @media(max-width: 1000px){
         .ril__navButtonPrev, .ril__navButtonNext  {
-            top: 60%;
+            top: 75%;
         }
 
         .chakra-button:hover p{
             padding-right: 0 ;
            transition: none;
        }
+
+       ::-webkit-scrollbar-track-piece:end {
+        margin-bottom: 60px; 
+    }
     }
 `;

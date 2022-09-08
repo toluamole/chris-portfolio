@@ -6,12 +6,12 @@ import PaperIcon from '../Assets/PaperIcon.svg';
 // import { Link as RLink } from 'react-router-dom';
 import { contactDetails } from '../Constants/ContactConstant';
 import RESUME from '../Assets/RESUME.pdf';
-import { AppRoutes } from '../Routes/AppRoutes';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { BsPinAngleFill } from 'react-icons/bs';
-import { Link as RLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Contact = () => {
+	const navigate = useNavigate();
 	return (
 		<HomeLayout collapse={false}>
 			<Box
@@ -19,7 +19,7 @@ export const Contact = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={{base:'80%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
+				h={{base:'78%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 				// w={['90vw','78vw']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				// p={'20px'}
@@ -42,9 +42,9 @@ export const Contact = () => {
 					justify={'flex-start'}
 					pl={6}
 				>
-					<Link as={RLink} to={AppRoutes.home}>
+					<Box  onClick={() => navigate(-1)} >
 						<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
-					</Link>
+					</Box>
 					<BsPinAngleFill size={'20px'} />
 					<Text
 						color={'#CA4F29'}
@@ -61,7 +61,7 @@ export const Contact = () => {
 					// spacing={'8px'}
 					overflowY={'scroll'}
 					overflowX={'hidden'}
-					p={4}
+					p={4} pt={'12px'}
 					h={['92%','100%']}
 				>
 					<Box
@@ -89,8 +89,9 @@ export const Contact = () => {
 						{
 							contactDetails.map(items => {
 								return(
-									<Flex
-										alignItems={'flex-start'}
+									<HStack
+										// align={'center'}
+										justify={'center'}
 										key={items.id}
 										bgColor={'#F4F0EB'}
 										w={[items.mobileWidth,'auto']}
@@ -107,7 +108,7 @@ export const Contact = () => {
 										</Text>
 										<Link 
 											// as={RLink} 
-											ml={'5px'}
+											// ml={'5px'}
 											color={' #0075FF'} 
 											textDecor={'underline'}
 											fontSize={['14px','16px']}
@@ -118,7 +119,7 @@ export const Contact = () => {
 										>
 											{items.name}
 										</Link>
-									</Flex>
+									</HStack>
 								);
 							})
 						}
@@ -138,8 +139,11 @@ export const Contact = () => {
 							<HStack
 								align={'center'}
 								justify={'flex-start'}
+								borderRadius={['8px','16px']}
 							>
-								<Image src={PaperIcon}/>
+								<Image src={PaperIcon}
+									borderRadius={['4px','10px']}
+								/>
 								<Link 
 									// as={RLink} 
 									color={' #0075FF'} 

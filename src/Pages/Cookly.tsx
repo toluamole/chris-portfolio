@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { Box, HStack, Link, Text, Image, VStack,  List, ListItem, SimpleGrid, chakra, ListIcon } from '@chakra-ui/react';
+import { Box, HStack, Text, Image, VStack,  List, ListItem, SimpleGrid, chakra, ListIcon } from '@chakra-ui/react';
 import React, {useState} from 'react';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import CooklyData from '../Data/Cookly.json';
-import { Link as RLink, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
@@ -38,7 +38,7 @@ export const Cookly = () => {
 				borderStyle={'solid'}
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
-				h={ collapse == true ? {base:'90%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'80%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
+				h={ collapse == true ? {base:'90%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'78%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				overflow={'hidden'}
 				cursor={'pointer'}
@@ -61,9 +61,9 @@ export const Cookly = () => {
 						spacing={'20px'}
 						justify={'flex-start'}
 					>
-						<Link as={RLink} to={AppRoutes.projects}>
+						<Box  onClick={() => navigate(-1)} >
 							<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
-						</Link>
+						</Box>
 						<BsPinAngleFill size={'20px'} />
 						<Text
 							color={'#CA4F29'}
@@ -79,7 +79,7 @@ export const Cookly = () => {
 					align={'baseline'}
 					justify={'start'}
 					spacing={['28px','8px']}
-					p={[2,4]}
+					p={[2,4]} pt={'12px'}
 					h={{base:'100%', lg:'95%'}}
 					overflowY={'scroll'}
 				>
@@ -100,7 +100,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Background
@@ -121,7 +121,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Problem Statement
@@ -142,7 +142,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Solution Proffered
@@ -163,7 +163,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Roles
@@ -194,7 +194,7 @@ export const Cookly = () => {
 						>
 							<Text 
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>	
 								Research / Interviews
@@ -211,7 +211,7 @@ export const Cookly = () => {
 						>
 							<Text 
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>
 								These are the questions i asked them:
@@ -243,7 +243,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Challenges & Solutions
@@ -253,7 +253,7 @@ export const Cookly = () => {
 							<Text 
 								color={'#CA4F29'}
 								fontSize={['14px','16px']} 
-								fontWeight={700}
+								fontWeight={'bold'}
 							>
 								Challenges #1
 							</Text>
@@ -274,7 +274,7 @@ export const Cookly = () => {
 							<Text 
 								color={'#CA4F29'}
 								fontSize={['14px','16px']} 
-								fontWeight={700}
+								fontWeight={'bold'}
 							>
 								Solution
 							</Text>
@@ -306,17 +306,17 @@ export const Cookly = () => {
 						>
 							<Text
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>Challenges / Solution</Text>
 							<Text
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>Challenge #2</Text>
 							<Text
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>{CooklyData.challenges.secondChallenge}</Text>
 							<List 
@@ -351,7 +351,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Competitive Analysis
@@ -366,7 +366,7 @@ export const Cookly = () => {
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Naija foods recipes</Text>
 								<List 
@@ -388,7 +388,7 @@ export const Cookly = () => {
 							<VStack align={'flex-start'}>
 								<Text
 									color={'#CA4F29'}
-									fontWeight={700}
+									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
 								>Recipeas</Text>
 								<List 
@@ -419,7 +419,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 								Revenue model
@@ -437,7 +437,7 @@ export const Cookly = () => {
 						>
 							<Text
 								color={'#CA4F29'}
-								fontWeight={700}
+								fontWeight={'bold'}
 								fontSize={['14px','16px']} 
 							>Subscription packages</Text>
 							<Text 
@@ -454,17 +454,17 @@ export const Cookly = () => {
 							>
 								<ListItem> 
 									<ListIcon as={BsDot} color='#CA4F29.700' />
-									<chakra.span fontWeight={700} >Free </chakra.span> 
+									<chakra.span fontWeight={'bold'} >Free </chakra.span> 
 									{CooklyData.subscription[0]}
 								</ListItem>
 								<ListItem >
 									<ListIcon as={BsDot} color='#CA4F29.700' />
-									<chakra.span fontWeight={700} >Regular</chakra.span> 
+									<chakra.span fontWeight={'bold'} >Regular</chakra.span> 
 									{CooklyData.subscription[1]}
 								</ListItem>
 								<ListItem >
 									<ListIcon as={BsDot} color='#CA4F29.700' />
-									<chakra.span fontWeight={700} >Premium</chakra.span>
+									<chakra.span fontWeight={'bold'} >Premium</chakra.span>
 									{CooklyData.subscription[2]}
 								</ListItem>
 							</List>
@@ -486,7 +486,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Ideation
@@ -529,7 +529,7 @@ export const Cookly = () => {
 					>
 						<Text 
 							color={'#CA4F29'}
-							fontWeight={700}
+							fontWeight={'bold'}
 							fontSize={['14px','16px']} 
 						>
 							Final Design & Implementation
@@ -593,7 +593,7 @@ export const Cookly = () => {
 					<VStack
 						alignSelf={'flex-end'}
 						mr={4}
-						py={'48px'}
+						pt={'48px'} pb={['100px', '48px']}
 					>
 						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.gather)} direction={'left'}  />
 					</VStack>
