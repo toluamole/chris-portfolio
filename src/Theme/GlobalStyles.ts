@@ -134,7 +134,7 @@ export const GlobalStyles = css`
        }
 
        ::-webkit-scrollbar-track-piece:end {
-        margin-bottom: 60px; 
+        margin-bottom: 70px; 
     }
     }
 `;
