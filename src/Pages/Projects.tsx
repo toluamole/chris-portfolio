@@ -26,7 +26,7 @@ export const Projects = () => {
 				h={'100%'}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				cursor={'pointer'}
-				overflow={'hidden'}
+				overflow={'clip'}
 				// position={'relative'}
 			>
 				<HStack
@@ -62,7 +62,7 @@ export const Projects = () => {
 					spacing={['36px', '48px']}
 					p={[2,4]} pt={'12px'}
 					// h={'65vh'} w={'100%'}
-					h={{base:'100%', lg:'95%'}}
+					h={{base:'95%', lg:'95%'}}
 					overflowY={'scroll'}
 				>
 					<VStack 

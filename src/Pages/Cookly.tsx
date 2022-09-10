@@ -40,7 +40,7 @@ export const Cookly = () => {
 				borderRadius={['16px','24px']}
 				h={'100%'}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-				overflow={'hidden'}
+				overflow={'clip'}
 				cursor={'pointer'}
 			>
 				<HStack
