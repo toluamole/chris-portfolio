@@ -80,7 +80,7 @@ export const Cookly = () => {
 					justify={'start'}
 					spacing={['28px','8px']}
 					p={[2,4]} pt={'12px'}
-					h={{base:'100%', lg:'95%'}}
+					h={{base:'95%', lg:'95%'}}
 					overflowY={'scroll'}
 				>
 					<ImageBox imageTitle={CooklyData.images[0].title} width={'60%'}  content={'View'} onclick={() => _handleClick(0)}>

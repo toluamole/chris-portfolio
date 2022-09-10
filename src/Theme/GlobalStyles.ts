@@ -39,7 +39,7 @@ export const GlobalStyles = css`
 
     ::-webkit-scrollbar-track-piece:end {
         background: transparent;
-        margin-bottom: 20px; 
+        margin-bottom: 60px; 
     }
     
     ::-webkit-scrollbar-track-piece:start {
@@ -97,7 +97,7 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
-       git
+        // box-shadow: 0 0 3px rgba(198, 198, 211, 0.4);
         opacity : 1
     }
 
@@ -148,8 +148,8 @@ export const GlobalStyles = css`
            transition: none;
        }
 
-       ::-webkit-scrollbar-track-piece:end {
-            margin-bottom: 100px; 
-        }
+    //    ::-webkit-scrollbar-track-piece:end {
+    //         margin-bottom: 100px; 
+    //     }
     }
 `;
