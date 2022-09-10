@@ -40,7 +40,7 @@ export const Crisp = () => {
 				h={'100%'}
 				// w={ collapse == true ? '100%' : 'auto'}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-				overflow={'clip'}
+				overflow={'hidden'}
 				cursor={'pointer'}
 			>
 				<HStack

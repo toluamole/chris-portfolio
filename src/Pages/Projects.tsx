@@ -26,7 +26,7 @@ export const Projects = () => {
 				h={'100%'}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				cursor={'pointer'}
-				overflow={'clip'}
+				overflow={'hidden'}
 				// position={'relative'}
 			>
 				<HStack
