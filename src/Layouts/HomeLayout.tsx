@@ -43,7 +43,7 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 						{isLargerThan768 ? <Profile collapse={collapse} /> : 
 							<Mobileprofile handleClick={_handleClick} show={show}/>}
 					</Box>
-					<Box h={collapse ? '90vh' : {base:'78vh', lg: '77vh', '2xl':'80vh', xl:'77vh'}}>{children}</Box>
+					<Box h={collapse ? '90vh' : {base:'77vh', lg: '77vh', '2xl':'80vh', xl:'77vh'}}>{children}</Box>
 				</Box>
 			</Box>
 		</Flex>

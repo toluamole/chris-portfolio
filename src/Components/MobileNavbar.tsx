@@ -32,7 +32,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				borderRadius={'16px'}
 				// h={'100%'}
 				w={'56%'}
-				h={{base:'86vh', md:'85vh'}}
+				h={{base:'85vh', md:'85vh'}}
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 				mr={['12px','20px']}
 				cursor={'pointer'}

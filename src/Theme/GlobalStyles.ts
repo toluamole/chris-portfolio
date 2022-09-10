@@ -71,7 +71,7 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
-        box-shadow: 0 0 6px rgba(198, 198, 211, 0.25);
+        box-shadow: 0 0 3px rgba(198, 198, 211, 0.4);
         opacity: 1
     }
 
@@ -97,7 +97,7 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
-        box-shadow: 0 0 6px rgba(198, 198, 211, 0.25);
+        box-shadow: 0 0 3px rgba(198, 198, 211, 0.4);
         opacity : 1
     }
 
@@ -138,7 +138,10 @@ export const GlobalStyles = css`
 
     @media(max-width: 1000px){
         .ril__navButtonPrev, .ril__navButtonNext  {
-            top: 75%;
+            top: 80%;
+        }
+        .ril__toolbar {
+            top: 35px;
         }
 
         .chakra-button:hover p{
