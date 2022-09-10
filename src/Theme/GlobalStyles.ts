@@ -71,7 +71,7 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
-        box-shadow: 0 0 3px rgba(198, 198, 211, 0.4);
+        // box-shadow: 0 0 3px rgba(198, 198, 211, 0.4);
         opacity: 1
     }
 
@@ -97,14 +97,13 @@ export const GlobalStyles = css`
         border-radius: 50%;
         border: 2px solid white;
         padding: 20px;
-        box-shadow: 0 0 3px rgba(198, 198, 211, 0.4);
+       git
         opacity : 1
     }
 
     .ril__closeButton {
         background: transparent url(${closeIcon}) no-repeat center;
         background-size: 12px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     ril__caption, .ril__toolbar {
