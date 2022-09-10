@@ -15,7 +15,7 @@ export const GlobalStyles = css`
         font-family: 'Jura', sans-serif;
         scroll-behavior: smooth-scroll;
         background: #0F0E0E;
-        height: 100vh;
+        min-height: 100vh;
         height: -webkit-fill-available;
         overflow: hidden;
     },
@@ -45,6 +45,19 @@ export const GlobalStyles = css`
     ::-webkit-scrollbar-track-piece:start {
         background: transparent;
         margin-top: 10px;
+    }
+
+    ::-moz-selection {
+        background: #CA4F29;
+        color: #F4F0EB
+    }
+      ::-webkit-selection {
+        background:#CA4F29;
+        color: #F4F0EB
+    }
+      ::selection {
+        background: #CA4F29;
+        color: #F4F0EB
     }
 
     

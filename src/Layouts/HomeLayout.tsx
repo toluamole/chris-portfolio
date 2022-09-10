@@ -19,8 +19,9 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 
 	return (
 		<Flex
-			h={'100vh'}
+			minH={'100vh'}
 			w={'100vw'}
+			position={'absolute'}
 			bgImage={`url('${backgroundImage}')`}
 			// bgPosition='center'
 			bgSize={'cover'}
@@ -31,28 +32,19 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 			alignItems={'stretch'}
 		> 
 			{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
-			<Box
-				w={'100%'}
-				// bg= {!show ? 'rgb(0 0 0 / 20%)' : ' '}
-				// _before={{
-				// 	display: {base: !show ? 'block' : 'none', lg:'none'},
-				// 	opacity: !show ? 1 : 0,
-				// 	content:  '" "',
-				// 	position: 'absolute',
-				// 	top: 20,
-				// 	left: 60,
-				// 	height: '76%',
-				// 	width: '100%',
-				// 	borderRadius: '12px',
-				// 	// zIndex: 9999,
-				// 	bg: 'rgb(0 0 0 / 20%)'
-				// }}
+			<Box 
+				w={'100%'} 	
+				h={'100%'}
 			>
-				<Box mb={['8px','20px']} >
-					{isLargerThan768 ? <Profile collapse={collapse} /> : 
-						<Mobileprofile handleClick={_handleClick} show={show}/>}
+				<Box
+					opacity= {!show ? '0.5' : 1}
+				>
+					<Box mb={['8px','20px']} >
+						{isLargerThan768 ? <Profile collapse={collapse} /> : 
+							<Mobileprofile handleClick={_handleClick} show={show}/>}
+					</Box>
+					<Box h={collapse ? '90vh' : {base:'78vh', lg: '77vh', '2xl':'80vh', xl:'77vh'}}>{children}</Box>
 				</Box>
-				{children}
 			</Box>
 		</Flex>
 	);
