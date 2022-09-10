@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Text, VStack } from '@chakra-ui/react';
+import {  Flex, Text, VStack } from '@chakra-ui/react';
 import { HomeLayout } from '../Layouts/HomeLayout';
 import { HomeContents } from '../Constants/HomeConstant';
 import { useNavigate } from 'react-router-dom';
