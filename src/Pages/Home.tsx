@@ -30,7 +30,7 @@ export const Home = () => {
 				borderRadius={['16px','24px']}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				p={['8px',4]}
-				h={'100%'}
+				h={{base:'78%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
 				overflowY={'scroll'}
 
 			>

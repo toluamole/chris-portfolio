@@ -17,6 +17,7 @@ export const GlobalStyles = css`
         background: #0F0E0E;
         min-height: 100vh;
         height: -webkit-fill-available;
+        width: 100vw;
         overflow: hidden;
     },
 
@@ -147,9 +148,10 @@ export const GlobalStyles = css`
             padding-right: 0 ;
            transition: none;
        }
-
-    //    ::-webkit-scrollbar-track-piece:end {
-    //         margin-bottom: 100px; 
-    //     }
+       .ril__navButtonPrev:hover,.ril__navButtonNext:hover{
+            transform: none;
+            background-position: 50% 50%;
+            transition: none;
+        }
     }
 `;

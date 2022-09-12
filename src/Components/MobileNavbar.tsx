@@ -32,7 +32,29 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 				borderRadius={'16px'}
 				// h={'100%'}
 				w={'56%'}
-				h={{base:'85vh', md:'85vh'}}
+				// h={{base:'85%', md:'85vh'}}
+				sx={{
+					'@media only screen and (min-width: 320px)' : {
+						h: '85vh',
+					},
+					'@media only screen and (min-width: 480px)' : {
+						
+						h: '87vh',
+					},
+					'@media only screen and (min-width: 600px)' : {
+						
+						h: '95vh',
+					},
+					'@media only screen and (min-width: 801px)' : {
+						
+						h: '95vh',
+					},
+					'@media only screen and (min-width: 1025px)' : {
+						
+						h: '95vh',
+					}
+
+				}}
 				boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 				mr={['12px','20px']}
 				cursor={'pointer'}

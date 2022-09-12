@@ -1,46 +1,30 @@
-import { Flex, Text, VStack, chakra } from '@chakra-ui/react';
+import { Flex, Text, VStack, chakra, Box } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import backgroundImage from '../Assets/backgroundImage.svg';
-import { Progress } from '@chakra-ui/react';
 import { MotionBox } from './AnimatedPages';
 import { AnimatePresence } from 'framer-motion';
+import ProgressBar from './ProgressBar';
+
 
 const firstVariant = {
 	initial: {
-		transition: {delay: 0.8}
+		// transition: {delay: 0.8},
+		marginTop: '100px'
 	},
+	
 	hidden: {
-		opacity:[0, 1, 1, 0],
-		y: ['0', '-.5em', '-.5em', '-.5em'],
-		translateZ: '10px',
+		marginTop:['70px', '-8px', '-8px', '-80px', '-80px', '-200px', ],
 		transition: {
-			duration: 2,
-			ease: [0.42, 0, 0.58, 1],
+			duration: 3,
+			ease: 'easeOut',
 			delay: 0.8
-		},
-		transitionEnd: {y: '-1.5em'}
+		}
 	},
 	exit: {
-		y: '-1em'
+		marginTop: '-300px'
 	}
 };
 
-const secondVariant = {
-	initial: {
-		// y: 10,
-		opacity: 0,
-	},
-	hidden: {
-		opacity:[0, 0, 0, 1, 1],
-		y:  '-1.5em',
-		transition: {
-			duration: 3,
-			ease: 'anticipate',
-			delay: 1
-		},
-		transitionEnd: {opacity:0}
-	}
-};
 
 const blinkingText = {
 	initial: {
@@ -50,9 +34,9 @@ const blinkingText = {
 		opacity: 1,
 		transition: {
 			ease: [0.42, 0, 0.58, 1],
-			duration: 0.5,
+			duration: 1,
 			repeat: Infinity,
-			delay: 5
+			delay: 3
 		}
 	}
 };
@@ -66,8 +50,8 @@ const thirdVariant = {
 		y: '-4em',
 		transition: {
 			duration: 0.8,
-			ease: 'anticipate',
-			delay: 4
+			ease: 'easeOut',
+			delay: 3
 		},
 	}
 };
@@ -75,31 +59,27 @@ const thirdVariant = {
 const quoteVariant = {
 	initial: {
 		opacity: 0,
+		y: '1em'
 	},
 	hidden: {
 		opacity: 1,
-		// y: '-1em',
+		y: '-1em',
 		transition: {
 			duration: 0.8,
-			ease: [0.42, 0, 0.58, 1],
-			delay: 7
+			ease: 'easeOut',
+			delay: 5
 		},
 	}
 };
  
 export const Preloader = () => {
-	const [width, setWidth] = useState(0);
+	const [completed, setCompleted] = useState(0);
 
-	useEffect(()=> {
-		setTimeout(() => {
-			if( width < 100) {
-				setInterval(()=> {
-					setWidth((width)=>width + 20);
-				}, 1000);
-				// clearInterval(myInterval);
-			}
-		}, 5000);
-	}, [width]);
+	useEffect(() => {
+		if(completed < 100 ) {
+			setInterval(() => setCompleted((completed) => completed + 5), 2000);
+		}
+	}, [completed]);
 	return(
 		<AnimatePresence key={'box'}>
 			<Flex
@@ -115,21 +95,33 @@ export const Preloader = () => {
 				color={' rgba(217, 217, 217, 1)'}
 			>
 				<VStack
+					align={'center'}
+					h={['50px','60px']}
+					// pb={'15px'}
+					overflow={'hidden'}
 					// spacing={'4px'}
 				>
 					<MotionBox 
+						fontSize={['18px','30px']} 
+						textAlign={'center'}
+						textShadow={'0 0 5px #fff'}
+						marginBottom={['60px','40px']} 
+						boxSizing={'border-box'}
 						variants={firstVariant}
 						initial={'initial'}
 						animate={'hidden'}
 						exit={'exit'}
-					><Text fontSize={['20px','36px']}>I DESIGNED THIS EXPERINCE FOR YOU</Text></MotionBox>
-					<MotionBox
-						variants={secondVariant}
-						initial={'initial'}
-						animate={'hidden'}
 					>
-						<Text fontSize={['20px','36px']}>AND ME</Text>
+						I DESIGNED THIS EXPERINCE FOR YOU
 					</MotionBox>
+					<Box 
+						fontSize={['18px','30px']}
+						// marginBottom={['60px','50px']} 
+						boxSizing={'border-box'}
+						textShadow={'0 0 5px #fff'}
+					>
+						AND ME
+					</Box>
 				</VStack>
 				<VStack
 					spacing={4}
@@ -150,19 +142,9 @@ export const Preloader = () => {
 							animate={'animate'}
 							mb={4}
 						>
-							<Text fontSize={['20px','24px']}>Decrypting messages</Text>
+							<Text fontSize={['18px','24px']}>Decrypting messages</Text>
 						</MotionBox>
-						<Progress 
-							value={width} 
-							size='xs' 
-							width={'380px'}
-							variant="primary"
-							className='progressBar'
-							transitionTimingFunction={'0.42, 0, 0.58, 1'}
-							transition={'all'}
-							transitionDuration={'0.2'}
-							// isIndeterminate
-						/>
+						<ProgressBar bgcolor={'#CA4F29'} completed={completed}/>
 					</MotionBox>
 				</VStack>
 				<VStack
@@ -180,7 +162,8 @@ export const Preloader = () => {
 						<Text 
 							textAlign={'right'}
 							w={'200px'}
-							fontSize={'20px'}
+							fontSize={'16px'}
+							textShadow={'0 0 5px #fff'}
 						>
 							&quot;Look at usual things with unusual eyes&quot; <br/>
 							<chakra.span textAlign={'right'}> -Vico Magistretti</chakra.span>

@@ -23,6 +23,7 @@ function App() {
 			{
 				loading === false ? (<MainRoute />) : (<Preloader />)
 			}
+			{/* <Preloader /> */}
 			{/* <AnimatedCursor innerSize={20} clickables={['button', 'a']} /> */}
 		</ChakraProvider>
 	);
