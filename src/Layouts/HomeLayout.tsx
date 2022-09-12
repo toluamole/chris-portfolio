@@ -19,7 +19,7 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 
 	return (
 		<Flex
-			minH={'100vh'}
+			h={'100vh'}
 			w={'100vw'}
 			position={'absolute'}
 			bgImage={`url('${backgroundImage}')`}
@@ -32,19 +32,15 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 			alignItems={'stretch'}
 		> 
 			{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
-			<Box 
-				w={'100%'} 	
-				h={'100%'}
+			<Box
+				w={'100%'}
+				opacity= {!show ? '0.5' : 1}
 			>
-				<Box
-					opacity= {!show ? '0.5' : 1}
-				>
-					<Box mb={['8px','20px']} >
-						{isLargerThan768 ? <Profile collapse={collapse} /> : 
-							<Mobileprofile handleClick={_handleClick} show={show}/>}
-					</Box>
-					<Box zIndex={2} h={collapse ? '90vh' : {base:'77vh', lg: '77vh', '2xl':'80vh', xl:'77vh'}}>{children}</Box>
+				<Box mb={['8px','20px']} >
+					{isLargerThan768 ? <Profile collapse={collapse} /> : 
+						<Mobileprofile handleClick={_handleClick} show={show}/>}
 				</Box>
+				{children}
 			</Box>
 		</Flex>
 	);
