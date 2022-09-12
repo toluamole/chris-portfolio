@@ -14,7 +14,7 @@ const ProgressBar = ({bgcolor, completed}: IPreloaderProps) => {
 		// width: '380px',
 		backgroundColor: '#e0e0de',
 		borderRadius: 50,
-		margin: 10,
+		// margin: 1,
 	};
   
 	const fillerStyles = {

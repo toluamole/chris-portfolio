@@ -9,11 +9,11 @@ import ProgressBar from './ProgressBar';
 const firstVariant = {
 	initial: {
 		// transition: {delay: 0.8},
-		marginTop: '100px'
+		marginTop: '70px'
 	},
 	
 	hidden: {
-		marginTop:['70px', '-8px', '-8px', '-80px', '-80px', '-200px', ],
+		marginTop:['70px', '-1px', '-1px', '-92px', '-92px', '-200px', ],
 		transition: {
 			duration: 3,
 			ease: 'easeOut',
@@ -47,7 +47,7 @@ const thirdVariant = {
 	hidden: {
 		opacity: [0, 0, 0, 1, 1],
 		// y: '-1em',
-		y: '-4em',
+		y: '-5em',
 		transition: {
 			duration: 0.8,
 			ease: 'easeOut',
@@ -124,7 +124,7 @@ export const Preloader = () => {
 					</Box>
 				</VStack>
 				<VStack
-					spacing={4}
+					// spacing={4}
 				>
 					<MotionBox
 						variants={thirdVariant}
@@ -140,7 +140,7 @@ export const Preloader = () => {
 							variants={blinkingText}
 							initial={'initial'}
 							animate={'animate'}
-							mb={4}
+							mb={2}
 						>
 							<Text fontSize={['18px','24px']}>Decrypting messages</Text>
 						</MotionBox>

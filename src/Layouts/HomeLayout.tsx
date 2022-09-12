@@ -34,13 +34,16 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 			{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
 			<Box
 				w={'100%'}
-				opacity= {!show ? '0.5' : 1}
+				// opacity= {!show ? '0.5' : 1}
 			>
 				<Box mb={['8px','20px']} >
 					{isLargerThan768 ? <Profile collapse={collapse} /> : 
 						<Mobileprofile handleClick={_handleClick} show={show}/>}
 				</Box>
-				{children}
+				<Box
+					h={'100%'}
+					opacity= {!show ? '0.5' : 1}
+				>{children}</Box>
 			</Box>
 		</Flex>
 	);
