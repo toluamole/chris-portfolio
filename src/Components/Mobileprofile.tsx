@@ -12,7 +12,6 @@ import {
 	ModalCloseButton,
 	useDisclosure,
 	HStack,
-	keyframes
 } from '@chakra-ui/react';
 import profileImage from '../Assets/profileImage.png';
 import ExpandedImage from '../Assets/ExpandedImage.png';
@@ -26,11 +25,11 @@ interface IProfileProp{
 
 export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	const animationKeyframes = keyframes`
-		0% { background-color: #D83636};
-		50%{ background-color: #D83636};
-		100% {background-color: #4DD836};
-	`;
+	// const animationKeyframes = keyframes`
+	// 	0% { background-color: #D83636};
+	// 	50%{ background-color: #D83636};
+	// 	100% {background-color: #4DD836};
+	// `;
 	return (
 		<HStack
 			justify='space-between'
@@ -65,7 +64,7 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 					boxSize='.8em' 
 					bg='#4DD836'  
 					borderColor={'#15191A'} 
-					animation={`${animationKeyframes} 2s ease`}
+					// animation={`${animationKeyframes} 2s ease`}
 				/>
 			</Avatar>
 			<Modal isCentered isOpen={isOpen} onClose={onClose} >

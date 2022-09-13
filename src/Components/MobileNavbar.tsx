@@ -80,28 +80,9 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 								fontSize={'14px'}
 								fontWeight={isActive === path ? '700' : '400'}
 								position={'relative'}
-								// _after={{
-								// 	content: '""',
-								// 	display: 'flex',
-								// 	position: 'relative',
-								// 	borderBottom:'1.4px solid #686875',
-								// 	boxShadow: '0 0 5px rgba(198,198,211,0.4)',
-								// 	width: {base:'170px', md:'200px'},
-								// 	mt: '20px',
-								// }}
-								// _hover={{
-								// 	textDecoration: 'none',
-								// 	color:'#CA4F29',
-								// 	fontWeight: 'bold',
-								// 	textShadow: '0 0 8px #CA4F29',
-								// 	// transform: 'scaleY(1.15)',
-								// 	transition: 'all .3s ease',
-								// 	paddingY: '32px',
-								// 	_after: {
-								// 		mt: '32px',
-								// 		transition: 'all .3s ease',
-								// 	}
-								// }}
+								_hover={{
+									textDecoration: 'none'
+								}}
 							>
 								{label}
 							</Link>

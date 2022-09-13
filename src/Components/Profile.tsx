@@ -12,7 +12,6 @@ import {
 	ModalBody,
 	ModalCloseButton,
 	useDisclosure,
-	keyframes,
 } from '@chakra-ui/react';
 import profileImage from '../Assets/profileImage.svg';
 import ExpandedImage from '../Assets/ExpandedImage.png';
@@ -25,10 +24,10 @@ interface IProfileProps{
 
 export const Profile = ({collapse}: IProfileProps) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	const animationKeyframes = keyframes`
-		0% { background-color: #D83636};
-		100% {background-color: #4DD836};
-	`;
+	// const animationKeyframes = keyframes`
+	// 	0% { background-color: #D83636};
+	// 	100% {background-color: #4DD836};
+	// `;
 
 	return (
 		<AnimatePresence initial={false}>
@@ -58,7 +57,7 @@ export const Profile = ({collapse}: IProfileProps) => {
 					>
 						<Avatar src={profileImage} cursor={'pointer'} onClick={onOpen}>
 							<AvatarBadge  
-								animation={`${animationKeyframes} 2s  ease`}
+								// animation={`${animationKeyframes} 2s  ease`}
 								boxSize='.8em' bg={'#4DD836'} borderColor={'#15191A'}
 							/>
 						</Avatar>

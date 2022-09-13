@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Text,  Link, keyframes} from '@chakra-ui/react';
+import { Flex, Text,  Link} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
 import AnimatedCursor from 'react-animated-cursor';
@@ -13,11 +13,11 @@ interface INavbarProps{
 export const  NavBar = ({collapse}:INavbarProps) => {
 	const location = useLocation();
 	const isActive = location.pathname;
-	const animationKeyframes = keyframes`
-	0% { background-color: #D83636};
-	50%{ background-color: #D83636};
-	100% {background-color: #4DD836};
-`;
+	// 	const animationKeyframes = keyframes`
+	// 	0% { background-color: #D83636};
+	// 	50%{ background-color: #D83636};
+	// 	100% {background-color: #4DD836};
+	// `;
 
 
 	return (
@@ -62,7 +62,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 									justifyContent={'center'}
 									borderBottom={'1.4px solid #686875'}
 									width={'15vw'}
-									color={isActive === path ? '#CA4F29' : '#F4F0EB'} 
+									color={isActive === path  ? '#CA4F29' : '#F4F0EB'} 
 									boxShadow= { ' inset 0 -4px 5px -5px rgba(198,198,211,0.4)'}
 									textShadow={isActive === path ? '0 0 8px #CA4F29' : 'none'}
 									py={isActive == path ? '28px' : '16px' }
@@ -70,6 +70,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 									fontSize={'14px'}
 									fontWeight={isActive === path ? 'bold' : 'medium'}
 									position={'relative'}
+									pointerEvents={isActive === path ? 'none' : 'initial'}
 
 									_hover={{
 										textDecoration: 'none',
@@ -78,10 +79,18 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 										textShadow: '0 0 8px #CA4F29',
 										pt: '20px',
 										pb: '20px',
-										transition: 'all .3s ease',
+										transition: 'all .3s ease-out',
 									}}
 								>
-									<Text>{label}</Text>
+									<Text
+										// _hover={{
+										// 	py:  '16px' ,
+										// 	// pb: '16px',
+										// 	transition: 'all .3s ease',
+										// }}
+									>
+										{label}
+									</Text>
 								</Link>
 							))
 						}
@@ -114,7 +123,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 								left: '-8%',
 								bottom: '30%',
 								borderRadius:'50%',
-								animation: `${animationKeyframes} 2s ease`
+								// animation: `${animationKeyframes} 2s ease`
 							}}
 						>
 							Available for

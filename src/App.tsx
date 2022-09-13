@@ -6,7 +6,6 @@ import '@fontsource/jura';
 import {Global} from '@emotion/react';
 import {GlobalStyles} from './Theme/GlobalStyles';
 import { Preloader } from './Components/Preloader';
-// import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -21,10 +20,9 @@ function App() {
 		<ChakraProvider theme={theme}>
 			<Global styles={GlobalStyles}/>
 			{
-				loading === false ? (<MainRoute />) : (<Preloader />)
+				loading ? (<Preloader />) : (<MainRoute />)
 			}
-			{/* <Preloader /> */}
-			{/* <AnimatedCursor innerSize={20} clickables={['button', 'a']} /> */}
+			{/* <MainRoute /> */}
 		</ChakraProvider>
 	);
 }

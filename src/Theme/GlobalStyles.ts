@@ -52,11 +52,13 @@ export const GlobalStyles = css`
         background: #CA4F29;
         color: #F4F0EB
     }
-      ::-webkit-selection {
+
+    ::-webkit-selection {
         background:#CA4F29;
         color: #F4F0EB
     }
-      ::selection {
+
+    ::selection {
         background: #CA4F29;
         color: #F4F0EB
     }
