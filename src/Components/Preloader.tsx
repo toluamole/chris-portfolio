@@ -85,12 +85,15 @@ export const Preloader = () => {
 			<MotionBox
 				animate={{
 					opacity: 1,
+					transition:{
+						ease: 'easeOut'
+					}
 				}}
 				exit={{
 					opacity: 0.5,
 					transition: {
-						delay: 12,
-						ease: 'linear',
+						delay: 2,
+						ease: 'easeOut',
 						duration: 10
 					}
 				}}
