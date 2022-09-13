@@ -2,7 +2,6 @@ import React  from 'react';
 import { Flex, Text,  Link} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
-import AnimatedCursor from 'react-animated-cursor';
 import { MotionBox } from './AnimatedPages';
 import { AnimatePresence } from 'framer-motion';
 
@@ -136,7 +135,6 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 							collaborations and jobs
 						</Text>
 					</Flex> 
-					<AnimatedCursor innerSize={20} clickables={['button', 'a']} />
 				</Flex>
 			</MotionBox>
 		</AnimatePresence>
