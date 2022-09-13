@@ -86,7 +86,7 @@ export const ImageBox = ({children, imageTitle, width,content, display, onclick}
 						height={['250px', '430px']} 
 						borderRadius={['4px','10px']} 
 						startColor={'#E5E2DD'}
-						endColor={'#F4F0EB'}
+						endColor={'#CECECE'}
 					/>
 				}
 			</>

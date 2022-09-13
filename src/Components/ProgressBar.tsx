@@ -24,7 +24,7 @@ const ProgressBar = ({bgcolor, completed}: IPreloaderProps) => {
 		backgroundColor: bgcolor,
 		borderRadius: 'inherit',
 		// textAlign: 'right',
-		transition: 'width 1s linear',
+		transition: 'width 0.5s ease',
 	};
   
 	// const labelStyles = {

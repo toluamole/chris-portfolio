@@ -67,7 +67,7 @@ const quoteVariant = {
 		transition: {
 			duration: 0.8,
 			ease: 'easeOut',
-			delay: 5
+			delay: 4
 		},
 	}
 };
@@ -77,7 +77,7 @@ export const Preloader = () => {
 
 	useEffect(() => {
 		if(completed < 100 ) {
-			setInterval(() => setCompleted((completed) => completed + 5), 2000);
+			setInterval(() => setCompleted((completed) => completed + 25), 2000);
 		}
 	}, [completed]);
 	return(
