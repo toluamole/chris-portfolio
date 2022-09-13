@@ -19,7 +19,7 @@ export const Home = () => {
 				animate={{
 					opacity: 1,
 					transition: {
-						duration: 0.3,
+						duration: 1,
 						ease: 'linear'
 					}
 				}}
