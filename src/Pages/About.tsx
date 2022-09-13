@@ -7,121 +7,118 @@ import { BsPinAngleFill } from 'react-icons/bs';
 import { AppRoutes } from '../Routes/AppRoutes';
 import {  useNavigate } from 'react-router-dom';
 import { NavigationButton } from '../Components/NavigationButton';
-import { AnimatedPages } from '../Components/AnimatedPages';
 
 export const About = () => {
 	const navigate = useNavigate();
 	return (
-		<AnimatedPages>
-			<HomeLayout collapse={false}>
-				<Box
-					borderWidth={['1px', '2px']}
-					borderStyle={'solid'}
-					borderColor={'#686875'}
-					borderRadius={['16px','24px']}
-					h={{base:'78%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
-					boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
-					// p={'20px'}
-					overflow={'hidden'}
+		<HomeLayout collapse={false}>
+			<Box
+				borderWidth={['1px', '2px']}
+				borderStyle={'solid'}
+				borderColor={'#686875'}
+				borderRadius={['16px','24px']}
+				h={{base:'78%', md: '90%', lg:'87%',  xl: '86%', '2xl': '87%'}}
+				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
+				// p={'20px'}
+				overflow={'hidden'}
+			>
+				<HStack
+					display={['flex', 'none']}
+					border={'none'}
+					borderColor={'white'}
+					borderRadius={['16px 16px 0px 0px','20px 20px 0px 0px']}
+					bg={'#F4F0EB'}
+					height={['45px','56px']}
+					width={'100%'}
+					// max-width={'100%'}
+					boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
+					position={'sticky'}
+					top={0}
+					// zIndex={'99999'}
+					spacing={'20px'}
+					justify={'flex-start'}
+					pl={6}
 				>
-					<HStack
-						display={['flex', 'none']}
-						border={'none'}
-						borderColor={'white'}
-						borderRadius={['16px 16px 0px 0px','20px 20px 0px 0px']}
-						bg={'#F4F0EB'}
-						height={['45px','56px']}
-						width={'100%'}
-						// max-width={'100%'}
-						boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
-						position={'sticky'}
-						top={0}
-						// zIndex={'99999'}
-						spacing={'20px'}
-						justify={'flex-start'}
-						pl={6}
+					<Box  onClick={() => navigate(-1)} >
+						<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
+					</Box>
+					<BsPinAngleFill size={'20px'} />
+					<Text
+						color={'#CA4F29'}
+						fontSize={['14px','16px']} 
+						fontWeight={'700'}
 					>
-						<Box  onClick={() => navigate(-1)} >
-							<ChevronLeftIcon boxSize={6} color={'#CA4F29'} />
-						</Box>
-						<BsPinAngleFill size={'20px'} />
-						<Text
-							color={'#CA4F29'}
+						About
+					</Text>
+				</HStack>
+				<VStack
+					align={'baseline'}
+					justify={'start'}
+					spacing={['8px','8px']}
+					overflowY={'scroll'}
+					p={4} pt={'12px'}
+					h={['100%','100%']}
+				>
+					<Box
+						w={['', '256px']}
+						// h={['', '45px']}
+						borderRadius={['12px','16px']}
+						bgColor={'#CA4F29'}
+						alignSelf={'flex-end'}
+						mb={['28px','48px']}
+						px={['12px','40px']} py={'16px'}
+					>
+						<Text 
+							color={'#F4F0EB'}
 							fontSize={['14px','16px']} 
-							fontWeight={'700'}
+							textAlign={'center'}
 						>
-							About
+							Tell me about yourself
 						</Text>
-					</HStack>
-					<VStack
-						align={'baseline'}
-						justify={'start'}
-						spacing={['8px','8px']}
-						overflowY={'scroll'}
-						p={4} pt={'12px'}
-						h={['100%','100%']}
-					>
-						<Box
-							w={['', '256px']}
-							// h={['', '45px']}
-							borderRadius={['12px','16px']}
-							bgColor={'#CA4F29'}
-							alignSelf={'flex-end'}
-							mb={['28px','48px']}
-							px={['12px','40px']} py={'16px'}
-						>
-							<Text 
-								color={'#F4F0EB'}
-								fontSize={['14px','16px']} 
-								textAlign={'center'}
-							>
-								Tell me about yourself
-							</Text>
-						</Box>
+					</Box>
 
-						{
-							Bio.map(items => {
-								return(
-									<VStack 
-										align={'flex-start'}
-										key={items.id}
-										bgColor={'#F4F0EB'}
-										w={['316px','700px']}
-										h={['auto','auto']}
-										borderRadius={['12px','16px']}
-										px={['12px','40px']} py={'16px'}
+					{
+						Bio.map(items => {
+							return(
+								<VStack 
+									align={'flex-start'}
+									key={items.id}
+									bgColor={'#F4F0EB'}
+									w={['316px','700px']}
+									h={['auto','auto']}
+									borderRadius={['12px','16px']}
+									px={['12px','40px']} py={'16px'}
+								>
+									<Text 
+										fontSize={['14px','16px']} 
+										fontWeight={500}
+										color={'#CA4F29'}
 									>
-										<Text 
-											fontSize={['14px','16px']} 
-											fontWeight={500}
-											color={'#CA4F29'}
-										>
-											{items.subText}
-										</Text>
-									</VStack>
-								);
-							})
-						}
-						<Box
-							bgColor={'#F4F0EB'}
-							w={['316px','auto']}
-							// h={['auto','auto']}
-							borderRadius={['12px','16px']}
-							px={['12px','40px']}  py={'16px'}
-							// mb={['32px']}
+										{items.subText}
+									</Text>
+								</VStack>
+							);
+						})
+					}
+					<Box
+						bgColor={'#F4F0EB'}
+						w={['316px','auto']}
+						// h={['auto','auto']}
+						borderRadius={['12px','16px']}
+						px={['12px','40px']}  py={'16px'}
+						// mb={['32px']}
+					>
+						<Text 
+							fontSize={['14px','16px']}  
+							fontWeight={500}
+							color={'#CA4F29'}
 						>
-							<Text 
-								fontSize={['14px','16px']}  
-								fontWeight={500}
-								color={'#CA4F29'}
-							>
-								So yeah, if you ever want to collaborate, I’m only a phone call/ email away.
-							</Text>
-						</Box>
-						<Box pt={'48px'} pb={['100px', '48px']} alignSelf={'flex-end'}><NavigationButton onClick={() => navigate(AppRoutes.contact)} title={'Reach Out'} direction={'right'}/></Box>
-					</VStack>
-				</Box>
-			</HomeLayout>
-		</AnimatedPages>
+							So yeah, if you ever want to collaborate, I’m only a phone call/ email away.
+						</Text>
+					</Box>
+					<Box pt={'48px'} pb={['100px', '48px']} alignSelf={'flex-end'}><NavigationButton onClick={() => navigate(AppRoutes.contact)} title={'Reach Out'} direction={'right'}/></Box>
+				</VStack>
+			</Box>
+		</HomeLayout>
 	);
 };

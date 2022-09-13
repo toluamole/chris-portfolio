@@ -148,6 +148,7 @@ export const GlobalStyles = css`
 
         .chakra-button:hover p{
             padding-right: 0 ;
+            transform: none;
            transition: none;
        }
        .ril__navButtonPrev:hover,.ril__navButtonNext:hover{

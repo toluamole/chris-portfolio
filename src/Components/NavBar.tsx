@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Flex, Text,  Link} from '@chakra-ui/react';
 import { Link as RLink, useLocation } from 'react-router-dom';
 import {links} from '../Constants/NavLinks';
@@ -18,6 +18,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 	// 	50%{ background-color: #D83636};
 	// 	100% {background-color: #4DD836};
 	// `;
+
 
 
 	return (
@@ -77,9 +78,8 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 										color:'#CA4F29',
 										fontWeight: 'bold',
 										textShadow: '0 0 8px #CA4F29',
-										pt: '20px',
-										pb: '20px',
-										transition: 'all .3s ease-out',
+										py: '20px',
+										transition: 'all .3s ease',
 									}}
 								>
 									<Text

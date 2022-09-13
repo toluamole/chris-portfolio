@@ -55,7 +55,7 @@ export const Profile = ({collapse}: IProfileProps) => {
 						alignItems={'center'}
 						ml={4}
 					>
-						<Avatar src={profileImage} cursor={'pointer'} onClick={onOpen}>
+						<Avatar name='Oladapo Awosika' src={profileImage} cursor={'pointer'} onClick={onOpen}>
 							<AvatarBadge  
 								// animation={`${animationKeyframes} 2s  ease`}
 								boxSize='.8em' bg={'#4DD836'} borderColor={'#15191A'}

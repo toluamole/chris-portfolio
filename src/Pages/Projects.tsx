@@ -8,17 +8,16 @@ import GatherData from '../Data/Gather.json';
 import CooklyData from '../Data/Cookly.json';
 // import { motion } from 'framer-motion';
 import { CtaButton } from '../Components/CtaButton';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { ImageBox } from '../Components/ImageBox';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
-import { AnimatedPages } from '../Components/AnimatedPages';
 
 export const Projects = () => {
 	const navigate = useNavigate();
 	
 	return(
-		<AnimatedPages>
+		<>
 			<HomeLayout collapse={false}>
 				<Box
 					borderWidth={['1px', '2px']}
@@ -167,6 +166,7 @@ export const Projects = () => {
 					</VStack>
 				</Box>
 			</HomeLayout>
-		</AnimatedPages>
+			<Outlet/>
+		</>
 	);
 };
