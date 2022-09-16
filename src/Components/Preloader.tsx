@@ -49,8 +49,8 @@ const thirdVariant = {
 		y: '-5em',
 		transition: {
 			duration: 0.8,
-			ease: 'linear',
-			delay: 3.5
+			ease: 'easeOut',
+			delay: 3
 		},
 	}
 };
@@ -65,7 +65,7 @@ const quoteVariant = {
 		y: '-1em',
 		transition: {
 			duration: 0.8,
-			ease: 'linear',
+			ease: 'easeOut',
 			delay: 4
 		},
 	}

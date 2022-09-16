@@ -15,13 +15,13 @@ export const  AnimatedPages = ({children}: IAnimatedPages) => {
 			opacity: 1,
 			transition: {
 				// duration: 0.3,
-				ease: 'anticipate'
+				ease: 'easeOut'
 			}
 		},
 		exit: {
 			opacity: 0,
 			transition: {
-				ease: 'anticipate'
+				ease: 'easeOut'
 			}
 		},
 	};

@@ -15,7 +15,6 @@ export const GlobalStyles = css`
         fex-direction: column;
         font-size: 12px;
         font-family: 'Jura', sans-serif;
-        scroll-behavior: smooth-scroll;
         background: #0F0E0E;
         min-height: 100vh;
         height: -webkit-fill-available;

@@ -6,7 +6,6 @@ import {Mobileprofile} from '../Components/Mobileprofile';
 import backgroundImage from '../Assets/backgroundImage.svg';
 import { MobileNavBar } from '../Components/MobileNavbar';
 import { AnimatedPages } from '../Components/AnimatedPages';
-import AnimatedCursor from 'react-animated-cursor';
 
 interface IHomeLayoutProps{
     children: React.ReactNode;
@@ -20,7 +19,7 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 	const _handleClick =  () => setShow(!show);
 
 	return (
-		<><AnimatedPages>
+		<AnimatedPages>
 			<Flex
 				h={'100vh'}
 				w={'100vw'}
@@ -29,25 +28,26 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 				// bgPosition='center'
 				bgSize={'cover'}
 				bgRepeat={'no-repeat'}
-				p={['8px', null, '10px', null, '30px']}
+				p={['8px',null, '10px',null, '30px']}
 				overflow={'hidden'}
 				wrap='nowrap'
 				alignItems={'stretch'}
-			>
-				{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show} />}
+			> 
+				{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
 				<Box
 					w={'100%'}
+					// opacity= {!show ? '0.5' : 1}
 				>
-					<Box mb={['8px', '20px']}>
-						{isLargerThan768 ? <Profile collapse={collapse} /> :
-							<Mobileprofile handleClick={_handleClick} show={show} />}
+					<Box mb={['8px','20px']} >
+						{isLargerThan768 ? <Profile collapse={collapse} /> : 
+							<Mobileprofile handleClick={_handleClick} show={show}/>}
 					</Box>
 					<Box
 						h={'100%'}
-						opacity={!show ? '0.5' : 1}
+						opacity= {!show ? '0.5' : 1}
 					>{children}</Box>
 				</Box>
 			</Flex>
-		</AnimatedPages><AnimatedCursor innerSize={20} clickables={['button', 'a']} /></>
+		</AnimatedPages>
 	);
 };
