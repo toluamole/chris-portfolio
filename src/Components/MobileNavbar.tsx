@@ -20,7 +20,8 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 					// opacity: show ? 1 : 0,
 					marginLeft: show ? '-56vw' : 0,
 					transition: {
-						duration: 0.2
+						ease: 'anticipate'
+						
 					}
 				}}
 				display={['flex', null, null, 'none']}

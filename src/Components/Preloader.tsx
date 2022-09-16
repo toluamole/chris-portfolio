@@ -36,7 +36,7 @@ const blinkingText = {
 			ease: [0.42, 0, 0.58, 1],
 			duration: 1,
 			repeat: Infinity,
-			delay: 3
+			delay: 4
 		}
 	}
 };
@@ -50,8 +50,8 @@ const thirdVariant = {
 		y: '-5em',
 		transition: {
 			duration: 0.8,
-			ease: 'easeOut',
-			delay: 3
+			ease: 'linear',
+			delay: 3.5
 		},
 	}
 };
@@ -66,7 +66,7 @@ const quoteVariant = {
 		y: '-1em',
 		transition: {
 			duration: 0.8,
-			ease: 'easeOut',
+			ease: 'linear',
 			delay: 4
 		},
 	}

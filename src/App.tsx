@@ -16,7 +16,7 @@ function App() {
 		setLoading(true);
 		setTimeout(()=> {
 			setLoading(false);
-		}, 8000);
+		}, 10000);
 	}, []);
 	return (
 		<ChakraProvider theme={theme}>

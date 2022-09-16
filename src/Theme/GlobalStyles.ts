@@ -6,6 +6,8 @@ import closeIcon from '../Assets/closeIcon.svg';
 export const GlobalStyles = css`
     html {
         height: -webkit-fill-available;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
     }
 
     body {
@@ -75,6 +77,7 @@ export const GlobalStyles = css`
         border: 2px solid white;
         padding: 20px;
         // box-shadow: 0 0 3px rgba(198, 198, 211, 0.4);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
         opacity: 1
     }
 
@@ -101,6 +104,7 @@ export const GlobalStyles = css`
         border: 2px solid white;
         padding: 20px;
         // box-shadow: 0 0 3px rgba(198, 198, 211, 0.4);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
         opacity : 1
     }
 
