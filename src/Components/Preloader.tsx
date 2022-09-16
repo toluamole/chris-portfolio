@@ -2,7 +2,6 @@ import { Flex, Text, VStack, chakra, Box } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import backgroundImage from '../Assets/backgroundImage.svg';
 import { MotionBox } from './AnimatedPages';
-import { AnimatePresence } from 'framer-motion';
 import ProgressBar from './ProgressBar';
 
 
@@ -81,96 +80,94 @@ export const Preloader = () => {
 		}
 	}, [completed]);
 	return(
-		<AnimatePresence >
-			<Flex
-				h={'100vh'}
-				w={'100vw'}
-				bgImage={`url('${backgroundImage}')`}
-				bgPosition='center'
-				bgSize={'cover'}
-				bgRepeat={'no-repeat'}
-				direction={'column'}
-				alignItems={'center'}
-				justifyContent={'center'}
-				color={' rgba(217, 217, 217, 1)'}
+		<Flex
+			h={'100vh'}
+			w={'100vw'}
+			bgImage={`url('${backgroundImage}')`}
+			bgPosition='center'
+			bgSize={'cover'}
+			bgRepeat={'no-repeat'}
+			direction={'column'}
+			alignItems={'center'}
+			justifyContent={'center'}
+			color={' rgba(217, 217, 217, 1)'}
+		>
+			<VStack
+				align={'center'}
+				h={['50px','60px']}
+				// pb={'15px'}
+				overflow={'hidden'}
+				// spacing={'4px'}
 			>
-				<VStack
-					align={'center'}
-					h={['50px','60px']}
-					// pb={'15px'}
-					overflow={'hidden'}
-					// spacing={'4px'}
+				<MotionBox 
+					fontSize={['18px','30px']} 
+					textAlign={'center'}
+					textShadow={'0 0 5px #fff'}
+					marginBottom={['60px','40px']} 
+					boxSizing={'border-box'}
+					variants={firstVariant}
+					initial={'initial'}
+					animate={'hidden'}
+					exit={'exit'}
 				>
-					<MotionBox 
-						fontSize={['18px','30px']} 
-						textAlign={'center'}
-						textShadow={'0 0 5px #fff'}
-						marginBottom={['60px','40px']} 
-						boxSizing={'border-box'}
-						variants={firstVariant}
-						initial={'initial'}
-						animate={'hidden'}
-						exit={'exit'}
-					>
-						I DESIGNED THIS EXPERINCE FOR YOU
-					</MotionBox>
-					<Box 
-						fontSize={['18px','30px']}
-						// marginBottom={['60px','50px']} 
-						boxSizing={'border-box'}
-						textShadow={'0 0 5px #fff'}
-					>
-						AND ME
-					</Box>
-				</VStack>
-				<VStack
-					// spacing={4}
+					I DESIGNED THIS EXPERINCE FOR YOU
+				</MotionBox>
+				<Box 
+					fontSize={['18px','30px']}
+					// marginBottom={['60px','50px']} 
+					boxSizing={'border-box'}
+					textShadow={'0 0 5px #fff'}
+				>
+					AND ME
+				</Box>
+			</VStack>
+			<VStack
+				// spacing={4}
+			>
+				<MotionBox
+					variants={thirdVariant}
+					initial={'initial'}
+					animate={'hidden'}
+					display={'flex'}
+					flexDirection={'column'}
+					alignItems={'center'}
+					justifyContent={'center'}
 				>
 					<MotionBox
-						variants={thirdVariant}
-						initial={'initial'}
-						animate={'hidden'}
-						display={'flex'}
-						flexDirection={'column'}
-						alignItems={'center'}
-						justifyContent={'center'}
-					>
-						<MotionBox
 
-							variants={blinkingText}
-							initial={'initial'}
-							animate={'animate'}
-							mb={2}
-						>
-							<Text fontSize={['18px','24px']}>Decrypting messages</Text>
-						</MotionBox>
-						<ProgressBar bgcolor={'#CA4F29'} completed={completed}/>
-					</MotionBox>
-				</VStack>
-				<VStack
-					alignSelf={'flex-end'}
-					justifyContent={'flex-end'}
-					position={'fixed'}
-					bottom={10}
-					right={10}
-				>
-					<MotionBox
-						variants={quoteVariant}
+						variants={blinkingText}
 						initial={'initial'}
-						animate={'hidden'}
+						animate={'animate'}
+						mb={2}
 					>
-						<Text 
-							textAlign={'right'}
-							w={'200px'}
-							fontSize={'16px'}
-							textShadow={'0 0 5px #fff'}
-						>
-							&quot;Look at usual things with unusual eyes&quot; <br/>
-							<chakra.span textAlign={'right'}> -Vico Magistretti</chakra.span>
-						</Text>
+						<Text fontSize={['18px','24px']}>Decrypting messages</Text>
 					</MotionBox>
-				</VStack>
-			</Flex>
-		</AnimatePresence>
+					<ProgressBar bgcolor={'#CA4F29'} completed={completed}/>
+				</MotionBox>
+			</VStack>
+			<VStack
+				alignSelf={'flex-end'}
+				justifyContent={'flex-end'}
+				position={'fixed'}
+				bottom={10}
+				right={10}
+			>
+				<MotionBox
+					variants={quoteVariant}
+					initial={'initial'}
+					animate={'hidden'}
+				>
+					<Text 
+						textAlign={'right'}
+						w={'200px'}
+						fontSize={'16px'}
+						textShadow={'0 0 5px #fff'}
+					>
+						&quot;Look at usual things with unusual eyes&quot; <br/>
+						<chakra.span textAlign={'right'}> -Vico Magistretti</chakra.span>
+					</Text>
+				</MotionBox>
+			</VStack>
+		</Flex>
 	);
 };
