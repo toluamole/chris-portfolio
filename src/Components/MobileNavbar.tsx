@@ -13,7 +13,7 @@ export const  MobileNavBar = ({show}:IMobileNav) => {
 	const location = useLocation();
 	const isActive = location.pathname;
 	return (
-		<AnimatePresence initial={false}>
+		<AnimatePresence initial={false} exitBeforeEnter>
 			<MotionBox
 				layout
 				animate={{
