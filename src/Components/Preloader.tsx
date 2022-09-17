@@ -15,8 +15,8 @@ const firstVariant = {
 	hidden: {
 		marginTop:['70px', '-1px', '-1px', '-92px', '-92px', '-200px', ],
 		transition: {
-			duration: 2,
-			ease: 'linear',
+			duration: 3,
+			ease: 'easeOut',
 			delay: 0.8
 		}
 	},
@@ -33,10 +33,10 @@ const blinkingText = {
 	animate: {
 		opacity: 1,
 		transition: {
-			ease: 'linear',
+			ease: 'easeOut',
 			duration: 1,
 			repeat: Infinity,
-			delay: 3
+			// delay: 3
 		}
 	}
 };
@@ -49,8 +49,8 @@ const thirdVariant = {
 		// y: '-1em',
 		y: '-5em',
 		transition: {
-			duration: 0.3,
-			ease: 'linear',
+			duration: 0.8,
+			ease: 'easeOut',
 			delay: 3
 		},
 	}
