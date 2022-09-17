@@ -13,6 +13,7 @@ import { NavigationButton } from '../Components/NavigationButton';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import MAX from '../Assets/MAX.svg';
+import MAX2 from '../Assets/MAX2.svg';
 import {  MotionBox } from '../Components/AnimatedPages';
 
 export const Gather = () => {
@@ -73,7 +74,7 @@ export const Gather = () => {
 							{GatherData.name}
 						</Text>
 					</HStack>
-					<Box display={['none', null, null, 'block']}><Image src={MAX} pr='9px' onClick={_handleCollapse}/></Box>
+					<Box display={['none', null, null, 'block']}><Image src={collapse ? MAX2 : MAX} pr='9px' onClick={_handleCollapse}/></Box>
 				</HStack>
 				<VStack
 					align={'baseline'}
@@ -630,7 +631,7 @@ export const Gather = () => {
 					<VStack
 						alignSelf={'flex-end'}
 						mr={4}
-						pt={'48px'} pb={['100px', '48px']}
+						pt={'48px'} pb={['50px', '48px']}
 					>
 						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'right'}  />
 						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.crisp)} direction={'left'} />

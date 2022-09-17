@@ -56,7 +56,7 @@ export const About = () => {
 					justify={'start'}
 					spacing={['8px','8px']}
 					overflowY={'scroll'}
-					p={4} pt={'12px'}
+					p={['8px',4]} pt={'12px'}
 					h={['100%','100%']}
 				>
 					<Box

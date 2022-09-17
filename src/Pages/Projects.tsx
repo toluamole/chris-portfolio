@@ -7,11 +7,11 @@ import CrispData from '../Data/Crisp.json';
 import GatherData from '../Data/Gather.json';
 import CooklyData from '../Data/Cookly.json';
 // import { motion } from 'framer-motion';
-import { CtaButton } from '../Components/CtaButton';
 import {  useNavigate } from 'react-router-dom';
 import { ImageBox } from '../Components/ImageBox';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
+import { NavigationButton } from '../Components/NavigationButton';
 
 export const Projects = () => {
 	const navigate = useNavigate();
@@ -157,10 +157,10 @@ export const Projects = () => {
 					</Box>
 					<VStack
 						alignSelf={'flex-end'}
-						mr={4}
-						pb={['100px', '48px']}
+						// mr={4}
+						pb={['50px', '48px']}
 					>
-						<CtaButton title={'Reach Out'} onClick={() => navigate(AppRoutes.contact)}  />
+						<NavigationButton title={'Reach Out'} onClick={() => navigate(AppRoutes.contact)} direction={'right'}  />
 					</VStack>
 				</VStack>
 			</Box>

@@ -32,7 +32,7 @@ export const Home = () => {
 					alignItems={'flex-start'}
 					justifyContent={'center'}
 					bgColor={'#F4F0EB'}
-					w={['285px','510px']}
+					w={['285px','auto']}
 					// h={['90px','65px']}
 					borderRadius={['12px','16px']}
 					mb={'8px'} px={['12px','40px']}  py={'16px'}

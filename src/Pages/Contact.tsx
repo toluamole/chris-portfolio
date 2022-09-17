@@ -61,7 +61,7 @@ export const Contact = () => {
 					// spacing={'8px'}
 					overflowY={'scroll'}
 					overflowX={'hidden'}
-					p={4} pt={'12px'}
+					p={['8px',4]} pt={'12px'}
 					h={['92%','100%']}
 				>
 					<Box
@@ -71,12 +71,12 @@ export const Contact = () => {
 						bgColor={'#CA4F29'}
 						alignSelf={'flex-end'}
 						mb={['28px','48px']}
+						px={['12px','40px']}  py={'16px'}
 					>
 						<Container
 							centerContent
 							color={'#F4F0EB'}
 							fontSize={['14px','16px']}
-							px={['12px','40px']}  py={'16px'}
 						>
 							How do i reach you,<br/>
 							I&apos;d love to collaborate?
