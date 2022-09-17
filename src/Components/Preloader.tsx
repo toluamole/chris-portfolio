@@ -36,7 +36,7 @@ const blinkingText = {
 			ease: 'linear',
 			duration: 1,
 			repeat: Infinity,
-			delay: 4
+			delay: 3
 		}
 	}
 };
@@ -51,7 +51,7 @@ const thirdVariant = {
 		transition: {
 			duration: 0.3,
 			ease: 'linear',
-			delay: 5
+			delay: 3
 		},
 	}
 };
@@ -67,7 +67,7 @@ const quoteVariant = {
 		transition: {
 			duration: 0.8,
 			ease: 'easeOut',
-			delay: 6
+			delay: 4
 		},
 	}
 };
