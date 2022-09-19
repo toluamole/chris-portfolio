@@ -58,15 +58,12 @@ export const Contact = () => {
 					direction={'column'}
 					align={'baseline'}
 					justify={'start'}
-					// spacing={'8px'}
 					overflowY={'scroll'}
 					overflowX={'hidden'}
 					p={['8px',4]} pt={'12px'}
 					h={['92%','100%']}
 				>
 					<Box
-						// w={['', '240px']}
-						// h={['', '45px']}
 						borderRadius={['12px','16px']}
 						bgColor={'#CA4F29'}
 						alignSelf={'flex-end'}
@@ -90,7 +87,6 @@ export const Contact = () => {
 							contactDetails.map(items => {
 								return(
 									<HStack
-										// align={'center'}
 										justify={'center'}
 										key={items.id}
 										bgColor={'#F4F0EB'}
@@ -107,8 +103,6 @@ export const Contact = () => {
 											{items.text}
 										</Text>
 										<Link 
-											// as={RLink} 
-											// ml={'5px'}
 											color={' #0075FF'} 
 											textDecor={'underline'}
 											fontSize={['14px','16px']}

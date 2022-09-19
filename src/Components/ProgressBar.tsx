@@ -27,12 +27,6 @@ const ProgressBar = ({bgcolor, completed}: IPreloaderProps) => {
 		transition: 'width 1s ease',
 	};
   
-	// const labelStyles = {
-	// 	padding: 5,
-	// 	color: 'white',
-	// 	fontWeight: 'bold'
-	// };
-  
 	return (
 		<Box w={['300px', '380px']} style={containerStyles}>
 			<Box style={fillerStyles}>

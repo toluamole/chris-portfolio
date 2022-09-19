@@ -30,11 +30,9 @@ export const About = () => {
 					bg={'#F4F0EB'}
 					height={['45px','56px']}
 					width={'100%'}
-					// max-width={'100%'}
 					boxShadow={'0px 8px 8px rgba(0, 0, 0, 0.25)'}
 					position={'sticky'}
 					top={0}
-					// zIndex={'99999'}
 					spacing={'20px'}
 					justify={'flex-start'}
 					pl={6}
@@ -61,7 +59,6 @@ export const About = () => {
 				>
 					<Box
 						w={['', '256px']}
-						// h={['', '45px']}
 						borderRadius={['12px','16px']}
 						bgColor={'#CA4F29'}
 						alignSelf={'flex-end'}
@@ -103,10 +100,8 @@ export const About = () => {
 					<Box
 						bgColor={'#F4F0EB'}
 						w={['316px','auto']}
-						// h={['auto','auto']}
 						borderRadius={['12px','16px']}
 						px={['12px','40px']}  py={'16px'}
-						// mb={['32px']}
 					>
 						<Text 
 							fontSize={['14px','16px']}  

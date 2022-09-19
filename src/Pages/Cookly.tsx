@@ -8,7 +8,6 @@ import {  useNavigate } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
-import { CtaButton } from '../Components/CtaButton';
 import { NavigationButton } from '../Components/NavigationButton';
 import {BsDot} from 'react-icons/bs';
 import Lightbox from 'react-image-lightbox';

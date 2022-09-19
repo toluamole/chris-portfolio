@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { AppRoutes } from '../Routes/AppRoutes';
 import { ImageBox } from '../Components/ImageBox';
-// import { CtaButton } from '../Components/CtaButton';
 import { NavigationButton } from '../Components/NavigationButton';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -25,11 +24,11 @@ export const Crisp = () => {
 	const _handleClick = (id:number) => {
 		setIsOpen(true);
 		setImgIndex(id);
-	}
+	};
 
 	const _handleCollapse = () => {
 		setCollapse(!collapse);
-	}
+	};
 
 	return(
 		<HomeLayout collapse={collapse}>
@@ -39,7 +38,6 @@ export const Crisp = () => {
 				borderColor={'#686875'}
 				borderRadius={['16px','24px']}
 				h={ collapse == true ? {base:'85%', md: '90%', lg:'95%',  xl: '96%', '2xl': '96%'} : {base:'78%', md: '90%', lg:'85%',  xl: '86%', '2xl': '87%'}}
-				// w={ collapse == true ? '100%' : 'auto'}
 				boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 				overflow={'hidden'}
 				cursor={'pointer'}

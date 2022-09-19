@@ -84,7 +84,7 @@ export const Projects = () => {
 						</Text>
 						<ImageBox display='none' width={'50vw'}  content={'Open'}>
 							<Image 
-								src={process.env.PUBLIC_URL + '/images/Crisp/crisp.png'} 
+								src={process.env.PUBLIC_URL + '/images/Crisp/Crisp.png'} 
 								width= '100%'
 								borderRadius={['4px','10px']}
 							/>
