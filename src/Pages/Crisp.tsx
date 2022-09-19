@@ -86,7 +86,7 @@ export const Crisp = () => {
 				>
 					<ImageBox imageTitle={CrispData.images[0].title} width={'60%'}  content={'view'}  onclick={() => _handleClick(0)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[0].imageUrl} 
+							src={CrispData.images[0].imageUrl} 
 							width= '100%'
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
@@ -136,14 +136,14 @@ export const Crisp = () => {
 					</VStack>
 					<ImageBox imageTitle={CrispData.images[1].title} width={'60%'}  content={'view'}  onclick={() => _handleClick(1)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[1].imageUrl} 
+							src={CrispData.images[1].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[2].title} width={'60%'}  content={'view'}  onclick={() => _handleClick(2)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[2].imageUrl} 
+							src={CrispData.images[2].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
@@ -323,7 +323,7 @@ export const Crisp = () => {
 					</VStack>
 					<ImageBox imageTitle={CrispData.images[3].title} width={'60%'}  content={'view'}  onclick={() => _handleClick(3)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[3].imageUrl} 
+							src={CrispData.images[3].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
@@ -351,7 +351,7 @@ export const Crisp = () => {
 					</VStack>
 					<ImageBox imageTitle={CrispData.images[4].title} width={'40%'}  content={'view'}  onclick={() => _handleClick(4)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[4].imageUrl} 
+							src={CrispData.images[4].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['8px','16px']}
 						/>
@@ -379,49 +379,49 @@ export const Crisp = () => {
 					</VStack>
 					<ImageBox imageTitle={CrispData.images[5].title} width={'80%'}  content={'view'}  onclick={() => _handleClick(5)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[5].imageUrl} 
+							src={CrispData.images[5].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[6].title} width={'80%'}  content={'view'}  onclick={() => _handleClick(6)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[6].imageUrl} 
+							src={CrispData.images[6].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[7].title} width={'80%'}  content={'view'}  onclick={() => _handleClick(7)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[7].imageUrl} 
+							src={CrispData.images[7].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[8].title} width={'765px'}  content={'view'}  onclick={() => _handleClick(8)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[8].imageUrl} 
+							src={CrispData.images[8].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[9].title} width={'765px'}  content={'view'}  onclick={() => _handleClick(9)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[9].imageUrl} 
+							src={CrispData.images[9].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[10].title} width={'765px'}  content={'view'}  onclick={() => _handleClick(10)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[10].imageUrl} 
+							src={CrispData.images[10].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
 					</ImageBox>
 					<ImageBox imageTitle={CrispData.images[11].title} width={'765px'}  content={'view'}  onclick={() => _handleClick(11)}>
 						<Image 
-							src={process.env.PUBLIC_URL + CrispData.images[11].imageUrl} 
+							src={CrispData.images[11].imageUrl} 
 							vertical-align= 'top'
 							borderRadius={['4px','10px']}
 						/>
