@@ -12,8 +12,6 @@ import { ImageBox } from '../Components/ImageBox';
 import { NavigationButton } from '../Components/NavigationButton';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import MAX from '../Assets/MAX.svg';
-import MAX2 from '../Assets/MAX2.svg';
 import {  MotionBox } from '../Components/AnimatedPages';
 
 export const Gather = () => {
@@ -74,7 +72,7 @@ export const Gather = () => {
 							{GatherData.name}
 						</Text>
 					</HStack>
-					<Box display={['none', null, null, 'block']}><Image src={collapse ? MAX2 : MAX} pr='9px' onClick={_handleCollapse}/></Box>
+					<Box display={['none', null, null, 'block']}><Image src={collapse ? window.location.origin + '/images/MAX2.svg' : window.location.origin + '/images/MAX.svg'} pr='9px' onClick={_handleCollapse}/></Box>
 				</HStack>
 				<VStack
 					align={'baseline'}

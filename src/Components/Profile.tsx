@@ -13,8 +13,6 @@ import {
 	ModalCloseButton,
 	useDisclosure,
 } from '@chakra-ui/react';
-import profileImage from '../Assets/profileImage.svg';
-import ExpandedImage from '../Assets/ExpandedImage.png';
 import { MotionBox } from './AnimatedPages';
 import { AnimatePresence } from 'framer-motion';
 
@@ -24,10 +22,6 @@ interface IProfileProps{
 
 export const Profile = ({collapse}: IProfileProps) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	// const animationKeyframes = keyframes`
-	// 	0% { background-color: #D83636};
-	// 	100% {background-color: #4DD836};
-	// `;
 
 	return (
 		<AnimatePresence initial={false}>
@@ -55,7 +49,7 @@ export const Profile = ({collapse}: IProfileProps) => {
 						alignItems={'center'}
 						ml={4}
 					>
-						<Avatar name='Oladapo Awosika' src={profileImage} cursor={'pointer'} onClick={onOpen}>
+						<Avatar name='Oladapo Awosika' src={window.location.origin + '/images/profileImage.svg'} cursor={'pointer'} onClick={onOpen}>
 							<AvatarBadge  
 								// animation={`${animationKeyframes} 2s  ease`}
 								boxSize='.8em' bg={'#4DD836'} borderColor={'#15191A'}
@@ -86,7 +80,7 @@ export const Profile = ({collapse}: IProfileProps) => {
 						/>
 						<ModalContent bg={'none'}  >
 							<ModalBody  cursor={'pointer'}>
-								<Image src={ExpandedImage} />
+								<Image src={window.location.origin + '/images/ExpandedImage.png'} />
 							</ModalBody>
 						</ModalContent>
 					</Modal>

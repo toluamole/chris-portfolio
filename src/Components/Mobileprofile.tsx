@@ -13,10 +13,6 @@ import {
 	useDisclosure,
 	HStack,
 } from '@chakra-ui/react';
-import profileImage from '../Assets/profileImage.png';
-import ExpandedImage from '../Assets/ExpandedImage.png';
-import cancelIcon from '../Assets/cancelIcon.svg';
-import hamburger from '../Assets/hamburger.svg';
 
 interface IProfileProp{
 	handleClick: () => void;
@@ -25,11 +21,6 @@ interface IProfileProp{
 
 export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	// const animationKeyframes = keyframes`
-	// 	0% { background-color: #D83636};
-	// 	50%{ background-color: #D83636};
-	// 	100% {background-color: #4DD836};
-	// `;
 	return (
 		<HStack
 			justify='space-between'
@@ -44,10 +35,10 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 			display={['flex', null, null, 'none']}
 		>
 			<Box>
-				{show ? <Image src={hamburger}
+				{show ? <Image src={window.location.origin + '/images/hamburger.svg'}
 					color={'#686875'}
 					onClick= {handleClick}
-				/>  : <Image src={cancelIcon}
+				/>  : <Image src={window.location.origin + '/images/cancelIcon.svg'}
 					color={' #686875'} 
 					onClick= {handleClick}
 				/> }
@@ -59,7 +50,7 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 			>
 				Oladapo Awosika
 			</Text>
-			<Avatar size={['md','sm']} src={profileImage} cursor={'pointer'} onClick={onOpen}>
+			<Avatar size={['md','sm']} src={window.location.origin + '/images/profileImage.svg'} cursor={'pointer'} onClick={onOpen}>
 				<AvatarBadge  
 					boxSize='.8em' 
 					bg='#4DD836'  
@@ -83,7 +74,7 @@ export const Mobileprofile = ({handleClick, show}:IProfileProp) => {
 				/>
 				<ModalContent bg={'none'}>
 					<ModalBody w={'auto'}>
-						<Image  src={ExpandedImage} boxSize={'100%'} />
+						<Image  src={window.location.origin + '/images/ExpandedImage.png'} boxSize={'100%'} />
 					</ModalBody>
 				</ModalContent>
 			</Modal>
