@@ -45,6 +45,7 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 					<Box
 						h={'100%'}
 						opacity= {!show ? '0.5' : 1}
+						pointerEvents={!show ? 'none' : 'auto'}
 					>{children}</Box>
 				</Box>
 			</Flex>
