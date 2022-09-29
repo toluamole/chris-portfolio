@@ -41,7 +41,7 @@ export const  NavBar = ({collapse}:INavbarProps) => {
 					borderColor={'#686875'}
 					borderRadius={'24px'}
 					h={'100%'}
-					w={['25vw','18vw']}
+					w={collapse ? '230px' : ['25vw','18vw']}
 					boxShadow= {'0 0 5px rgba(198,198,211,0.4)'}
 					mr={'20px'}
 					// transform={'translateX(-50%)'}

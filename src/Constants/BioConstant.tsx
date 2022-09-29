@@ -6,7 +6,7 @@ export const Bio: {id:number, subText:string}[] = [
     
 	{
 		id: 1,
-		subText: 'Okay back to the important stuff. I\'m a collaborative product designer, and art director with a focus on creating amazing digital interfaces and experiences.I approach design with an immense appreciation for user perspectives. My aim is to help people and provide memorable experiences. '
+		subText: 'Okay back to the important stuff. I\'m a collaborative product designer and art director, with a focus on creating amazing digital interfaces and experiences.I approach design with an immense appreciation for user perspectives. My aim is to help people and provide memorable experiences. '
 	},
 
 	{

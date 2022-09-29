@@ -40,7 +40,7 @@ export const Profile = ({collapse}: IProfileProps) => {
 					border={'2px'}
 					borderColor={'#686875'}
 					borderRadius={'24px'}
-					height={'10vh'}
+					height={ collapse ? 'auto' : '10vh'}
 					// width={['90vw','78vw']}
 					boxShadow= {'0 0 3px rgba(198,198,211,0.4)'}
 					transition={'all ease .3s'}

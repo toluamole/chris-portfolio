@@ -388,13 +388,13 @@ export const Cookly = () => {
 									color={'#CA4F29'}
 									fontWeight={'bold'}
 									fontSize={['14px','16px']} 
-								>Recipeas</Text>
+								>Recipes</Text>
 								<List 
 									color={'#CA4F29'}
 									fontSize={['14px','16px']} 
 								>
 									{
-										CooklyData.Recipeas.map((item, index) => {
+										CooklyData.Recipes.map((item, index) => {
 											return (
 												<ListItem key={index}>
 													<ListIcon as={BsDot} color='#CA4F29.700' />
@@ -593,7 +593,7 @@ export const Cookly = () => {
 						mr={4}
 						pt={'48px'} pb={['50px', '48px']}
 					>
-						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.gather)} direction={'left'}  />
+						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
 					</VStack>
 				</VStack>
 				{isOpen && <Lightbox

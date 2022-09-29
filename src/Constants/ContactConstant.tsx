@@ -30,14 +30,14 @@ export const contactDetails: {id:number, name?:string, text: string, path:string
 		width: '240px',
 		mobileWidth: '198px'
 	},
-	{
-		id: 4,
-		name: 'Twitter',
-		text:  'And of course i\'ve got',
-		path: 'https://twitter.com/oladapooooo',
-		width: '280px',
-		mobileWidth: '245px'
-	},
+	// {
+	// 	id: 4,
+	// 	name: 'Twitter',
+	// 	text:  'And of course i\'ve got',
+	// 	path: 'https://twitter.com/oladapooooo',
+	// 	width: '280px',
+	// 	mobileWidth: '245px'
+	// },
 
     
 ];

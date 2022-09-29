@@ -36,6 +36,7 @@ export const HomeLayout = ({children, collapse}: IHomeLayoutProps) => {
 				{isLargerThan768 ? <NavBar collapse={collapse} /> : <MobileNavBar show={show}  /> }
 				<Box
 					w={'100%'}
+					boxSizing={'border-box'}
 					// opacity= {!show ? '0.5' : 1}
 				>
 					<Box mb={['8px','20px']} >

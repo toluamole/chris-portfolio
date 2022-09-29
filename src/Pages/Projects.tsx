@@ -70,7 +70,7 @@ export const Projects = () => {
 						borderRadius={['8px','16px']}
 						bgColor={'#F4F0EB'}
 						// p={'8px'}
-						onClick={() => navigate(AppRoutes.crisp)}
+						onClick={() => navigate(AppRoutes.cookly)}
 						w={{base:'100%', lg: 'auto'}}
 					>
 						<Text 
@@ -80,11 +80,11 @@ export const Projects = () => {
 							fontWeight={'bold'}
 							p={['4px',2]}
 						>
-							{CrispData.name}
+							{CooklyData.name}
 						</Text>
-						<ImageBox display='none' width={'50vw'}  content={'Open'}>
+						<ImageBox display='none' width={'50vw'} content={'Open'}>
 							<Image 
-								src={process.env.PUBLIC_URL + '/images/Crisp/Crisp.png'} 
+								src={process.env.PUBLIC_URL + '/images/Cookly/Onboarding.png'} 
 								width= '100%'
 								borderRadius={['4px','10px']}
 							/>
@@ -120,7 +120,7 @@ export const Projects = () => {
 						borderRadius={['8px','16px']}
 						bgColor={'#F4F0EB'}
 						// p={'8px'}
-						onClick={() => navigate(AppRoutes.cookly)}
+						onClick={() => navigate(AppRoutes.crisp)}
 						w={{base:'100%', lg: 'auto'}}
 					>
 						<Text 
@@ -130,11 +130,11 @@ export const Projects = () => {
 							fontWeight={'bold'}
 							p={['4px',2]}
 						>
-							{CooklyData.name}
+							{CrispData.name}
 						</Text>
-						<ImageBox display='none' width={'50vw'} content={'Open'}>
+						<ImageBox display='none' width={'50vw'}  content={'Open'}>
 							<Image 
-								src={process.env.PUBLIC_URL + '/images/Cookly/Onboarding.png'} 
+								src={process.env.PUBLIC_URL + '/images/Crisp/Crisp.png'} 
 								width= '100%'
 								borderRadius={['4px','10px']}
 							/>

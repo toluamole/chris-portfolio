@@ -411,6 +411,11 @@ export const Gather = () => {
 										})
 									}
 								</List>
+								<Text
+									color={'#CA4F29'}
+									fontWeight={'bold'}
+									fontSize={['14px','16px']} 
+								>Cons</Text>
 								<List 
 									color={'#CA4F29'}
 									fontSize={['14px','16px']} 
@@ -447,6 +452,11 @@ export const Gather = () => {
 										})
 									}
 								</List>
+								<Text
+									color={'#CA4F29'}
+									fontWeight={'bold'}
+									fontSize={['14px','16px']} 
+								>Cons</Text>
 								<List 
 									color={'#CA4F29'}
 									fontSize={['14px','16px']} 
@@ -631,8 +641,8 @@ export const Gather = () => {
 						mr={4}
 						pt={'48px'} pb={['50px', '48px']}
 					>
-						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'right'}  />
-						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.crisp)} direction={'left'} />
+						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.crisp)} direction={'right'}  />
+						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.cookly)} direction={'left'} />
 					</VStack>
 				</VStack>
 			</MotionBox>

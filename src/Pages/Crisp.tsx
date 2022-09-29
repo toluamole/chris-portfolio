@@ -429,7 +429,7 @@ export const Crisp = () => {
 						mr={4}
 						pt={'48px'} pb={['50px', '48px']}
 					>
-						<NavigationButton title={'Next Project'} onClick={() => navigate(AppRoutes.gather)} direction={'right'}  />
+						<NavigationButton title={'Prev Project'} onClick={() => navigate(AppRoutes.gather)} direction={'left'}  />
 					</VStack>
 				</VStack>
 			</MotionBox>
