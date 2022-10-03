@@ -5,7 +5,7 @@ import resume from '../Assets/resume.png';
 import PaperIcon from '../Assets/PaperIcon.svg';
 // import { Link as RLink } from 'react-router-dom';
 import { contactDetails } from '../Constants/ContactConstant';
-import RESUME from '../Assets/RESUME.pdf';
+// import RESUME from '../Assets/RESUME.pdf';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { BsPinAngleFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
@@ -143,7 +143,7 @@ export const Contact = () => {
 									color={' #0075FF'} 
 									textDecor={'underline'}
 									fontWeight={700}
-									href={`${RESUME}`}
+									href={'https://docs.google.com/document/d/1EjLbHTfhPdVnpUPHo8ps-qMc66JWtkpL/export?format=pdf'}
 									target='_blank'	
 								>
 									Open resume
